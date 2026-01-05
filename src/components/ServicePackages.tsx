@@ -40,15 +40,17 @@ const ServicePackages = () => {
           <h2 className="font-display text-display-md md:text-display-lg text-foreground mb-4">
             Simple, Honest Pricing
           </h2>
-          <p className="text-body-md text-muted-foreground">
-            No hidden fees. No hourly surprises. You know exactly what you're paying before we start.
-          </p>
-          <p className="text-body-md text-muted-foreground mt-4">
-            When you purchase either service package, the $150 on-site visit fee is waived.
-          </p>
-          <p className="text-sm text-muted-foreground/60 mt-1">
-            For comparison, national services often charge $300 or more just for an on-site visit.
-          </p>
+          <div className="space-y-3">
+            <p className="text-body-md text-muted-foreground">
+              No hidden fees. No hourly surprises. You know exactly what you're paying before we start.
+            </p>
+            <p className="text-body-md text-muted-foreground">
+              When you purchase either service package, the $150 on-site visit fee is waived.
+            </p>
+            <p className="text-sm text-muted-foreground/60">
+              For comparison, national services often charge $300 or more just for an on-site visit.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
