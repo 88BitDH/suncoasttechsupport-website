@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Calendar, ShieldCheck } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -127,6 +127,45 @@ const ContactSection = () => {
                 Scope and pricing are confirmed during the free call. Please do not send passwords.
               </p>
             </form>
+          </div>
+        </div>
+
+        {/* Service Guidelines */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-card rounded-xl border border-border p-6 shadow-card">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-primary-light flex items-center justify-center">
+                <ShieldCheck className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="font-display text-lg font-semibold text-foreground">Service Guidelines (Applies to All Packages)</h3>
+            </div>
+            
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Scope and pricing are confirmed before work begins
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Remote support is preferred when possible
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Same-day help when scheduling allows (not guaranteed)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Data recovery is best-effort and depends on device condition and encryption
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Please do not send passwords via forms or text
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                Recycling and disposal are tied to a purchased service package
+              </li>
+            </ul>
           </div>
         </div>
       </div>
