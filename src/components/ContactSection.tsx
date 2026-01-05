@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock, Calendar } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary/50" id="contact">
+    <section id="contact" className="py-16 md:py-24 bg-secondary/50 scroll-mt-20">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}

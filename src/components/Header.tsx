@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          <a href="#top" className="flex items-center gap-2">
             <img src={logo} alt="Suncoast Tech Support" className="h-8 md:h-10 w-auto" />
             <div className="hidden sm:block">
               <span className="font-display text-lg font-bold text-foreground">Suncoast</span>
@@ -30,6 +30,9 @@ const Header = () => {
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               About
             </a>
+            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+              FAQ
+            </a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               Contact
             </a>
@@ -41,10 +44,12 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">773.669.8868</span>
             </a>
-            <Button variant="hero" size="sm" className="hidden sm:flex">
-              <Calendar className="w-4 h-4" />
-              Book Free Call
-            </Button>
+            <a href="#contact">
+              <Button variant="hero" size="sm" className="hidden sm:flex">
+                <Calendar className="w-4 h-4" />
+                Book Free Call
+              </Button>
+            </a>
             
             {/* Mobile menu button */}
             <button
@@ -63,11 +68,14 @@ const Header = () => {
               <a href="#services" className="text-foreground font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Services</a>
               <a href="#pricing" className="text-foreground font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
               <a href="#about" className="text-foreground font-medium py-2" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="#faq" className="text-foreground font-medium py-2" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
               <a href="#contact" className="text-foreground font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              <Button variant="hero" size="lg" className="mt-2">
-                <Calendar className="w-4 h-4" />
-                Book Free Call
-              </Button>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="hero" size="lg" className="mt-2 w-full">
+                  <Calendar className="w-4 h-4" />
+                  Book Free Call
+                </Button>
+              </a>
             </nav>
           </div>
         )}

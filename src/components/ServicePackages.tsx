@@ -34,7 +34,7 @@ const packages = [
 
 const ServicePackages = () => {
   return (
-    <section id="services" className="py-16 md:py-24 bg-secondary/50">
+    <section id="services" className="py-16 md:py-24 bg-secondary/50 scroll-mt-20">
       <div className="container">
         <div id="pricing" className="text-center max-w-3xl mx-auto mb-12 scroll-mt-24">
           <h2 className="font-display text-display-md md:text-display-lg text-foreground mb-4">
