@@ -29,7 +29,7 @@ const HeroSection = () => {
                   Book Free 15-Minute Call
                 </Button>
               </a>
-              <a href="#services">
+              <a href="#faq">
                 <Button variant="heroOutline" size="lg">
                   See How We Help
                   <ArrowRight className="w-4 h-4" />
