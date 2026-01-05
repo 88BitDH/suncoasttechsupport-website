@@ -87,9 +87,11 @@ const ServicePackages = () => {
                 ))}
               </ul>
 
-              <Button variant={pkg.popular ? "hero" : "outline"} size="lg" className="w-full">
-                Book This Service
-              </Button>
+              <a href="#contact" className="block">
+                <Button variant={pkg.popular ? "hero" : "outline"} size="lg" className="w-full">
+                  Book This Service
+                </Button>
+              </a>
 
               <p className="text-xs text-muted-foreground mt-4 text-center">
                 Additional computers can be handled during the same visit. Scope and pricing are confirmed during the free consultation.
