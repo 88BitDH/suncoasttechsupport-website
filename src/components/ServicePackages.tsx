@@ -7,11 +7,11 @@ const packages = [
     name: "Troubleshooting & Repair",
     price: "$179",
     period: "first 90 minutes",
-    description: "Slow computers, virus removal, software issues, and general tech problems. Remote support is offered first—in-home visits only when needed.",
+    description: "Slow computers, virus removal, software issues, and general tech problems. Most issues can be resolved remotely—faster and more cost-effective. If hands-on help is needed, we'll confirm that during your free consultation.",
     features: [
-      "Remote support preferred",
-      "In-home visit if required",
-      "Full diagnosis and repair",
+      "Free 15-minute consultation first",
+      "Remote support resolves most issues",
+      "In-home visit only when required",
       "30-day follow-up support",
     ],
     popular: true,
@@ -21,12 +21,12 @@ const packages = [
     name: "Data Transfer & Recovery",
     price: "$249",
     period: "starting at",
-    description: "Moving files to a new computer, recovering lost data, or setting up backups. We start remotely when possible.",
+    description: "Moving files to a new computer, recovering lost data, or setting up backups. We start with a free consultation to determine the best approach—remote or in-home.",
     features: [
-      "Remote or in-home as needed",
+      "Free consultation to assess needs",
+      "Remote when possible, in-home when needed",
       "Photos, documents, music preserved",
-      "Cloud backup setup",
-      "Written reference guide",
+      "Cloud backup setup included",
     ],
     popular: false,
   },
@@ -98,8 +98,23 @@ const ServicePackages = () => {
           ))}
         </div>
 
-        {/* On-Site Fee Savings */}
+        {/* Remote-First Approach */}
         <div className="mt-12 max-w-2xl mx-auto">
+          <div className="bg-primary-light rounded-xl border border-primary/20 p-6 text-center mb-6">
+            <p className="text-foreground font-semibold text-lg mb-3">
+              How Our Remote-First Approach Works
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              We start with a free 15-minute consultation to determine whether remote or in-home support is the best fit. Many issues can be resolved remotely, which is faster and more cost-effective. If hands-on help is needed, we'll confirm that before scheduling an in-home visit.
+            </p>
+            <p className="text-muted-foreground text-sm mt-3 italic">
+              Perfect for homeowners, work-from-home professionals, and short-term rental / Airbnb businesses.
+            </p>
+          </div>
+        </div>
+
+        {/* On-Site Fee Savings */}
+        <div className="max-w-2xl mx-auto">
           <div className="bg-success-light rounded-xl border border-success/30 p-6 text-center">
             <p className="text-foreground font-semibold text-lg mb-2">
               When you purchase either service package, the $150 on-site visit fee is waived.
