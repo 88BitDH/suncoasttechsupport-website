@@ -26,10 +26,12 @@ const UrgencyCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
-              <Calendar className="w-5 h-5" />
-              Book Free 15-Minute Call
-            </Button>
+            <a href="#contact" className="w-full sm:w-auto">
+              <Button variant="hero" size="xl" className="w-full">
+                <Calendar className="w-5 h-5" />
+                Book Free 15-Minute Call
+              </Button>
+            </a>
             <a href="tel:+17736698868">
               <Button 
                 variant="ghost" 

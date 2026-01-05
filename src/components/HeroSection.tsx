@@ -23,14 +23,18 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="xl">
-                <Calendar className="w-5 h-5" />
-                Book Free 15-Minute Call
-              </Button>
-              <Button variant="heroOutline" size="lg">
-                See How We Help
-                <ArrowRight className="w-4 h-4" />
-              </Button>
+              <a href="#contact">
+                <Button variant="hero" size="xl">
+                  <Calendar className="w-5 h-5" />
+                  Book Free 15-Minute Call
+                </Button>
+              </a>
+              <a href="#services">
+                <Button variant="heroOutline" size="lg">
+                  See How We Help
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </a>
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
