@@ -43,8 +43,11 @@ const ServicePackages = () => {
           <p className="text-body-md text-muted-foreground">
             No hidden fees. No hourly surprises. You know exactly what you're paying before we start.
           </p>
-          <p className="text-sm text-muted-foreground/80 mt-2">
+          <p className="text-body-md text-muted-foreground mt-4">
             When you purchase either service package, the $150 on-site visit fee is waived.
+          </p>
+          <p className="text-sm text-muted-foreground/60 mt-1">
+            For comparison, national services often charge $300 or more just for an on-site visit.
           </p>
         </div>
 
