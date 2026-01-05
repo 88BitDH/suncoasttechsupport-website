@@ -100,20 +100,6 @@ const ServicePackages = () => {
           ))}
         </div>
 
-        {/* Remote-First Approach */}
-        <div className="mt-12 max-w-2xl mx-auto">
-          <div className="bg-primary-light rounded-xl border border-primary/20 p-6 text-center mb-6">
-            <p className="text-foreground font-semibold text-lg mb-3">
-              How Our Remote-First Approach Works
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              We start with a free 15-minute consultation to determine whether remote or in-home support is the best fit. Many issues can be resolved remotely, which is faster and more cost-effective. If hands-on help is needed, we'll confirm that before scheduling an in-home visit.
-            </p>
-            <p className="text-muted-foreground text-sm mt-3 italic">
-              Perfect for homeowners, work-from-home professionals, and short-term rental / Airbnb businesses.
-            </p>
-          </div>
-        </div>
 
         {/* On-Site Fee Savings */}
         <div className="max-w-2xl mx-auto">

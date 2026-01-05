@@ -7,6 +7,10 @@ import {
 
 const faqs = [
   {
+    question: "How does your remote-first support work?",
+    answer: "We start with a free 15-minute consultation to determine whether remote or in-home support is the best fit. Many issues can be resolved remotely, which is faster and more cost-effective. If hands-on help is needed, we'll confirm that before scheduling an in-home visit. This approach is perfect for homeowners, work-from-home professionals, and short-term rental / Airbnb businesses.",
+  },
+  {
     question: "How quickly can you come to my home?",
     answer: "We usually have appointments available within 24-48 hours. For urgent issues, we often have same-day availability. Just give us a call and we'll do our best to fit you in.",
   },
