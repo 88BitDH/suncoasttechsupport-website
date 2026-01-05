@@ -34,6 +34,10 @@ const faqs = [
     question: "What forms of payment do you accept?",
     answer: "We accept all major credit cards and electronic payments. Cash and checks are not accepted. Payment is due at the end of your service visit. If multiple visits are required, this will be explained in advance during your consultation.",
   },
+  {
+    question: "Do you offer ongoing or monthly support?",
+    answer: "Yes. Monthly support options are available after your first service visit.",
+  },
 ];
 
 const FAQ = () => {
