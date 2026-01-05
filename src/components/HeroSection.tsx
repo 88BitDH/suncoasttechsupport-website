@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-tech-support.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative gradient-hero overflow-hidden">
+    <section id="top" className="relative gradient-hero overflow-hidden">
       <div className="container py-16 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
