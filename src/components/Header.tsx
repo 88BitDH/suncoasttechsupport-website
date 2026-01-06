@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const logoSrc = import.meta.env.BASE_URL + "logo.png";
+const logoSrc = "/logo.png";
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
