@@ -108,22 +108,6 @@ const ServicePackages = () => {
           ))}
         </div>
 
-
-        {/* On-Site Fee Savings */}
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-success-light rounded-xl border border-success/30 p-6 text-center">
-            <p className="text-foreground font-semibold text-lg mb-2">
-              When you purchase either service package, the $150 on-site visit fee is waived.
-            </p>
-            <p className="text-muted-foreground text-sm mb-4">
-              For comparison, national services often charge $300 or more just for an on-site visit.
-            </p>
-            <p className="text-primary font-medium">
-              Book today and put that savings toward actually fixing the problem.
-            </p>
-          </div>
-        </div>
-
       </div>
     </section>
   );
