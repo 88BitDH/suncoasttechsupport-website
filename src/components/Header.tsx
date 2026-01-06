@@ -84,7 +84,7 @@ const Header = () => {
               className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">773.669.8868</span>
+              <span className="font-medium">727.496.4668</span>
             </a>
 
             <a href="#contact" onClick={closeMobileMenu}>
