@@ -45,7 +45,7 @@ const UrgencyCTA = () => {
               </Button>
             </a>
 
-            <a href="tel:+17736698868">
+            <a href="tel:+17274964668">
               <Button
                 variant="ghost"
                 size="lg"
