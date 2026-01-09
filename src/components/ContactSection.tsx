@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Clock, Calendar, ShieldCheck } from "lucide-react"
 import { CALENDLY_URL } from "@/config";
 
 const ContactSection = () => {
-  const PHONE_TEL = "tel:+17736698868";
-  const PHONE_DISPLAY = "773.669.8868";
+  const PHONE_TEL = "tel:+17274964668";
+  const PHONE_DISPLAY = "7274964668";
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-secondary/50 scroll-mt-20">
