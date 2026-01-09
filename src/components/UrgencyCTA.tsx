@@ -52,7 +52,7 @@ const UrgencyCTA = () => {
                 className="w-full sm:w-auto text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
               >
                 <Phone className="w-5 h-5" />
-                773.669.8868
+                7274964668
               </Button>
             </a>
           </div>
