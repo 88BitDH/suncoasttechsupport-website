@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { CALENDLY_URL } from "@/config";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -84,10 +85,17 @@ const Header = () => {
               className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">727.496.4668</span>
+              <span className="font-medium">773.669.8868</span>
             </a>
 
-            <a href="#contact" onClick={closeMobileMenu}>
+            {/* FIX: Calendly booking link (was #contact) */}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+              aria-label="Book a free call on Calendly"
+            >
               <Button variant="hero" size="sm" className="hidden sm:flex">
                 <Calendar className="w-4 h-4" />
                 Book Free Call
@@ -100,7 +108,11 @@ const Header = () => {
               onClick={() => setMobileMenuOpen((v) => !v)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -145,7 +157,14 @@ const Header = () => {
                 Contact
               </a>
 
-              <a href="#contact" onClick={closeMobileMenu}>
+              {/* FIX: Calendly booking link (was #contact) */}
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                aria-label="Book a free call on Calendly"
+              >
                 <Button variant="hero" size="lg" className="mt-2 w-full">
                   <Calendar className="w-4 h-4" />
                   Book Free Call
