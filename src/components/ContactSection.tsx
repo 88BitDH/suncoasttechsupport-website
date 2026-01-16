@@ -95,7 +95,6 @@ const ContactSection = () => {
               </p>
             </div>
 
-            {/* Calendly CTA (replaces non-functional form submission) */}
             <div className="space-y-4">
               <a
                 href={CALENDLY_URL}
@@ -117,12 +116,43 @@ const ContactSection = () => {
                 Scope and pricing are confirmed during the free call. Please do not send passwords.
               </p>
 
-              {/* ONLY CHANGE ADDED: SMS Consent (matches same font/color/alignment) */}
               <p className="text-xs text-center text-muted-foreground/80 mt-2">
-                <strong>SMS Opt-In Consent:</strong> By submitting your phone number through our contact or
-                service intake forms, you are opting in to receive service-related text messages from
-                Suncoast Tech Support including appointment confirmations and service updates.  . Message frequency varies. Message and data rates may apply.
+                <strong>SMS Consent:</strong> By submitting your phone number through our contact or
+                service intake forms, you consent to receive service-related text messages from
+                Suncoast Tech Support. Message frequency varies. Message and data rates may apply.
                 Reply <strong>STOP</strong> to opt out.
+              </p>
+
+              {/* ONLY NEW ADDITION BELOW */}
+              <p className="text-xs text-center text-muted-foreground/80 mt-2">
+                <strong>Text Message Consent</strong>
+                <br />
+                By submitting your phone number to Suncoast Tech Support, you consent to receive
+                service-related text messages for appointment coordination, service updates, and
+                customer support.
+                <br /><br />
+                Message frequency varies. Message and data rates may apply.
+                <br /><br />
+                You may opt out of receiving text messages at any time by replying <strong>STOP</strong>.
+                For help, reply <strong>HELP</strong> or contact our support team.
+                <br /><br />
+                <a
+                  href="https://suncoasttechsupport.net/privacy"
+                  className="underline hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+                {" · "}
+                <a
+                  href="https://suncoasttechsupport.net/terms"
+                  className="underline hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms &amp; Conditions
+                </a>
               </p>
             </div>
           </div>
