@@ -119,9 +119,9 @@ const ContactSection = () => {
 
               {/* ONLY CHANGE ADDED: SMS Consent (matches same font/color/alignment) */}
               <p className="text-xs text-center text-muted-foreground/80 mt-2">
-                <strong>SMS Consent:</strong> By submitting your phone number through our contact or
-                service intake forms, you consent to receive service-related text messages from
-                Suncoast Tech Support. Message frequency varies. Message and data rates may apply.
+                <strong>SMS Opt-In Consent:</strong> By submitting your phone number through our contact or
+                service intake forms, you are opting in to receive service-related text messages from
+                Suncoast Tech Support including appointment confirmations and service updates.  . Message frequency varies. Message and data rates may apply.
                 Reply <strong>STOP</strong> to opt out.
               </p>
             </div>
