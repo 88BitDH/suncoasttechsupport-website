@@ -116,6 +116,14 @@ const ContactSection = () => {
               <p className="text-xs text-center text-muted-foreground/80 mt-2 border-t border-border pt-3">
                 Scope and pricing are confirmed during the free call. Please do not send passwords.
               </p>
+
+              {/* ONLY CHANGE ADDED: SMS Consent (matches same font/color/alignment) */}
+              <p className="text-xs text-center text-muted-foreground/80 mt-2">
+                <strong>SMS Consent:</strong> By submitting your phone number through our contact or
+                service intake forms, you consent to receive service-related text messages from
+                Suncoast Tech Support. Message frequency varies. Message and data rates may apply.
+                Reply <strong>STOP</strong> to opt out.
+              </p>
             </div>
           </div>
         </div>
