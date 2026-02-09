@@ -81,11 +81,11 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+17274964668"
+              href="tel:+1(727) 647-9000"
               className="hidden lg:flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">7274964668</span>
+              <span className="font-medium">(727) 647-9000</span>
             </a>
 
             {/* FIX: Calendly booking link (was #contact) */}
