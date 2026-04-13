@@ -1104,14 +1104,13 @@
         });
 
         if (resp.ok) {
-          if (success) success.style.display = "inline-flex";
           if (typeof gtag === "function") {
             gtag('event', 'conversion', {
               'send_to': 'AW-17992501324'
             });
           }
           form.reset();
-          if (window.location.hash !== "#contact") window.location.hash = "contact";
+          window.location.href = "https://www.suncoasttechsupport.net/thanks.html";
         } else {
           if (errorBox) errorBox.style.display = "inline-flex";
           form.dataset.fallback = "1";
