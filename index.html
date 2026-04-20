@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SunCoast Tech Support | In-Home Computer Help in Clearwater, FL</title>
-  <meta name="description" content="Friendly, patient in-home computer help for seniors and home users in Clearwater, Dunedin, Largo, Palm Harbor, Safety Harbor, and Belleair. Call, text, or request a visit online." />
+  <meta name="description" content="Frustrated with your computer? SunCoast Tech Support provides in-home computer help for seniors and home users in Clearwater and nearby Pinellas areas." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
@@ -13,1125 +13,1015 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17992501324');
+
+    /*
+      FUTURE TRACKING PLACEHOLDERS
+      ----------------------------
+      Replace these placeholder labels later when you create additional Google Ads conversions
+      or GA4 events. The site will still load fine without changing them now.
+
+      Example:
+      var CALL_CONVERSION_LABEL = 'AW-17992501324/XXXXXXXXXXXX';
+      var FORM_CONVERSION_LABEL = 'AW-17992501324/YYYYYYYYYYYY';
+    */
+    var CALL_CONVERSION_LABEL = 'AW-17992501324/CALL_PLACEHOLDER';
+    var FORM_CONVERSION_LABEL = 'AW-17992501324/FORM_PLACEHOLDER';
+
+    function trackCallClick(source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': 'call_' + source,
+        'value': 1
+      });
+
+      // Future Google Ads call conversion placeholder:
+      // gtag('event', 'conversion', { 'send_to': CALL_CONVERSION_LABEL });
+
+      // Future GA4 / Meta / CRM hook placeholder:
+      // window.dataLayer.push({ event: 'call_click', source: source });
+    }
+
+    function trackSecondaryContact(type, source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': type + '_' + source,
+        'value': 1
+      });
+
+      // Future tracking placeholder:
+      // window.dataLayer.push({ event: type + '_click', source: source });
+    }
+
+    function trackFormStart() {
+      gtag('event', 'form_start', {
+        'event_category': 'lead_form',
+        'event_label': 'b2c_request_visit'
+      });
+    }
   </script>
 
   <style>
-    :root{
-      --bg:#f6fbff;
-      --text:#0b1324;
-      --muted:#30415f;
-      --muted2:#5a6d8b;
-      --ocean:#1570c9;
-      --sky:#6fd3ff;
-      --sun:#ffcc33;
-      --green:#00d18f;
-      --orange:#ef7f1a;
-      --white:#ffffff;
-      --border:rgba(10,19,36,.12);
-      --radius:22px;
-      --max:1120px;
-      --font:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      --shadow:0 18px 55px rgba(10,19,36,.10);
-      --shadow2:0 10px 28px rgba(10,19,36,.08);
+    :root {
+      --bg: #f5f9fc;
+      --surface: #ffffff;
+      --text: #163047;
+      --muted: #476173;
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --accent: #eaf4ff;
+      --border: #d7e5f2;
+      --success: #0f7b4d;
+      --warning-bg: #fff7e6;
+      --warning-border: #f0d5a5;
+      --warning-text: #784b00;
+      --shadow: 0 10px 25px rgba(22, 48, 71, 0.08);
+      --radius: 16px;
+      --max: 1120px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:var(--font);
-      font-size:18px;
-      line-height:1.65;
-      color:var(--text);
-      background:
-        radial-gradient(900px 520px at 15% 8%, rgba(255,204,51,.24), transparent 60%),
-        radial-gradient(780px 480px at 85% 12%, rgba(0,184,255,.16), transparent 62%),
-        linear-gradient(180deg, #ffffff, var(--bg));
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
-    .section{padding:40px 0}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow2);
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    h1,h2,h3{margin:0;color:var(--text)}
-    h1{
-      font-size:clamp(36px, 4.3vw, 58px);
-      line-height:1.08;
-      letter-spacing:-.03em;
-    }
-    h2{
-      font-size:clamp(28px, 3vw, 40px);
-      line-height:1.15;
-      letter-spacing:-.02em;
-      margin-bottom:10px;
-    }
-    h3{
-      font-size:24px;
-      line-height:1.2;
-      letter-spacing:-.01em;
-    }
-    .lead{
-      color:var(--muted);
-      font-size:18px;
-      font-weight:700;
-      margin:0 0 18px;
-    }
-    .fine{
-      font-size:14px;
-      color:var(--muted2);
-      font-weight:700;
+    .topbar {
+      background: #0d2235;
+      color: #fff;
+      font-size: 14px;
     }
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(10px);
-      background:rgba(255,255,255,.82);
-      border-bottom:1px solid var(--border);
-      box-shadow:0 8px 22px rgba(10,19,36,.06);
-    }
-    .nav{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:14px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-    .logo-wrap{
-      width:80px;
-      height:80px;
-      border-radius:20px;
-      background:rgba(255,255,255,.95);
-      border:1px solid var(--border);
-      box-shadow:0 10px 24px rgba(10,19,36,.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:6px;
-      flex:0 0 auto;
-    }
-    .logo-img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-    }
-    .brand-title{
-      font-size:22px;
-      font-weight:950;
-      line-height:1.1;
-    }
-    .brand-sub{
-      margin-top:3px;
-      color:var(--muted2);
-      font-size:14px;
-      font-weight:800;
+    .topbar .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      text-align: center;
+      flex-wrap: wrap;
     }
 
-    .tagline-badges,.trust-bar,.callouts{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid #9adfbe;
-      background:#dff5e7;
-      color:#0b1324;
-      font-weight:900;
-      font-size:14px;
+    .topbar a {
+      color: #fff;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:15px 18px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      font-size:17px;
-      font-weight:950;
-      white-space:nowrap;
-      transition:transform .08s ease, box-shadow .15s ease, background .15s ease;
-      cursor:pointer;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{
-      background:var(--sky);
-      color:#000;
-      border-color:#2bb7f5;
-      box-shadow:0 12px 34px rgba(15,184,255,.12);
-    }
-    .btn.call{
-      background:var(--sky);
-      color:#000;
-      border-color:#2bb7f5;
-    }
-    .btn.secondary{
-      background:rgba(255,255,255,.92);
-      color:var(--text);
-      border-color:var(--border);
-    }
-    .btn.text{
-      background:#fff4e7;
-      color:var(--text);
-      border-color:#ffc88d;
-    }
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
+    header {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f9fc 100%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
     }
 
-    .hero{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:20px;
-      align-items:stretch;
-      padding-top:32px;
-      padding-bottom:10px;
-    }
-    .hero-copy,.hero-side{padding:24px}
-    .hero-copy{
-      background:linear-gradient(145deg, rgba(255,255,255,.95), rgba(255,255,255,.86));
-      border:1px solid var(--border);
-      border-radius:28px;
-      box-shadow:var(--shadow);
-    }
-    .hero-copy .sub{
-      color:var(--muted);
-      font-size:20px;
-      font-weight:700;
-      margin:14px 0 0;
-    }
-    .urgency{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(0,209,143,.55);
-      background:rgba(0,209,143,.10);
-      color:var(--text);
-      font-size:14px;
-      font-weight:950;
-      margin-top:16px;
-    }
-    .pulse{
-      width:10px;height:10px;border-radius:999px;background:var(--green);
-      box-shadow:0 0 0 0 rgba(0,209,143,.55);
-      animation:pulse 1.5s infinite;
-      flex:0 0 auto;
-    }
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,209,143,.55)}
-      70%{box-shadow:0 0 0 10px rgba(0,209,143,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,209,143,0)}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
     }
 
-    .hero-side{
-      background:linear-gradient(180deg, #f4fbff, #ffffff);
-      border:1px solid var(--border);
-      border-radius:28px;
-      box-shadow:var(--shadow2);
-    }
-    .hero-photo{
-      border-radius:22px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#fff;
-      min-height:280px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .hero-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      aspect-ratio:16 / 12;
-    }
-    .hero-side .fine{margin-top:12px}
-
-    .service-area{
-      margin-top:16px;
-      font-weight:800;
-      color:var(--muted);
-    }
-    .trust-line{
-      margin-top:12px;
-      font-weight:800;
-      color:var(--ocean);
-    }
-    .urgency-line{
-      margin-top:8px;
-      font-weight:800;
-      color:var(--ocean);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
     }
 
-    .bio-grid{
-      display:grid;
-      grid-template-columns:320px 1fr;
-      gap:24px;
-      align-items:center;
-      padding:26px;
-    }
-    .bio-photo{
-      border-radius:22px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background:#fff;
-      min-height:280px;
-    }
-    .bio-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      aspect-ratio:4 / 5;
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
     }
 
-    .why-grid,.services-grid,.pricing-grid,.reviews-grid,.contactGrid,.faqGrid{
-      display:grid;
-      gap:16px;
-    }
-    .why-grid{
-      grid-template-columns:repeat(2, minmax(0,1fr));
-    }
-    .mini-card{
-      padding:18px;
-      border-radius:18px;
-      border:1px solid var(--border);
-      background:#fff;
-      box-shadow:0 8px 22px rgba(10,19,36,.05);
-      font-weight:800;
-      color:var(--text);
-    }
-    .emphasis{
-      padding:26px;
-      background:linear-gradient(135deg, rgba(21,112,201,.08), rgba(111,211,255,.16));
+    .brand-text h1 {
+      font-size: 20px;
+      margin: 0 0 2px;
     }
 
-    .services-grid{
-      grid-template-columns:repeat(3, minmax(0,1fr));
-    }
-    .service-card{
-      padding:22px;
-    }
-    .service-icon{
-      width:52px;
-      height:52px;
-      border-radius:16px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:28px;
-      background:#eef8ff;
-      border:1px solid var(--border);
-      margin-bottom:14px;
-    }
-    .service-card p{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-weight:700;
+    .brand-text p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .pricing-grid{
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      align-items:stretch;
-    }
-    .price-card{
-      position:relative;
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      min-height:100%;
-    }
-    .price-card.popular{
-      border:2px solid var(--ocean);
-      box-shadow:0 18px 48px rgba(21,112,201,.14);
-    }
-    .popular-badge{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:8px 12px;
-      border-radius:999px;
-      background:var(--ocean);
-      color:#fff;
-      font-size:13px;
-      font-weight:950;
-      margin-bottom:14px;
-      align-self:flex-start;
-    }
-    .price{
-      font-size:48px;
-      font-weight:950;
-      line-height:1;
-      letter-spacing:-.03em;
-      margin:10px 0 6px;
-    }
-    .price-note{
-      color:var(--muted2);
-      font-size:14px;
-      font-weight:800;
-      margin-bottom:14px;
-    }
-    .price-card ul{
-      margin:14px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      font-weight:700;
-    }
-    .price-card li{margin:8px 0}
-    .price-card .ctaRow{margin-top:auto;padding-top:18px}
-
-    .reviews-wrap{
-      padding:28px;
-    }
-    .reviews-grid{
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      margin-top:18px;
-    }
-    .review-card{
-      padding:24px;
-      border-radius:24px;
-      background:#fff;
-      border:1px solid rgba(10,19,36,.10);
-      box-shadow:0 10px 28px rgba(10,19,36,.06);
-    }
-    .stars{
-      color:var(--orange);
-      font-size:28px;
-      letter-spacing:2px;
-      margin-bottom:12px;
-    }
-    .review-card blockquote{
-      margin:0 0 18px;
-      font-style:italic;
-      color:#1f3558;
-      font-size:22px;
-      line-height:1.55;
-    }
-    .review-name{
-      font-size:18px;
-      font-weight:900;
-      margin:0;
-    }
-    .review-location{
-      font-size:15px;
-      color:var(--muted2);
-      margin:3px 0 0;
-      font-weight:800;
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .family-card{
-      padding:28px;
-      text-align:center;
+    .btn,
+    button,
+    input {
+      font-family: inherit;
     }
 
-    .faqGrid{
-      grid-template-columns:repeat(2, minmax(0,1fr));
-    }
-    details{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.92);
-      border-radius:18px;
-      padding:14px 16px;
-    }
-    summary{
-      cursor:pointer;
-      font-size:18px;
-      font-weight:950;
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p, details li{
-      color:var(--muted);
-      font-weight:700;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: .2s ease;
+      min-height: 52px;
+      cursor: pointer;
     }
 
-    .contactGrid{
-      grid-template-columns:1.15fr .85fr;
-      align-items:start;
-    }
-    form{display:grid;gap:12px}
-    label{
-      font-size:14px;
-      color:var(--muted2);
-      font-weight:950;
-      margin-bottom:6px;
-      display:block;
-    }
-    input, textarea, select{
-      width:100%;
-      padding:14px 13px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.95);
-      color:var(--text);
-      font-family:var(--font);
-      font-size:16px;
-      outline:none;
-    }
-    textarea{min-height:130px;resize:vertical}
-    .row2{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:12px;
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
     }
 
-    .contact-card{
-      padding:22px;
-    }
-    .contact-item{
-      padding:16px 0;
-      border-top:1px solid rgba(10,19,36,.08);
-    }
-    .contact-item:first-child{border-top:0;padding-top:0}
-    .contact-label{
-      font-size:13px;
-      color:var(--muted2);
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-weight:950;
-      margin-bottom:6px;
-    }
-    .contact-value{
-      font-size:20px;
-      font-weight:900;
-    }
-    .contact-sub{
-      color:var(--muted);
-      font-weight:700;
-      margin-top:6px;
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-subtle {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
     }
 
-    footer{
-      border-top:1px solid var(--border);
-      padding:28px 0 40px;
-      color:var(--muted2);
-      font-size:14px;
-    }
-    .footRow{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+    .btn-subtle:hover { background: #f8fbff; }
+
+    .hero {
+      padding: 34px 0 28px;
     }
 
-    .mobileBar{
-      position:fixed;
-      left:12px;
-      right:12px;
-      bottom:12px;
-      display:none;
-      gap:10px;
-      padding:10px;
-      border-radius:18px;
-      border:1px solid var(--border);
-      background:rgba(5,8,20,.88);
-      backdrop-filter:blur(10px);
-      box-shadow:0 18px 55px rgba(0,0,0,.45);
-      z-index:999;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: center;
     }
-    .mobileBar a{flex:1}
 
-    @media (max-width: 1020px){
-      .hero,
-      .bio-grid,
-      .contactGrid{
-        grid-template-columns:1fr;
-      }
+    .trust-line {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 16px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-lead {
+      font-size: 21px;
+      color: var(--text);
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 660px;
+    }
+
+    .urgency-box {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 12px 15px;
+      border-radius: 14px;
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      border: 1px solid var(--warning-border);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .btn-call-dominant {
+      font-size: 20px;
+      min-height: 60px;
+      padding: 18px 22px;
+      min-width: 320px;
+    }
+
+    .secondary-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .secondary-links a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 34px 0;
+    }
+
+    .section h3 {
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.15;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-photo {
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-panel {
+      padding: 24px;
+    }
+
+    .quote-strip {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+
+    .quote-strip ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .quote-strip li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .review-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      padding: 20px;
+    }
+
+    .service-card h4 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .see-more {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .see-more summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 18px 20px;
+      font-weight: 700;
+      background: #fff;
+    }
+
+    .see-more summary::-webkit-details-marker { display: none; }
+
+    .see-more-content {
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+
+    .see-more-content ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .pricing-guide {
+      background: #eef8f1;
+      color: var(--success);
+      border: 1px solid #cde8d5;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .pricing-card {
+      padding: 24px;
+      position: relative;
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--primary);
+    }
+
+    .tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .pricing-card h4 {
+      font-size: 24px;
+      margin: 0 0 6px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+
+    .pricing-sub {
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-weight: 700;
+    }
+
+    .pricing-card ul {
+      margin: 0 0 18px 20px;
+      padding: 0;
+      color: var(--text);
+    }
+
+    .pricing-card li { margin-bottom: 8px; }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .testimonial {
+      padding: 22px;
+    }
+
+    .stars {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #f2a400;
+    }
+
+    .testimonial blockquote {
+      margin: 0 0 14px;
+      font-size: 17px;
+      color: var(--text);
+    }
+
+    .testimonial cite {
+      color: var(--muted);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .faq-item {
+      padding: 18px 20px;
+    }
+
+    .faq-item h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .form-card,
+    .contact-card {
+      padding: 24px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 15px;
+      font-size: 16px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    input:focus {
+      outline: 2px solid rgba(13, 110, 253, 0.18);
+      border-color: var(--primary);
+    }
+
+    .form-note,
+    .mini {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .contact-card h4 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .contact-stack {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-chip {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--accent);
+      border: 1px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    footer {
+      padding: 34px 0 96px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-card {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .sticky-call {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
       .pricing-grid,
-      .services-grid,
-      .reviews-grid,
-      .why-grid,
-      .faqGrid{
-        grid-template-columns:1fr 1fr;
+      .testimonials,
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
       }
+
+      .contact-grid { grid-template-columns: 1fr; }
+      .pricing-grid,
+      .testimonials,
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-card { order: -1; }
     }
 
-    @media (max-width: 720px){
-      body{font-size:19px}
-      .wrap{padding:18px}
-      .nav{padding:12px 18px}
-      .brand-title{font-size:18px}
-      .tagline-badges{display:none}
-      .hero-copy,.hero-side,.reviews-wrap,.family-card,.contact-card{padding:20px}
-      .ctaRow{flex-direction:column;align-items:stretch}
-      .ctaRow .btn, .ctaRow button.btn{width:100%}
-      .services-grid,
-      .pricing-grid,
-      .reviews-grid,
-      .why-grid,
-      .faqGrid,
-      .row2{
-        grid-template-columns:1fr;
+    @media (max-width: 680px) {
+      .wrap {
+        width: min(var(--max), calc(100% - 20px));
       }
-      .mobileBar{display:flex}
-      main.wrap{padding-bottom:95px}
-      input, textarea, select{font-size:18px}
-      .review-card blockquote{font-size:20px}
-      .btn{font-size:20px;padding:18px}
-      .mobile-hide{display:none !important}
-      .mobileBar .btn{font-size:18px;padding:16px}
+
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .header-actions .btn {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 22px;
+      }
+
+      .trust-line {
+        display: block;
+        border-radius: 16px;
+        line-height: 1.45;
+        padding: 12px 14px;
+      }
+
+      .hero h2 { font-size: 35px; }
+      .hero-lead { font-size: 19px; }
+      .hero-copy { font-size: 17px; }
+
+      .hero-actions,
+      .secondary-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-call-dominant {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .pricing-grid,
+      .testimonials,
+      .service-grid,
+      .contact-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-call {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(245, 249, 252, 0.96);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid var(--border);
+      }
+
+      .sticky-call a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: var(--primary);
+        color: #fff;
+        border-radius: 14px;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 16px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .hide-mobile {
+        display: none !important;
+      }
     }
   </style>
 </head>
-
 <body>
-<header id="siteHeader">
-  <div class="nav">
-    <div class="brand">
-      <div class="logo-wrap">
-        <img src="src/assets/apple-touch-icon.png" class="logo-img" alt="SunCoast Tech Support logo" />
-      </div>
-      <div>
-        <div class="brand-title">SunCoast Tech Support</div>
-        <div class="brand-sub">Friendly in-home computer help for Clearwater area homes</div>
-        <div class="tagline-badges">
-          <span class="pill">⭐ 5-Star Google Reviews</span>
-          <span class="pill">🇺🇸 Veteran-Owned</span>
-          <span class="pill">✔ Licensed &amp; Insured</span>
-          <span class="pill">🛠 20+ Years of IT Experience</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="ctaRow" style="margin:0;">
-      <a href="#contact" class="btn primary" aria-label="Schedule a visit">Schedule a Visit</a>
-      <a class="btn call" href="tel:+17276479000" aria-label="Call SunCoast Tech Support">Call Now</a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Same-Day Appointments Available • Limited Spots This Week</span>
+      <a href="tel:17276479000" onclick="trackCallClick('topbar');">Call (727) 647-9000</a>
     </div>
   </div>
-</header>
 
-<main class="wrap">
-
-  <section class="hero" id="top">
-    <div class="hero-copy">
-      <h1>Friendly, In-Home Computer Help — We Come to You</h1>
-      <p class="sub">
-        Patient, reliable tech support for seniors and home users. No need to unplug or move your computer—we handle everything at your home.
-      </p>
-
-      <div class="trust-bar" style="margin-top:16px;">
-        <span class="pill">⭐ 5-Star Google Reviews</span>
-        <span class="pill">🇺🇸 Veteran-Owned</span>
-        <span class="pill">✔ Licensed &amp; Insured</span>
-        <span class="pill">🛠 20+ Years of IT Experience</span>
-      </div>
-
-      <div class="urgency" role="status" aria-live="polite">
-        <span class="pulse" aria-hidden="true"></span>
-        Friendly local help · Same-day appointments when available
-      </div>
-
-      <div class="ctaRow">
-        <a class="btn primary" href="tel:+17276479000">📞 Call Now (Fastest Help)</a>
-        <a class="btn text" href="sms:+17276479000">💬 Or Text Us</a>
-        <a class="btn secondary mobile-hide" href="#pricing">View Pricing</a>
-      </div>
-
-      <p class="trust-line">Trusted by homeowners across Clearwater, Dunedin, and Palm Harbor</p>
-      <p class="urgency-line">Limited same-day appointments available</p>
-
-      <div class="service-area">
-        Serving Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor, Belleair, and nearby Pinellas areas.
-      </div>
-    </div>
-
-    <aside class="hero-side">
-      <div class="hero-photo">
-        <img src="src/assets/hero-photo.jpg" alt="Friendly local technician helping a customer at home" />
-      </div>
-      <div class="fine">
-        Local, friendly service for Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor, and nearby communities.
-      </div>
-    </aside>
-  </section>
-
-  <section class="section" id="bio">
-    <div class="card bio-grid">
-      <div class="bio-photo">
-        <img src="src/assets/owner-photo.png" alt="Owner of SunCoast Tech Support" />
-      </div>
-      <div>
-        <h2>Meet Your Local Tech Support Expert</h2>
-        <p class="lead">Hi, I’m Ishmael "Moe" Muhammad, owner of Suncoast Tech Support.</p>
-        <p class="lead" style="font-size:18px; margin-bottom:10px;">
-          With over 20 years of experience in IT, I started this business to help people who feel frustrated or overwhelmed by technology.
-          I believe tech support should be patient, respectful, and easy to understand—not confusing or intimidating.
-        </p>
-        <p class="lead" style="font-size:18px; margin-bottom:0;">
-          When I come to your home, I take the time to explain what’s going on in plain English and make sure you feel comfortable every step of the way.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="why">
-    <h2>Simple, Stress-Free Tech Help</h2>
-    <p class="lead">Built for seniors, home users, and family members who want a trustworthy local tech person.</p>
-
-    <div class="why-grid">
-      <div class="mini-card">✔ We come to your home — no need to disconnect anything</div>
-      <div class="mini-card">✔ We explain everything in plain English</div>
-      <div class="mini-card">✔ We are patient and never rush you</div>
-      <div class="mini-card">✔ We respect your home and your time</div>
-      <div class="mini-card">✔ Clear pricing before any work begins</div>
-      <div class="mini-card">✔ Friendly local support — not a call center</div>
-    </div>
-  </section>
-
-  <section class="section" id="come-to-you">
-    <div class="card emphasis">
-      <h2>We Come to You</h2>
-      <p class="lead" style="margin-bottom:0;">
-        No carrying towers, unplugging printers, or trying to explain a problem from memory. We work with the setup already in your home and help you where the issue is actually happening.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <h2>Common Ways We Can Help</h2>
-    <p class="lead">If something isn’t working, we’ll figure it out and fix it—without the stress.</p>
-
-    <div class="services-grid">
-      <div class="card service-card">
-        <div class="service-icon">💻</div>
-        <h3>In-Home Computer Help</h3>
-        <p>Troubleshooting, fixes, and general support right at your home.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Computer Running Slow</h3>
-        <p>Speed up your system and get things working smoothly again.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon">🛡️</div>
-        <h3>Virus Removal &amp; Security</h3>
-        <p>Remove threats and help protect your computer going forward.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon">🖨️</div>
-        <h3>Email &amp; Printer Issues</h3>
-        <p>Fix common frustrations quickly and correctly.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon">📦</div>
-        <h3>New Computer Setup</h3>
-        <p>Set everything up, transfer files, and make it easy to use.</p>
-      </div>
-      <div class="card service-card">
-        <div class="service-icon">📶</div>
-        <h3>Wi-Fi &amp; Internet Problems</h3>
-        <p>Get your connection stable and working throughout your home.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="pricing">
-    <h2>Simple, Upfront Pricing</h2>
-    <p class="lead">Clear pricing. No surprises. Choose what works best for you.</p>
-
-    <div class="pricing-grid">
-      <div class="card price-card">
-        <h3>🟢 Starter Visit</h3>
-        <div class="price">$149</div>
-        <div class="price-note">Quick fix visit</div>
-        <p class="lead" style="font-size:17px; margin-bottom:8px;">Perfect for small issues and a single main problem.</p>
-        <ul>
-          <li>In-home visit</li>
-          <li>Full diagnosis</li>
-          <li>Fix one primary issue</li>
-          <li>Basic system check</li>
-        </ul>
-        <div class="ctaRow">
-          <a href="#contact" class="btn primary">Choose Starter</a>
+  <header>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="images/suncoast-logo.png" alt="SunCoast Tech Support logo" />
+        <div class="brand-text">
+          <h1>SunCoast Tech Support</h1>
+          <p>In-home computer help for Clearwater area homes</p>
         </div>
       </div>
 
-      <div class="card price-card popular">
-        <div class="popular-badge">Most Popular</div>
-        <h3>🔵 Home Care Visit</h3>
-        <div class="price">$199</div>
-        <div class="price-note">Best value for most homes</div>
-        <p class="lead" style="font-size:17px; margin-bottom:8px;">Best for multiple problems in one trip.</p>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Fix multiple issues during the visit</li>
-          <li>Computer speed optimization</li>
-          <li>Basic security check</li>
-          <li>Wi-Fi and device troubleshooting</li>
-        </ul>
-        <div class="ctaRow">
-          <a href="#contact" class="btn primary">Choose Home Care</a>
-        </div>
-      </div>
-
-      <div class="card price-card">
-        <h3>🟣 Total Care Visit</h3>
-        <div class="price">$279</div>
-        <div class="price-note">Full support and setup</div>
-        <p class="lead" style="font-size:17px; margin-bottom:8px;">Ideal for bigger issues, setups, or cleanup.</p>
-        <ul>
-          <li>Everything in Home Care</li>
-          <li>Virus removal if needed</li>
-          <li>Full system cleanup and optimization</li>
-          <li>New device setup or data transfer</li>
-          <li>Priority scheduling</li>
-        </ul>
-        <div class="ctaRow">
-          <a href="#contact" class="btn primary">Choose Total Care</a>
-        </div>
+      <div class="header-actions hide-mobile">
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('header');">Call Now – Talk to a Real Person</a>
+        <a class="btn btn-subtle" href="#contact" onclick="trackSecondaryContact('schedule', 'header');">Schedule a Visit</a>
+        <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">Text Us</a>
       </div>
     </div>
+  </header>
 
-    <p class="fine" style="margin-top:14px;">Not sure which option is right? Call, text, or request a visit and we’ll help you choose.</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Licensed &amp; Insured | Veteran-Owned</div>
+          <h2>Frustrated with Your Computer? We Come to You and Fix It Fast.</h2>
+          <p class="hero-lead">In-home help for seniors, retirees, and home users across Clearwater and nearby Pinellas areas.</p>
+          <p class="hero-copy">We explain everything in plain English—no confusing tech talk. No need to unplug your computer or drag it across town. We come to you, find the problem, and help you feel comfortable every step of the way.</p>
 
-  <section class="section" id="reviews">
-    <div class="card reviews-wrap">
-      <h2 style="text-align:center;">What Your Neighbors Are Saying</h2>
-      <p class="lead" style="text-align:center; margin-bottom:8px;">
-        Proudly rated <strong>5 stars on Google</strong>
-      </p>
+          <div class="urgency-box">Same-Day Appointments Available • Limited Spots This Week</div>
 
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>“They saved 30 years of family photos and showed me how to keep them safe.”</blockquote>
-          <p class="review-name">Margaret H.</p>
-          <p class="review-location">Clearwater Beach</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="trackCallClick('hero');">Call Now – Talk to a Real Person</a>
+          </div>
+
+          <div class="secondary-links">
+            <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">Schedule a Visit</a>
+            <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">Text Us</a>
+            <a href="#pricing">Start with $149</a>
+          </div>
         </div>
 
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>“He explained everything in words I could understand and fixed it in one visit.”</blockquote>
-          <p class="review-name">Robert T.</p>
-          <p class="review-location">Palm Harbor</p>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <blockquote>“My Wi-Fi works in every room now, even the lanai. Should have called sooner.”</blockquote>
-          <p class="review-name">Susan M.</p>
-          <p class="review-location">Dunedin</p>
+        <div class="hero-card">
+          <img src="images/hero.jpg" alt="Friendly local technician helping a customer at home" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="family">
-    <div class="card family-card">
-      <h2>Helping Families Stay Connected</h2>
-      <p class="lead" style="max-width:760px; margin:0 auto 18px;">
-        We also work with family members who want to make sure their loved ones have reliable, easy-to-use technology without the frustration.
-      </p>
-      <p class="lead" style="max-width:760px; margin:0 auto;">
-        Whether it’s setting up a new device or fixing ongoing issues, we make the process simple and stress-free for everyone.
-      </p>
-    </div>
-  </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="card about-photo">
+            <img src="images/moe-headshot.jpg" alt="Moe from SunCoast Tech Support" />
+          </div>
 
-  <section class="section" id="faq">
-    <h2>FAQ</h2>
-    <p class="lead">Clear answers before you book.</p>
+          <div class="card about-panel">
+            <h3>Meet Your Local Expert</h3>
+            <p class="section-intro">Hi, I’m Moe, your local tech support expert. I help seniors fix frustrating tech problems—patiently, clearly, and without jargon.</p>
+            <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi-Fi drops out, or family photos need to move safely to a new device. My goal is to make the process simple, respectful, and easy to understand.</p>
 
-    <div class="faqGrid">
-      <details>
-        <summary>❓ What areas do you serve?</summary>
-        <p>Clearwater, Clearwater Beach, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
-      </details>
+            <div class="quote-strip">
+              <strong>What customers are saying</strong>
+              <ul>
+                <li>“Fast, professional, and explained everything clearly.”</li>
+                <li>“Saved my family photos and made the whole process easy.”</li>
+                <li>“Finally fixed my Wi-Fi throughout the house.”</li>
+              </ul>
+              <a class="review-link" href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read Google Reviews</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <details>
-        <summary>❓ Do I need to bring my computer anywhere?</summary>
-        <p>No. We come to your home, work with your existing setup, and explain everything clearly before we wrap up.</p>
-      </details>
+    <section class="section">
+      <div class="wrap">
+        <h3>Common Problems We Fix</h3>
+        <p class="section-intro">Focused on the issues people most often call about after seeing your Google ads.</p>
 
-      <details>
-        <summary>❓ How do I schedule a visit?</summary>
-        <p>Use the form below, call directly, or text from your phone. We’ll confirm the problem, the best pricing tier, and the first available appointment.</p>
-      </details>
+        <div class="service-grid">
+          <div class="card service-card">
+            <h4>Wi-Fi Problems</h4>
+            <p>Weak signal, dropped internet, dead spots, and trouble getting devices connected around the home.</p>
+          </div>
 
-      <details>
-        <summary>❓ What if I’m not sure which pricing option I need?</summary>
-        <p>That is normal. Choose “Not sure — help me choose” on the form and we’ll guide you.</p>
-      </details>
-    </div>
-  </section>
+          <div class="card service-card">
+            <h4>Data Transfer</h4>
+            <p>Move files, family photos, and important documents from an old device to a new one safely.</p>
+          </div>
 
-  <section class="section" id="contact">
-    <h2>Need Help with Your Computer?</h2>
-    <p class="lead">
-      Friendly, reliable service is just a call, text, or message away. We’ll explain everything clearly and take care of the problem.
-    </p>
+          <div class="card service-card">
+            <h4>Virus &amp; Malware Cleanup</h4>
+            <p>Remove threats, stop pop-ups, and help get your computer back to a safer, more stable state.</p>
+          </div>
 
-    <div class="contactGrid">
-      <div class="card contact-card">
-        <form action="https://formspree.io/f/xdaolvby" method="POST" id="leadForm">
-          <input type="hidden" name="_subject" value="New SunCoast Tech Support Lead" />
-          <input type="hidden" name="_next" value="https://www.suncoasttechsupport.net/thank-you.html" />
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <input type="hidden" id="packageHidden" name="selected_package" value="" />
+          <div class="card service-card">
+            <h4>Slow Computers &amp; Errors</h4>
+            <p>Fix sluggish performance, startup issues, strange error messages, and general computer frustration.</p>
+          </div>
+        </div>
 
-          <div class="row2">
+        <details class="see-more">
+          <summary>See More</summary>
+          <div class="see-more-content">
+            <ul>
+              <li>Printer setup and troubleshooting</li>
+              <li>Email and password issues</li>
+              <li>New computer setup</li>
+              <li>Basic security checks</li>
+              <li>General in-home tech support</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <h3>Simple, Upfront Pricing</h3>
+        <p class="pricing-guide">Not sure what you need? Start with the $149 visit—most issues are solved there.</p>
+        <p class="section-intro">Choose the option that best fits the problem, or call and we’ll help you decide.</p>
+
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <h4>Starter Visit</h4>
+            <p class="price">$149</p>
+            <p class="pricing-sub">Best for one main issue</p>
+            <ul>
+              <li>In-home visit</li>
+              <li>Full diagnosis</li>
+              <li>Fix one primary issue</li>
+              <li>Basic system check</li>
+            </ul>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">Call to Book Starter</a>
+          </div>
+
+          <div class="card pricing-card popular">
+            <span class="tag">Most Popular</span>
+            <h4>Home Care Visit</h4>
+            <p class="price">$199</p>
+            <p class="pricing-sub">Best for most homes</p>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Multiple issues during one visit</li>
+              <li>Speed optimization</li>
+              <li>Basic security check</li>
+              <li>Wi-Fi and device troubleshooting</li>
+            </ul>
+            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_homecare');">Call to Book Home Care</a>
+          </div>
+
+          <div class="card pricing-card">
+            <h4>Total Care Visit</h4>
+            <p class="price">$279</p>
+            <p class="pricing-sub">Best for bigger cleanup or setup</p>
+            <ul>
+              <li>Everything in Home Care</li>
+              <li>Virus cleanup if needed</li>
+              <li>Full system cleanup</li>
+              <li>New device setup or data transfer</li>
+              <li>Priority scheduling</li>
+            </ul>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">Call to Book Total Care</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h3>What Your Neighbors Are Saying</h3>
+        <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
+
+        <div class="testimonials">
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“They saved 30 years of family photos and showed me how to keep them safe.”</blockquote>
+            <cite>Margaret H. • Clearwater Beach</cite>
+          </div>
+
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“He explained everything in words I could understand and fixed it in one visit.”</blockquote>
+            <cite>Robert T. • Palm Harbor</cite>
+          </div>
+
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“My Wi-Fi works in every room now, even the lanai. Should have called sooner.”</blockquote>
+            <cite>Susan M. • Dunedin</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h3>Frequently Asked Questions</h3>
+        <p class="section-intro">Clear answers before you call or book.</p>
+
+        <div class="faq-list">
+          <div class="card faq-item">
+            <h4>Do I need to bring my computer anywhere?</h4>
+            <p>No. We come to your home and work with the setup you already have there.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>What areas do you serve?</h4>
+            <p>Clearwater, Clearwater Beach, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>Do you work with seniors?</h4>
+            <p>Yes. The service is designed to be patient, clear, respectful, and easy to understand.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>What if I am not sure which pricing option I need?</h4>
+            <p>Start with the $149 visit or call first. We’ll help you choose the best fit for the problem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="card form-card">
+          <h3>Need Help with Your Computer?</h3>
+          <p class="section-intro">Call now for the fastest response, or request a visit below. Same-day appointments may be available.</p>
+          <div class="urgency-box">Limited Spots This Week • Fast Response During Business Hours</div>
+
+          <form action="https://formsubmit.co/suncoasttechsupport.net@gmail.com" method="POST" onfocusin="trackFormStart();">
             <div>
               <label for="name">Name</label>
-              <input id="name" name="name" autocomplete="name" required />
+              <input id="name" name="name" type="text" placeholder="Full Name" required />
             </div>
+
             <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" autocomplete="tel" required />
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" placeholder="Service Address" required />
             </div>
-          </div>
 
-          <div class="row2">
             <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Best Number to Reach You" required />
             </div>
-            <div>
-              <label for="city">City / ZIP</label>
-              <input id="city" name="city" placeholder="e.g., Clearwater 33755" />
-            </div>
-          </div>
 
-          <div class="row2">
-            <div>
-              <label for="package">Which visit?</label>
-              <select id="package" name="package" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Starter Visit — $149</option>
-                <option>Home Care Visit — $199</option>
-                <option>Total Care Visit — $279</option>
-                <option>Not sure — help me choose</option>
-              </select>
-            </div>
-            <div>
-              <label for="urgency">How soon?</label>
-              <select id="urgency" name="urgency" required>
-                <option value="" selected disabled>Select one</option>
-                <option>First available</option>
-                <option>Within 48 hours</option>
-                <option>This week</option>
-                <option>Flexible</option>
-              </select>
-            </div>
-          </div>
+            <input type="hidden" name="_subject" value="New SunCoast Tech Support Lead" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://suncoasttechsupport.net/thank-you.html" />
 
-          <div>
-            <label for="details">What do you need help with?</label>
-            <textarea id="details" name="details" placeholder="Example: 'My laptop is very slow and my printer stopped working' or 'Need help setting up a new computer for my mom.'" required></textarea>
-          </div>
+            <button class="btn btn-primary" type="submit">Schedule a Visit</button>
+          </form>
 
-          <div id="formSuccess" class="pill" style="display:none;" role="status" aria-live="polite">
-            Thanks — we received your request. We’ll reach out shortly.
-          </div>
-          <div id="formError" class="pill" style="display:none; border-color: rgba(255,100,120,.70); background: #ffe9ee;" role="alert" aria-live="assertive">
-            Something went wrong sending your request. Please call instead.
-          </div>
-
-          <div class="ctaRow" style="justify-content:space-between; align-items:center;">
-            <button class="btn primary" type="submit">Schedule a Visit</button>
-            <span class="pill">Response typically within 1 business day</span>
-          </div>
-
-          <div class="fine">Privacy note: Do not send passwords through this form.</div>
-        </form>
-      </div>
-
-      <div class="card contact-card">
-        <div class="contact-item">
-          <div class="contact-label">Phone</div>
-          <div class="contact-value"><a href="tel:+17276479000">(727) 647-9000</a></div>
-          <div class="contact-sub">Fastest option for same-day or urgent help.</div>
+          <p class="form-note">Form kept intentionally simple for mobile users. Do not send passwords through this form.</p>
         </div>
 
-        <div class="contact-item">
-          <div class="contact-label">Text / Scheduling</div>
-          <div class="contact-value"><a href="sms:+17276479000">Text (727) 647-9000</a></div>
-          <div class="contact-sub">Text us to schedule a visit or ask a quick question.</div>
-        </div>
+        <div class="card contact-card">
+          <h4>Call Now for Fastest Help</h4>
+          <p class="mini">The primary action on this page is to call. That gives home users the fastest path to relief and lets you close warm leads quickly.</p>
 
-        <div class="contact-item">
-          <div class="contact-label">Email</div>
-          <div class="contact-value"><a href="mailto:Support@SuncoastTechSupport.net">Support@SuncoastTechSupport.net</a></div>
-          <div class="contact-sub">Email us anytime and we’ll get back to you as soon as possible.</div>
-        </div>
-
-        <div class="ctaRow">
-          <a class="btn call" href="tel:+17276479000">📞 Call Now</a>
-          <a class="btn text" href="sms:+17276479000">💬 Text Now</a>
-          <a class="btn secondary" href="mailto:Support@SuncoastTechSupport.net">✉️ Email</a>
-        </div>
-
-        <div class="fine" style="margin-top:10px;">
-          Payment accepted: <strong>credit card</strong>. Scheduling is already integrated through your Formspree form.
+          <div class="contact-stack">
+            <a class="contact-chip" href="tel:17276479000" onclick="trackCallClick('contact_card');">📞 Call (727) 647-9000</a>
+            <a class="contact-chip" href="sms:17276479000" onclick="trackSecondaryContact('text', 'contact_card');">💬 Text (727) 647-9000</a>
+            <a class="contact-chip" href="mailto:help@suncoasttechsupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email help@suncoasttechsupport.net</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap">
-    <div class="footRow">
-      <div>© <span id="year"></span> SunCoast Tech Support · Licensed · Insured · Veteran-Owned</div>
-      <div class="pill">Serving Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor &amp; Belleair</div>
+  <footer>
+    <div class="wrap">
+      <div class="card footer-card">
+        <p><strong>SunCoast Tech Support</strong> • Licensed • Insured • Veteran-Owned</p>
+        <p>Serving Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor &amp; Belleair</p>
+        <p>© SunCoast Tech Support</p>
+      </div>
     </div>
+  </footer>
 
-    <div class="fine" style="margin-top:10px;">
-      Disclaimer: Services are provided on a best-effort basis. Scope is confirmed before proceeding.
-    </div>
-    <div class="fine" style="margin-top:10px;">
-      <a href="#top" class="pill">Back to top</a>
-    </div>
+  <div class="sticky-call">
+    <a href="tel:17276479000" onclick="trackCallClick('sticky_mobile');">Call Now – Talk to a Real Person</a>
   </div>
-</footer>
-
-<div class="mobileBar">
-  <a class="btn primary" href="tel:+17276479000">📞 Call Now</a>
-  <a class="btn text" href="sms:+17276479000">💬 Text Now</a>
-</div>
-
-<script>
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  (function(){
-    var buttons = document.querySelectorAll('[href="#contact"]');
-    var packageSelect = document.getElementById('package');
-    var packageHidden = document.getElementById('packageHidden');
-
-    document.querySelectorAll('.price-card .btn.primary').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var card = btn.closest('.price-card');
-        if(!card || !packageSelect) return;
-        var title = card.querySelector('h3');
-        if(!title) return;
-        var label = title.textContent.replace(/[🟢🔵🟣]\s*/g, '').trim();
-        var match = Array.from(packageSelect.options).find(function(opt){
-          return opt.textContent.indexOf(label) !== -1;
-        });
-        if(match){
-          packageSelect.value = match.value;
-          if(packageHidden) packageHidden.value = match.value;
-        }
-      });
-    });
-
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        if(packageSelect && packageSelect.value){
-          if(packageHidden) packageHidden.value = packageSelect.value;
-        }
-      });
-    });
-  })();
-
-  (function() {
-    var form = document.getElementById("leadForm");
-    if (!form) return;
-
-    var success = document.getElementById("formSuccess");
-    var errorBox = document.getElementById("formError");
-    var submitBtn = form.querySelector('button[type="submit"]');
-    var originalBtnText = submitBtn ? submitBtn.textContent : "Schedule a Visit";
-
-    function formToJSON(formEl) {
-      var data = {};
-      var fd = new FormData(formEl);
-      fd.forEach(function(value, key) {
-        if (key === "_gotcha") return;
-        if (data[key] !== undefined) {
-          if (!Array.isArray(data[key])) data[key] = [data[key]];
-          data[key].push(value);
-        } else {
-          data[key] = value;
-        }
-      });
-      return data;
-    }
-
-    async function handleSubmit(e) {
-      if (form.dataset.fallback === "1") return;
-      e.preventDefault();
-
-      if (success) success.style.display = "none";
-      if (errorBox) errorBox.style.display = "none";
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
-      }
-
-      try {
-        var hp = form.querySelector('input[name="_gotcha"]');
-        if (hp && hp.value) return;
-
-        var payload = formToJSON(form);
-
-        var resp = await fetch(form.action, {
-          method: "POST",
-          headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(payload)
-        });
-
-        if (resp.ok) {
-          if (typeof gtag === "function") {
-            gtag('event', 'conversion', {
-              'send_to': 'AW-17992501324'
-            });
-          }
-          form.reset();
-          window.location.href = "https://www.suncoasttechsupport.net/thank-you.html";
-        } else {
-          if (errorBox) errorBox.style.display = "inline-flex";
-          form.dataset.fallback = "1";
-          form.removeEventListener("submit", handleSubmit);
-          form.submit();
-        }
-      } catch (err) {
-        if (errorBox) errorBox.style.display = "inline-flex";
-        form.dataset.fallback = "1";
-        form.removeEventListener("submit", handleSubmit);
-        form.submit();
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalBtnText;
-        }
-      }
-    }
-
-    form.addEventListener("submit", handleSubmit);
-  })();
-</script>
 </body>
 </html>
