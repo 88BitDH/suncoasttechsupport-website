@@ -570,7 +570,8 @@
       margin-bottom: 6px;
     }
 
-    input {
+    input,
+    textarea {
       width: 100%;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -580,7 +581,13 @@
       color: var(--text);
     }
 
-    input:focus {
+    textarea {
+      min-height: 88px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
       outline: 2px solid rgba(13, 110, 253, 0.18);
       border-color: var(--primary);
     }
@@ -970,15 +977,15 @@
           <p class="section-intro">Call now for the fastest response, or request a visit below. Same-day appointments may be available.</p>
           <div class="urgency-box">Limited Spots This Week • Fast Response During Business Hours</div>
 
-          <form action="https://formsubmit.co/suncoasttechsupport.net@gmail.com" method="POST" onfocusin="trackFormStart();">
+          <form action="https://suncoast-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
             <div>
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Full Name" required />
             </div>
 
             <div>
-              <label for="address">Address</label>
-              <input id="address" name="address" type="text" placeholder="Service Address" required />
+              <label for="message">What do you need help with?</label>
+              <textarea id="message" name="message" placeholder="Briefly describe the problem" required></textarea>
             </div>
 
             <div>
