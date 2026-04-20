@@ -174,8 +174,7 @@
 
     .btn,
     button,
-    input,
-    textarea {
+    input {
       font-family: inherit;
     }
 
@@ -571,8 +570,7 @@
       margin-bottom: 6px;
     }
 
-    input,
-    textarea {
+    input {
       width: 100%;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -582,13 +580,7 @@
       color: var(--text);
     }
 
-    textarea {
-      min-height: 88px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
+    input:focus {
       outline: 2px solid rgba(13, 110, 253, 0.18);
       border-color: var(--primary);
     }
@@ -739,8 +731,9 @@
       }
     }
   </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<body id="top">
+<body>
   <div class="topbar">
     <div class="wrap">
       <span>Same-Day Appointments Available • Limited Spots This Week</span>
@@ -977,15 +970,15 @@
           <p class="section-intro">Call now for the fastest response, or request a visit below. Same-day appointments may be available.</p>
           <div class="urgency-box">Limited Spots This Week • Fast Response During Business Hours</div>
 
-          <form action="https://suncoast-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
+          <form action="https://formsubmit.co/suncoasttechsupport.net@gmail.com" method="POST" onfocusin="trackFormStart();">
             <div>
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Full Name" required />
             </div>
 
             <div>
-              <label for="address">Full Address</label>
-              <textarea id="address" name="address" placeholder="Street Address, City, ZIP" autocomplete="street-address" required></textarea>
+              <label for="address">Address</label>
+              <input id="address" name="address" type="text" placeholder="Service Address" required />
             </div>
 
             <div>
@@ -997,6 +990,8 @@
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://suncoasttechsupport.net/thank-you.html" />
+
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
 
             <button class="btn btn-primary" type="submit">Schedule a Visit</button>
           </form>
@@ -1011,16 +1006,12 @@
           <div class="contact-stack">
             <a class="contact-chip" href="tel:17276479000" onclick="trackCallClick('contact_card');">📞 Call (727) 647-9000</a>
             <a class="contact-chip" href="sms:17276479000" onclick="trackSecondaryContact('text', 'contact_card');">💬 Text (727) 647-9000</a>
-            <a class="contact-chip" href="mailto:Support@SuncoastTechSupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email Support@SuncoastTechSupport.net</a>
+            <a class="contact-chip" href="mailto:help@suncoasttechsupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email help@suncoasttechsupport.net</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-  <div class="wrap" style="padding-bottom: 16px; text-align: center;">
-    <a class="btn btn-subtle" href="#top">Back to Top</a>
-  </div>
 
   <footer>
     <div class="wrap">
