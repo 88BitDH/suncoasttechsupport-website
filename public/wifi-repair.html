@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Internet & WiFi Fix Near You | Clearwater & Pinellas County</title>
-  <meta name="description" content="Internet not working? WiFi issues at home? Same-day service in Clearwater and Pinellas County. Call now to speak directly with a local technician." />
-  <meta name="theme-color" content="#0d6efd" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <title>Internet Repair Near Me | WiFi Repair Clearwater & Pinellas County</title>
+  <meta name="description" content="Internet not working? WiFi repair near you in Clearwater and Pinellas County. Same-day home network repair service available. Call SunCoast Tech Support today." />
 
-  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,222 +16,192 @@
 
     function trackCallClick(source) {
       gtag('event', 'click', {
-        'event_category': 'contact',
-        'event_label': 'call_' + source,
-        'value': 1
+        event_category: 'contact',
+        event_label: 'wifi_call_' + source,
+        value: 1
       });
     }
   </script>
 
   <style>
     :root {
-      --brand: #0d6efd;
-      --brand-dark: #0a58ca;
       --bg: #f5f9fc;
       --surface: #ffffff;
-      --bg-soft: #eaf4ff;
       --text: #163047;
       --muted: #476173;
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --accent: #eaf4ff;
       --border: #d7e5f2;
+      --warning-bg: #fff7e6;
+      --warning-border: #f0d5a5;
+      --warning-text: #784b00;
       --shadow: 0 10px 25px rgba(22, 48, 71, 0.08);
       --radius: 16px;
+      --max: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding-bottom: 5rem;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.55;
+      padding-bottom: 82px;
     }
 
-    a {
-      color: var(--brand);
-      text-decoration: none;
+    a { color: var(--primary); text-decoration: none; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .top-call-strip {
+    .topbar {
       background: #0d2235;
       color: #fff;
       text-align: center;
-      padding: 0.65rem 0.85rem;
-      font-size: 0.98rem;
+      padding: 10px 12px;
+      font-weight: 700;
     }
 
-    .top-call-strip a {
+    .topbar a {
       color: #fff;
-      font-weight: 800;
-      white-space: nowrap;
+      text-decoration: underline;
     }
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 16px;
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero {
-      padding: 2rem 0 2.25rem;
-    }
-
-    .brand-wrap {
+    .brand {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 1rem;
+      padding: 16px 0;
     }
 
-    .brand-wrap img {
-      width: 70px;
-      height: 70px;
+    .brand img {
+      width: 64px;
+      height: 64px;
       object-fit: contain;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: var(--shadow);
     }
 
-    .brand-wrap strong {
-      font-size: 1.2rem;
-      color: var(--text);
+    .brand strong {
+      font-size: 22px;
+    }
+
+    .hero {
+      padding: 34px 0 30px;
     }
 
     .trust-line {
       display: inline-block;
-      background: var(--surface);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: 999px;
       padding: 10px 16px;
-      color: var(--text);
-      font-size: 0.96rem;
+      font-size: 15px;
       font-weight: 800;
       box-shadow: var(--shadow);
-      margin-bottom: 1rem;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(2.05rem, 6vw, 3.55rem);
-      line-height: 1.08;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.05;
+      margin: 0 0 14px;
       letter-spacing: -0.03em;
-      margin: 0 0 0.75rem;
-      color: var(--text);
     }
 
-    .subheadline {
-      font-size: clamp(1.08rem, 3vw, 1.35rem);
+    .hero-lead {
+      font-size: 23px;
+      font-weight: 800;
+      margin: 0 0 10px;
+    }
+
+    .hero-copy {
+      font-size: 18px;
       color: var(--muted);
-      margin: 0 0 1rem;
-      font-weight: 700;
+      max-width: 720px;
+      margin: 0 0 20px;
     }
 
-    .phone-big {
-      display: inline-block;
-      font-size: clamp(1.75rem, 7vw, 2.75rem);
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      color: var(--brand-dark);
-      text-decoration: none;
-      margin: 0.35rem 0 1rem;
-    }
-
-    .phone-big:hover {
-      text-decoration: underline;
-    }
-
-    .btn-primary,
-    .sticky-call a {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--brand);
-      border: 1px solid var(--brand);
-      color: #fff;
-      font-weight: 800;
-      text-decoration: none;
+      padding: 17px 22px;
       border-radius: 14px;
-      padding: 0.95rem 1.1rem;
-      min-height: 54px;
+      font-weight: 800;
+      min-height: 58px;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
       box-shadow: var(--shadow);
     }
 
-    .btn-primary:hover,
-    .sticky-call a:hover {
-      background: var(--brand-dark);
-      border-color: var(--brand-dark);
-      color: #fff;
-      text-decoration: none;
+    .btn-primary:hover {
+      background: var(--primary-dark);
     }
 
-    .section-wrap {
-      padding: 2rem 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-wrap h2 {
-      margin: 0 0 0.7rem;
-      font-size: clamp(1.55rem, 5vw, 2.3rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--text);
-    }
-
-    .section-wrap p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .service-list {
+    .hero-bullets {
       display: grid;
-      gap: 0.65rem;
-      margin-top: 1rem;
-      padding-left: 1.25rem;
-      color: var(--text);
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 18px;
       font-weight: 700;
     }
 
-    .card-soft {
+    .section {
+      padding: 34px 0;
+    }
+
+    .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.35rem;
       box-shadow: var(--shadow);
+      padding: 24px;
     }
 
-    .blue-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.35rem;
+    .section h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin: 0 0 10px;
+      line-height: 1.15;
     }
 
-    .proof-grid {
+    .section p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .urgency {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      color: var(--warning-text);
+    }
+
+    .keyword-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    .proof-item {
-      background: var(--surface);
+    .keyword {
+      background: var(--accent);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 1rem;
+      padding: 16px;
       font-weight: 800;
-      color: var(--text);
-      box-shadow: var(--shadow);
     }
 
     .sticky-call {
@@ -243,9 +210,9 @@
       right: 0;
       bottom: 0;
       z-index: 9999;
-      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
       background: rgba(245, 249, 252, 0.96);
       border-top: 1px solid var(--border);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
       backdrop-filter: blur(8px);
     }
 
@@ -253,123 +220,146 @@
       display: block;
       width: 100%;
       text-align: center;
-      font-size: 1.05rem;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 14px;
+      font-weight: 900;
+      font-size: 18px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
     }
 
-    @media (max-width: 780px) {
-      .trust-line {
-        display: block;
-        border-radius: 16px;
-        line-height: 1.45;
-      }
-
-      .btn-primary {
-        width: 100%;
-      }
-
-      .proof-grid {
-        grid-template-columns: 1fr;
-      }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 0;
+      font-size: 14px;
     }
 
-    @media (min-width: 781px) {
-      .sticky-call {
-        display: none;
-      }
-
-      body {
-        padding-bottom: 0;
-      }
+    @media (max-width: 680px) {
+      .wrap { width: min(var(--max), calc(100% - 20px)); }
+      .trust-line { border-radius: 16px; line-height: 1.45; }
+      .keyword-grid { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <div class="top-call-strip">
-    Internet down? Call now:
-    <a href="tel:+17276479000" onclick="trackCallClick('topbar')">(727) 647-9000</a>
+  <div class="topbar">
+    Internet down? Same-day service may be available —
+    <a href="tel:17276479000" onclick="trackCallClick('topbar');">Call (727) 647-9000</a>
   </div>
 
-  <main class="container">
-    <section class="hero" id="top">
-      <div class="brand-wrap">
-        <img src="/logo.png" alt="SunCoast Tech Support logo" loading="eager" decoding="async" />
-        <strong>SunCoast Tech Support</strong>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <img src="/logo.png" alt="SunCoast Tech Support logo" />
+        <div>
+          <strong>SunCoast Tech Support</strong><br />
+          <span>Serving Clearwater &amp; Pinellas County</span>
+        </div>
       </div>
+    </div>
+  </header>
 
-      <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Licensed &amp; Insured | Veteran-Owned</div>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="trust-line">
+          Serving Clearwater &amp; Pinellas County • Experienced Local Technicians
+        </div>
 
-      <h1>Internet Not Working? We Fix It Fast.</h1>
-      <p class="subheadline">Slow WiFi • No Connection • Network Issues<br />Local Technician – Same-Day Visits Available</p>
+        <h1>Internet Not Working? We Fix It Fast.</h1>
 
-      <a class="phone-big" href="tel:+17276479000" onclick="trackCallClick('hero_phone')" aria-label="Call SunCoast Tech Support now at 727-647-9000">(727) 647-9000</a>
+        <p class="hero-lead">Same-Day Service Available – Local Technicians</p>
 
-      <p>
-        <a class="btn-primary" href="tel:+17276479000" onclick="trackCallClick('hero_button')">📞 Call Now – Talk to Moe</a>
-      </p>
-    </section>
-
-    <section class="section-wrap" id="problem">
-      <h2>Frustrated with Your Internet?</h2>
-      <p>WiFi dropping? Internet completely down? Slow speeds affecting your work, streaming, calls, or smart devices?</p>
-      <p>Call now and speak directly with a local technician: <a href="tel:+17276479000" onclick="trackCallClick('problem_section')"><strong>(727) 647-9000</strong></a>.</p>
-    </section>
-
-    <section class="section-wrap" id="services">
-      <h2>We Fix Internet &amp; WiFi Issues</h2>
-      <ul class="service-list">
-        <li>WiFi not working</li>
-        <li>Slow internet speeds</li>
-        <li>Router setup and WiFi optimization</li>
-        <li>Connection drops</li>
-        <li>Dead zones around the home</li>
-        <li>Home network issues</li>
-      </ul>
-
-      <p><a class="btn-primary" href="tel:+17276479000" onclick="trackCallClick('services_button')">📞 Call Now – Speak Directly</a></p>
-    </section>
-
-    <section class="section-wrap" id="urgency">
-      <article class="blue-card">
-        <h2>Same-Day Visits Available</h2>
-        <p>Get your internet back up and running without waiting days. Local service for Clearwater, St. Pete, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
-        <p><a class="btn-primary" href="tel:+17276479000" onclick="trackCallClick('same_day_button')">📞 Call Now – Get Scheduled</a></p>
-      </article>
-    </section>
-
-    <section class="section-wrap" id="trust">
-      <h2>Why Choose SunCoast Tech Support</h2>
-
-      <div class="proof-grid">
-        <div class="proof-item">Local Clearwater Area</div>
-        <div class="proof-item">20+ Years Experience</div>
-        <div class="proof-item">Licensed &amp; Insured</div>
-        <div class="proof-item">Veteran-Owned</div>
-      </div>
-
-      <p>We focus on clear communication, practical fixes, and getting your home internet working without confusing tech talk.</p>
-    </section>
-
-    <section class="section-wrap" id="local">
-      <h2>Internet Service Near You</h2>
-      <p>Serving Clearwater, St. Pete, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas County communities.</p>
-      <p>Looking for <strong>internet service near me</strong>, <strong>wifi fix near me</strong>, <strong>home network service</strong>, or a local technician to get your connection working again? You’re in the right place.</p>
-    </section>
-
-    <section class="section-wrap" id="cta-final">
-      <div class="card-soft">
-        <h2>Need Internet Fixed Fast? Call Now.</h2>
-        <p>Speak directly with a technician and get your issue scheduled today.</p>
-        <p>
-          <a class="phone-big" href="tel:+17276479000" onclick="trackCallClick('final_phone')" aria-label="Call immediately at 727-647-9000">(727) 647-9000</a><br />
-          <a class="btn-primary" href="tel:+17276479000" onclick="trackCallClick('final_button')">📞 Call Now</a>
+        <p class="hero-copy">
+          Slow WiFi, dropped connections, dead zones, or internet that will not stay online?
+          Call SunCoast Tech Support and get back online today.
         </p>
+
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('hero');">
+          📞 Call Now – Get Back Online Today
+        </a>
+
+        <div class="hero-bullets">
+          <span>✔ Fast Diagnosis</span>
+          <span>✔ Reliable Repairs</span>
+          <span>✔ Serving Clearwater &amp; Pinellas County</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap card">
+        <h2>WiFi &amp; Internet Problems We Fix</h2>
+        <p>We help with slow internet, weak WiFi, connection drops, router setup, dead zones, and home network issues.</p>
+
+        <div class="keyword-grid">
+          <div class="keyword">internet repair near me</div>
+          <div class="keyword">wifi repair near me</div>
+          <div class="keyword">fix internet connection near me</div>
+          <div class="keyword">home network repair service</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap card urgency">
+        <h2>Same-Day Internet Repair Available</h2>
+        <p>
+          Don’t wait days to fix your connection. Call now and get help today.
+          A local technician can diagnose the issue and help restore your internet fast.
+        </p>
+
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('urgency');">
+          📞 Call Now – Get Help Today
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap card">
+        <h2>Why Choose SunCoast Tech Support?</h2>
+        <p>
+          Local service, plain-English explanations, and experienced in-home technical work
+          for Clearwater, Dunedin, Largo, Palm Harbor, Safety Harbor, and nearby Pinellas areas.
+        </p>
+
+        <div class="hero-bullets">
+          <span>✔ Local Clearwater-area technician</span>
+          <span>✔ 20+ years of IT experience</span>
+          <span>✔ Licensed &amp; insured</span>
+          <span>✔ Veteran-owned</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap card">
+        <h2>Call Now to Get Back Online</h2>
+        <p>Fastest option: call directly and explain what is happening with your internet or WiFi.</p>
+
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('final');">
+          📞 Call (727) 647-9000
+        </a>
       </div>
     </section>
   </main>
 
-  <div class="sticky-call" aria-label="Sticky call now bar">
-    <a href="tel:+17276479000" onclick="trackCallClick('sticky_mobile')">📞 Call Now: (727) 647-9000</a>
+  <footer>
+    <div class="wrap">
+      <strong>SunCoast Tech Support</strong><br />
+      Clearwater • Dunedin • Largo • Palm Harbor • Safety Harbor • Pinellas County
+    </div>
+  </footer>
+
+  <div class="sticky-call">
+    <a href="tel:17276479000" onclick="trackCallClick('sticky_mobile');">
+      📞 Call Now – Get Back Online Today
+    </a>
   </div>
 </body>
 </html>
