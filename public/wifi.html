@@ -118,22 +118,28 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: center;
+      gap: 10px;
       margin-bottom: 1rem;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .brand-wrap img {
-      width: 70px;
-      height: 70px;
+      width: 54px;
+      height: 54px;
       object-fit: contain;
-      border-radius: 12px;
+      border-radius: 10px;
       background: #fff;
       box-shadow: var(--shadow);
     }
 
     .brand-wrap strong {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      line-height: 1.2;
       color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
     }
 
     .trust-line {
@@ -410,6 +416,10 @@
       .hero-card {
         padding: 1.1rem;
         border-radius: 18px;
+      }
+
+      .brand-wrap {
+        justify-content: center;
       }
 
       .trust-line {
