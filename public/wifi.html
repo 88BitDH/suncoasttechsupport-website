@@ -34,6 +34,9 @@
     }
   </script>
 
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <style>
     :root {
       --brand: #0d6efd;
@@ -369,7 +372,8 @@
     }
 
     .form-grid input,
-    .form-grid select {
+    .form-grid select,
+    .form-grid textarea {
       width: 100%;
       min-height: 52px;
       border: 1px solid var(--border);
@@ -378,6 +382,12 @@
       background: #fff;
       color: var(--text);
       font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-grid textarea {
+      min-height: 110px;
+      resize: vertical;
     }
 
     .final-cta {
@@ -614,9 +624,16 @@
             </select>
           </div>
 
+          <div>
+            <label for="message">Problem Description</label>
+            <textarea id="message" name="message" placeholder="Tell us where the WiFi signal is weak or what internet issue you are seeing." required></textarea>
+          </div>
+
           <input type="hidden" name="_subject" value="New WiFi Coverage Lead - Suncoast Tech Support" />
           <input type="hidden" name="lead_source" value="wifi_coverage_landing_page" />
           <input type="hidden" name="lead_type" value="b2c_wifi_coverage" />
+
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
 
           <button class="btn-primary" type="submit">Request Help Today</button>
         </form>
