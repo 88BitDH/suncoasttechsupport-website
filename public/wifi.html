@@ -104,7 +104,15 @@
     }
 
     .hero {
-      padding: 2rem 0 2.25rem;
+      padding: 1.6rem 0 2rem;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
     }
 
     .brand-wrap {
@@ -130,14 +138,13 @@
 
     .trust-line {
       display: inline-block;
-      background: var(--surface);
+      background: var(--bg-soft);
       border: 1px solid var(--border);
       border-radius: 999px;
       padding: 10px 16px;
       color: var(--text);
       font-size: 0.96rem;
       font-weight: 800;
-      box-shadow: var(--shadow);
       margin-bottom: 1rem;
     }
 
@@ -165,7 +172,7 @@
 
     .phone-big {
       display: inline-block;
-      font-size: clamp(1.75rem, 7vw, 2.75rem);
+      font-size: clamp(1.85rem, 7vw, 2.8rem);
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: 0.02em;
@@ -179,8 +186,8 @@
     }
 
     .button-row {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin-top: 1rem;
     }
@@ -193,6 +200,7 @@
       justify-content: center;
       font-weight: 800;
       text-decoration: none;
+      text-align: center;
       border-radius: 14px;
       padding: 0.95rem 1.1rem;
       min-height: 54px;
@@ -226,6 +234,27 @@
       text-decoration: none;
     }
 
+    .reassurance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .reassurance-item {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .icon {
+      display: inline-block;
+      margin-right: 0.35rem;
+    }
+
     .section-wrap {
       padding: 2rem 0;
       border-top: 1px solid var(--border);
@@ -254,6 +283,23 @@
       font-weight: 700;
     }
 
+    .issue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .issue-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
     .card-soft {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -267,6 +313,42 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.35rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--brand-dark);
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+    }
+
+    .step-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+    }
+
+    .step-number {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 0.6rem;
     }
 
     .form-grid {
@@ -292,6 +374,19 @@
       font-size: 1rem;
     }
 
+    .final-cta {
+      background: #0d2235;
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2,
+    .final-cta p {
+      color: #fff;
+    }
+
     .sticky-call {
       position: fixed;
       left: 0;
@@ -312,6 +407,11 @@
     }
 
     @media (max-width: 780px) {
+      .hero-card {
+        padding: 1.1rem;
+        border-radius: 18px;
+      }
+
       .trust-line {
         display: block;
         border-radius: 16px;
@@ -319,13 +419,22 @@
       }
 
       .button-row {
-        display: grid;
-        gap: 12px;
+        grid-template-columns: 1fr;
       }
 
       .btn-primary,
       .btn-secondary {
         width: 100%;
+      }
+
+      .reassurance-grid,
+      .issue-grid,
+      .step-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-wrap {
+        padding: 1.5rem 0;
       }
     }
 
@@ -353,24 +462,34 @@
 
   <main class="container">
     <section class="hero" id="top">
-      <div class="brand-wrap">
-        <img src="/logo.png" alt="Suncoast Tech Support logo" loading="eager" decoding="async" />
-        <strong>Suncoast Tech Support</strong>
-      </div>
+      <div class="hero-card">
+        <div class="brand-wrap">
+          <img src="/logo.png" alt="Suncoast Tech Support logo" loading="eager" decoding="async" />
+          <strong>Suncoast Tech Support</strong>
+        </div>
 
-      <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Licensed &amp; Insured | Veteran-Owned</div>
+        <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Licensed &amp; Insured | Veteran-Owned</div>
 
-      <h1>Improve Your Home WiFi Coverage in Clearwater</h1>
-      <p class="subheadline">Local help for weak WiFi signal, slow rooms, dead zones, and home WiFi coverage concerns.</p>
+        <h1>Improve Your Home WiFi Coverage in Clearwater</h1>
+        <p class="subheadline">Local help for weak WiFi signal, slow rooms, dead zones, and home WiFi coverage concerns.</p>
 
-      <p class="supporting-text">
-        Suncoast Tech Support helps Clearwater-area homeowners understand where WiFi coverage is weak and what practical options may improve signal strength throughout the home.
-      </p>
+        <p class="supporting-text">
+          Suncoast Tech Support helps Clearwater-area homeowners understand where WiFi coverage is weak and what practical options may improve signal strength throughout the home.
+        </p>
 
-      <div class="button-row">
-        <a class="btn-primary" href="#contact">Request WiFi Coverage Help</a>
-        <a class="btn-secondary" href="tel:+17276479000" onclick="trackCallClick('hero_call')">Call to Speak with a Technician</a>
-        <a class="btn-secondary" href="sms:+17276479000" onclick="trackCallClick('hero_text')">Call or Text Us Now: (727) 647-9000</a>
+        <a class="phone-big" href="tel:+17276479000" onclick="trackCallClick('hero_phone')" aria-label="Call Suncoast Tech Support now at 727-647-9000">(727) 647-9000</a>
+
+        <div class="button-row">
+          <a class="btn-primary" href="#contact">Request WiFi Coverage Help</a>
+          <a class="btn-secondary" href="tel:+17276479000" onclick="trackCallClick('hero_call')">Call to Speak with a Technician</a>
+          <a class="btn-secondary" href="sms:+17276479000" onclick="trackCallClick('hero_text')">Call or Text Us Now</a>
+        </div>
+
+        <div class="reassurance-grid">
+          <div class="reassurance-item"><span class="icon">🔌</span>No need to disconnect equipment</div>
+          <div class="reassurance-item"><span class="icon">🏠</span>We come to you</div>
+          <div class="reassurance-item"><span class="icon">📋</span>Simple, clear recommendations</div>
+        </div>
       </div>
     </section>
 
@@ -387,47 +506,60 @@
 
       <p><strong>Common signs of poor WiFi coverage include:</strong></p>
 
-      <ul class="service-list">
-        <li>Weak WiFi signal in the living room, bedroom, garage, patio, or home office</li>
-        <li>WiFi not reaching certain rooms</li>
-        <li>Slow internet in parts of the home</li>
-        <li>Video buffering in rooms far from the router</li>
-        <li>Dropped connection in certain areas of the house</li>
-        <li>Poor signal on phones, tablets, TVs, or laptops in specific rooms</li>
-        <li>WiFi dead zones around the home</li>
-        <li>Coverage problems around the home</li>
-        <li>Router placement concerns</li>
-        <li>Home layout affecting signal strength</li>
-      </ul>
+      <div class="issue-grid">
+        <div class="issue-item">📶 Weak WiFi signal in the living room, bedroom, garage, patio, or home office</div>
+        <div class="issue-item">🚫 WiFi not reaching certain rooms</div>
+        <div class="issue-item">🐢 Slow internet in parts of the home</div>
+        <div class="issue-item">📺 Video buffering in rooms far from the router</div>
+        <div class="issue-item">🔌 Dropped connection in certain areas of the house</div>
+        <div class="issue-item">📱 Poor signal on phones, tablets, TVs, or laptops in specific rooms</div>
+        <div class="issue-item">📍 WiFi dead zones around the home</div>
+        <div class="issue-item">🏡 Coverage problems around the home</div>
+        <div class="issue-item">📡 Router placement concerns</div>
+        <div class="issue-item">🧱 Home layout affecting signal strength</div>
+      </div>
     </section>
 
     <section class="section-wrap" id="services">
       <article class="blue-card">
-        <h2>What We Help With | We come to you</h2>
+        <span class="section-label">🏠 We come to you</span>
+        <h2>What We Help With</h2>
 
         <p>
           Our WiFi coverage visit focuses on understanding your homes layout, reviewing signal problem areas, and recommending simple next steps for better coverage.
         </p>
 
         <ul class="service-list">
-          <li>Reviewing weak-signal areas</li>
-          <li>Checking home coverage patterns</li>
-          <li>Identifying possible WiFi dead zones</li>
-          <li>Reviewing router placement</li>
-          <li>Recommending practical coverage options</li>
-          <li>Helping you understand improvement choices</li>
+          <li>📶 Reviewing weak-signal areas</li>
+          <li>🏡 Checking home coverage patterns</li>
+          <li>📍 Identifying possible WiFi dead zones</li>
+          <li>📡 Reviewing router placement</li>
+          <li>🧭 Recommending practical coverage options</li>
+          <li>📋 Helping you understand improvement choices</li>
         </ul>
       </article>
     </section>
 
     <section class="section-wrap" id="process">
-      <h2>How It Works | No need to disconnect equipment | Simple Easy Steps</h2>
+      <span class="section-label">🔌 No need to disconnect equipment</span>
+      <h2>How It Works</h2>
 
-      <ol class="step-list">
-        <li>Tell us what areas of the home have weak WiFi.</li>
-        <li>We review the layout and coverage concerns.</li>
-        <li>You receive practical recommendations for improving your home WiFi coverage.</li>
-      </ol>
+      <div class="step-card-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div>Tell us what areas of the home have weak WiFi.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div>We review the layout and coverage concerns.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div>You receive practical recommendations for improving your home WiFi coverage.</div>
+        </div>
+      </div>
     </section>
 
     <section class="section-wrap" id="local">
@@ -444,10 +576,6 @@
 
         <p>
           Request local help with home WiFi coverage concerns in the Clearwater area.
-        </p>
-
-        <p>
-          <a class="btn-primary" href="#wifi-request-form">Request WiFi Coverage Help</a>
         </p>
 
         <form id="wifi-request-form" class="form-grid" method="POST" action="" onfocusin="trackFormStart();">
@@ -481,6 +609,14 @@
 
           <button class="btn-primary" type="submit">Request Help Today</button>
         </form>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="cta-final">
+      <div class="final-cta">
+        <h2>Want Better WiFi Coverage at Home?</h2>
+        <p>Request local help with home WiFi coverage concerns in the Clearwater area.</p>
+        <a class="btn-primary" href="#contact">Request WiFi Coverage Help</a>
       </div>
     </section>
   </main>
