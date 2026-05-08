@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>SunCoast Tech Support | In-Home Computer Help in Clearwater, FL</title>
-  <meta name="description" content="Frustrated with your computer? SunCoast Tech Support provides in-home computer help for seniors and home users in Clearwater and nearby Pinellas county." />
+  <meta name="description" content="Frustrated with your computer? SunCoast Tech Support provides in-home computer help for seniors and home users in Clearwater and nearby Pinellas areas." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
@@ -14,16 +15,6 @@
     gtag('js', new Date());
     gtag('config', 'AW-17992501324');
 
-    /*
-      FUTURE TRACKING PLACEHOLDERS
-      ----------------------------
-      Replace these placeholder labels later when you create additional Google Ads conversions
-      or GA4 events. The site will still load fine without changing them now.
-
-      Example:
-      var CALL_CONVERSION_LABEL = 'AW-17992501324/XXXXXXXXXXXX';
-      var FORM_CONVERSION_LABEL = 'AW-17992501324/YYYYYYYYYYYY';
-    */
     var CALL_CONVERSION_LABEL = 'AW-17992501324/CALL_PLACEHOLDER';
     var FORM_CONVERSION_LABEL = 'AW-17992501324/FORM_PLACEHOLDER';
 
@@ -33,12 +24,6 @@
         'event_label': 'call_' + source,
         'value': 1
       });
-
-      // Future Google Ads call conversion placeholder:
-      // gtag('event', 'conversion', { 'send_to': CALL_CONVERSION_LABEL });
-
-      // Future GA4 / Meta / CRM hook placeholder:
-      // window.dataLayer.push({ event: 'call_click', source: source });
     }
 
     function trackSecondaryContact(type, source) {
@@ -47,9 +32,6 @@
         'event_label': type + '_' + source,
         'value': 1
       });
-
-      // Future tracking placeholder:
-      // window.dataLayer.push({ event: type + '_click', source: source });
     }
 
     function trackFormStart() {
@@ -87,7 +69,8 @@
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.65;
+      font-size: 17px;
     }
 
     a { color: var(--primary); text-decoration: none; }
@@ -102,7 +85,7 @@
     .topbar {
       background: #0d2235;
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .topbar .wrap {
@@ -110,15 +93,17 @@
       justify-content: center;
       align-items: center;
       gap: 12px;
-      padding: 10px 0;
+      padding: 11px 0;
       text-align: center;
       flex-wrap: wrap;
     }
 
     .topbar a {
       color: #fff;
-      font-weight: 700;
+      font-weight: 800;
       white-space: nowrap;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     header {
@@ -161,7 +146,7 @@
     .brand-text p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .header-actions {
@@ -174,7 +159,8 @@
 
     .btn,
     button,
-    input {
+    input,
+    textarea {
       font-family: inherit;
     }
 
@@ -182,13 +168,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 18px;
+      padding: 15px 20px;
       border-radius: 12px;
-      font-weight: 700;
+      font-weight: 800;
       border: 1px solid transparent;
       transition: .2s ease;
-      min-height: 52px;
+      min-height: 56px;
       cursor: pointer;
+      text-align: center;
+      font-size: 17px;
     }
 
     .btn:hover { text-decoration: none; transform: translateY(-1px); }
@@ -225,30 +213,30 @@
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 999px;
-      padding: 10px 16px;
+      padding: 11px 16px;
       color: var(--text);
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 800;
       box-shadow: var(--shadow);
       margin-bottom: 14px;
     }
 
     .hero h2 {
-      font-size: clamp(34px, 5vw, 54px);
+      font-size: clamp(36px, 5vw, 54px);
       line-height: 1.08;
       margin: 0 0 14px;
       letter-spacing: -0.03em;
     }
 
     .hero-lead {
-      font-size: 21px;
+      font-size: 22px;
       color: var(--text);
       margin: 0 0 12px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .hero-copy {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--muted);
       margin: 0 0 18px;
       max-width: 660px;
@@ -264,7 +252,7 @@
       background: var(--warning-bg);
       color: var(--warning-text);
       border: 1px solid var(--warning-border);
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 18px;
     }
 
@@ -276,8 +264,8 @@
     }
 
     .btn-call-dominant {
-      font-size: 20px;
-      min-height: 60px;
+      font-size: 21px;
+      min-height: 64px;
       padding: 18px 22px;
       min-width: 320px;
     }
@@ -286,15 +274,15 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 800;
       color: var(--muted);
     }
 
     .secondary-links a {
       color: var(--muted);
       text-decoration: underline;
-      text-underline-offset: 2px;
+      text-underline-offset: 3px;
     }
 
     .hero-card {
@@ -313,18 +301,18 @@
     }
 
     .section {
-      padding: 34px 0;
+      padding: 36px 0;
     }
 
     .section h3 {
-      font-size: clamp(26px, 3vw, 38px);
+      font-size: clamp(28px, 3vw, 38px);
       line-height: 1.15;
       margin: 0 0 10px;
       letter-spacing: -0.02em;
     }
 
     .section-intro {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--muted);
       margin: 0 0 18px;
       max-width: 760px;
@@ -379,7 +367,7 @@
     .review-link {
       display: inline-block;
       margin-top: 12px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .service-grid {
@@ -395,13 +383,13 @@
 
     .service-card h4 {
       margin: 0 0 10px;
-      font-size: 19px;
+      font-size: 20px;
     }
 
     .service-card p {
       margin: 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .see-more {
@@ -416,7 +404,8 @@
       cursor: pointer;
       list-style: none;
       padding: 18px 20px;
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 18px;
       background: #fff;
     }
 
@@ -432,13 +421,17 @@
       padding: 0;
     }
 
+    .see-more-content li {
+      margin-bottom: 8px;
+    }
+
     .pricing-guide {
       background: #eef8f1;
       color: var(--success);
       border: 1px solid #cde8d5;
       border-radius: 14px;
       padding: 14px 16px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 18px;
       display: inline-block;
     }
@@ -465,8 +458,8 @@
       right: 14px;
       background: var(--primary);
       color: #fff;
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 800;
       border-radius: 999px;
       padding: 6px 10px;
     }
@@ -477,15 +470,15 @@
     }
 
     .price {
-      font-size: 38px;
-      font-weight: 800;
+      font-size: 40px;
+      font-weight: 900;
       margin: 0 0 6px;
     }
 
     .pricing-sub {
       color: var(--muted);
       margin: 0 0 14px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .pricing-card ul {
@@ -515,14 +508,14 @@
 
     .testimonial blockquote {
       margin: 0 0 14px;
-      font-size: 17px;
+      font-size: 18px;
       color: var(--text);
     }
 
     .testimonial cite {
       color: var(--muted);
       font-style: normal;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .faq-list {
@@ -537,7 +530,7 @@
 
     .faq-item h4 {
       margin: 0 0 8px;
-      font-size: 18px;
+      font-size: 19px;
     }
 
     .faq-item p {
@@ -559,13 +552,13 @@
 
     form {
       display: grid;
-      gap: 12px;
+      gap: 14px;
       margin-top: 16px;
     }
 
     label {
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 800;
+      font-size: 17px;
       display: block;
       margin-bottom: 6px;
     }
@@ -575,33 +568,34 @@
       width: 100%;
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 14px 15px;
-      font-size: 16px;
+      padding: 15px 16px;
+      font-size: 17px;
       background: #fff;
       color: var(--text);
+      min-height: 56px;
     }
 
     textarea {
-      min-height: 88px;
+      min-height: 110px;
       resize: vertical;
     }
 
     input:focus,
     textarea:focus {
-      outline: 2px solid rgba(13, 110, 253, 0.18);
+      outline: 3px solid rgba(13, 110, 253, 0.20);
       border-color: var(--primary);
     }
 
     .form-note,
     .mini {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
       margin: 0;
     }
 
     .privacy-note {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
       margin: 10px 0 0;
     }
 
@@ -618,18 +612,19 @@
 
     .contact-chip {
       display: block;
-      padding: 14px 16px;
+      padding: 15px 16px;
       border-radius: 12px;
       background: var(--accent);
       border: 1px solid var(--border);
-      font-weight: 700;
+      font-weight: 800;
       color: var(--text);
+      font-size: 17px;
     }
 
     footer {
       padding: 34px 0 96px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .footer-card {
@@ -638,7 +633,7 @@
     }
 
     .footer-card a {
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .sticky-call {
@@ -665,13 +660,45 @@
     }
 
     @media (max-width: 680px) {
+      body {
+        font-size: 18px;
+        padding-bottom: 92px;
+      }
+
       .wrap {
         width: min(var(--max), calc(100% - 20px));
+      }
+
+      .topbar {
+        font-size: 16px;
+      }
+
+      .topbar .wrap {
+        gap: 6px;
+        padding: 10px 0;
       }
 
       .header-inner {
         flex-direction: column;
         align-items: stretch;
+      }
+
+      .brand {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .brand-text h1 {
+        font-size: 19px;
+      }
+
+      .brand-text p {
+        font-size: 14px;
       }
 
       .header-actions {
@@ -684,7 +711,7 @@
       }
 
       .hero {
-        padding-top: 22px;
+        padding-top: 20px;
       }
 
       .trust-line {
@@ -694,14 +721,28 @@
         padding: 12px 14px;
       }
 
-      .hero h2 { font-size: 35px; }
-      .hero-lead { font-size: 19px; }
-      .hero-copy { font-size: 17px; }
+      .hero h2 { font-size: 34px; }
+      .hero-lead { font-size: 20px; }
+      .hero-copy { font-size: 18px; }
 
       .hero-actions,
       .secondary-links {
         flex-direction: column;
         align-items: stretch;
+      }
+
+      .secondary-links {
+        gap: 12px;
+      }
+
+      .secondary-links a {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 16px;
+        text-align: center;
+        color: var(--text);
+        text-decoration: none;
       }
 
       .btn-call-dominant {
@@ -715,6 +756,16 @@
       .contact-grid,
       .about-grid {
         grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .pricing-card,
+      .testimonial,
+      .faq-item,
+      .form-card,
+      .contact-card,
+      .about-panel {
+        padding: 20px;
       }
 
       .sticky-call {
@@ -737,7 +788,7 @@
         background: var(--primary);
         color: #fff;
         border-radius: 14px;
-        font-weight: 800;
+        font-weight: 900;
         font-size: 18px;
         padding: 16px 18px;
         box-shadow: var(--shadow);
@@ -748,13 +799,15 @@
       }
     }
   </style>
+
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
+
 <body>
   <div class="topbar">
     <div class="wrap">
-      <span>Appointments Available • Call or Text (727) 647-9000</span>
-      <a href="tel:17276479000" onclick="trackCallClick('topbar');">Call or Text (727) 647-9000</a>
+      <span>📅 Appointments Available • Call or Text (727) 647-9000</span>
+      <a href="tel:17276479000" onclick="trackCallClick('topbar');">📞 Call or Text (727) 647-9000</a>
     </div>
   </div>
 
@@ -769,9 +822,9 @@
       </div>
 
       <div class="header-actions hide-mobile">
-        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('header');">Call or Text a Local Person</a>
-        <a class="btn btn-subtle" href="#contact" onclick="trackSecondaryContact('schedule', 'header');">Schedule a Visit</a>
-        <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">Text Us</a>
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('header');">📞 Call or Text a Local Person</a>
+        <a class="btn btn-subtle" href="#contact" onclick="trackSecondaryContact('schedule', 'header');">🗓️ Schedule a Visit</a>
+        <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">💬 Text Us</a>
       </div>
     </div>
   </header>
@@ -781,18 +834,23 @@
       <div class="wrap hero-grid">
         <div>
           <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Licensed &amp; Insured | Veteran-Owned</div>
+
           <h2>Friendly In-Home Computer Help in the Clearwater Area</h2>
+
           <p class="hero-lead">In-home help for Clearwater-area homes, families, seniors, and home users.</p>
-          <p class="hero-copy">We explain everything in plain English—no confusing tech talk. No need to unplug your computer or drag it across town. We come to you, find the problem, and help you feel comfortable every step of the way.</p>
+
+          <p class="hero-copy">
+            We explain everything in plain English—no confusing tech talk. No need to unplug your computer or drag it across town. We come to you, find the problem, and help you feel comfortable every step of the way.
+          </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="trackCallClick('hero');">Call or Text a Local Person</a>
+            <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="trackCallClick('hero');">📞 Call or Text a Local Person</a>
           </div>
 
           <div class="secondary-links">
-            <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">Schedule a Visit</a>
-            <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">Text Us</a>
-            <a href="#pricing">Start with $149</a>
+            <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
+            <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">💬 Text Us</a>
+            <a href="#pricing">💵 Start with $149</a>
           </div>
         </div>
 
@@ -810,13 +868,16 @@
           </div>
 
           <div class="card about-panel">
-            <h3>Meet Your Local Expert</h3>
+            <h3>👋 Meet Your Local Expert</h3>
+
             <p class="section-intro">Hi, I’m Moe. I provide patient, local in-home technology help for Clearwater-area homes, including seniors, families, and home users.</p>
+
             <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi-Fi drops out, or family photos need to move safely to a new device.</p>
+
             <p>Common requests include slow computers, printer issues, Wi-Fi concerns, and moving family photos or important files to a new device.</p>
 
             <div class="quote-strip">
-              <strong>What customers are saying</strong>
+              <strong>⭐ What customers are saying</strong>
               <ul>
                 <li>“Fast, professional, and explained everything clearly.”</li>
                 <li>“Saved my family photos and made the whole process easy.”</li>
@@ -831,40 +892,40 @@
 
     <section class="section">
       <div class="wrap">
-        <h3>Common Problems We Fix</h3>
+        <h3>🛠️ Common Problems We Fix</h3>
         <p class="section-intro">Focused on common in-home technology requests from Clearwater-area customers.</p>
 
         <div class="service-grid">
           <div class="card service-card">
-            <h4>Wi-Fi Problems</h4>
+            <h4>📶 Wi-Fi Problems</h4>
             <p>Weak signal, dropped connections, dead spots, and Wi-Fi coverage concerns around the home.</p>
           </div>
 
           <div class="card service-card">
-            <h4>Data Transfer</h4>
+            <h4>📁 Data Transfer</h4>
             <p>Move files, family photos, and important documents from an old device to a new one safely.</p>
           </div>
 
           <div class="card service-card">
-            <h4>Virus &amp; Malware Cleanup</h4>
+            <h4>🛡️ Virus &amp; Malware Cleanup</h4>
             <p>Help with pop-ups, suspicious behavior, and basic cleanup options for a safer, more stable computer.</p>
           </div>
 
           <div class="card service-card">
-            <h4>Slow Computers &amp; Errors</h4>
+            <h4>🐢 Slow Computers &amp; Errors</h4>
             <p>Help with sluggish performance, startup issues, error messages, and general computer issues.</p>
           </div>
         </div>
 
         <details class="see-more">
-          <summary>See More</summary>
+          <summary>➕ See More</summary>
           <div class="see-more-content">
             <ul>
-              <li>Printer help</li>
-              <li>Email access help</li>
-              <li>New computer guidance</li>
-              <li>Basic security review</li>
-              <li>General in-home technology help</li>
+              <li>🖨️ Printer help</li>
+              <li>📧 Email access help</li>
+              <li>💻 New computer guidance</li>
+              <li>🔐 Basic security review</li>
+              <li>🏠 General in-home technology help</li>
             </ul>
           </div>
         </details>
@@ -873,8 +934,10 @@
 
     <section class="section" id="pricing">
       <div class="wrap">
-        <h3>Simple, Upfront Pricing</h3>
+        <h3>💵 Simple, Upfront Pricing</h3>
+
         <p class="pricing-guide">Not sure what you need? Start with the $149 visit. Many common requests can be handled during the first visit.</p>
+
         <p class="section-intro">Choose the option that best fits the problem, or call and we’ll help you decide.</p>
 
         <div class="pricing-grid">
@@ -887,7 +950,7 @@
               <li>Help with one primary request</li>
               <li>Basic system check</li>
             </ul>
-            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">Call to Book Starter</a>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">📞 Call to Book Starter</a>
           </div>
 
           <div class="card pricing-card popular">
@@ -902,7 +965,7 @@
               <li>Basic security review</li>
               <li>Wi-Fi and device help</li>
             </ul>
-            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_homecare');">Call to Book Home Care</a>
+            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_homecare');">📞 Call to Book Home Care</a>
           </div>
 
           <div class="card pricing-card">
@@ -916,7 +979,7 @@
               <li>New device guidance or data transfer</li>
               <li>Priority availability</li>
             </ul>
-            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">Call to Book Total Care</a>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
           </div>
         </div>
       </div>
@@ -924,7 +987,7 @@
 
     <section class="section">
       <div class="wrap">
-        <h3>What Your Neighbors Are Saying</h3>
+        <h3>⭐ What Your Neighbors Are Saying</h3>
         <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
 
         <div class="testimonials">
@@ -951,27 +1014,27 @@
 
     <section class="section">
       <div class="wrap">
-        <h3>Frequently Asked Questions</h3>
+        <h3>❓ Frequently Asked Questions</h3>
         <p class="section-intro">Clear answers before you call or book.</p>
 
         <div class="faq-list">
           <div class="card faq-item">
-            <h4>Do I need to bring my computer anywhere?</h4>
+            <h4>🏠 Do I need to bring my computer anywhere?</h4>
             <p>No. We come to your home and work with the setup you already have there.</p>
           </div>
 
           <div class="card faq-item">
-            <h4>What areas do you serve?</h4>
+            <h4>📍 What areas do you serve?</h4>
             <p>Clearwater, Clearwater Beach, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
           </div>
 
           <div class="card faq-item">
-            <h4>Do you work with seniors?</h4>
+            <h4>👵 Do you work with seniors?</h4>
             <p>Yes. The service is designed to be patient, clear, respectful, and easy to understand.</p>
           </div>
 
           <div class="card faq-item">
-            <h4>What if I am not sure which pricing option I need?</h4>
+            <h4>💵 What if I am not sure which pricing option I need?</h4>
             <p>Start with the $149 visit or call first. We’ll help you choose the best fit for the problem.</p>
           </div>
         </div>
@@ -981,9 +1044,11 @@
     <section class="section" id="contact">
       <div class="wrap contact-grid">
         <div class="card form-card">
-          <h3>Need In-Home Computer Help?</h3>
+          <h3>🗓️ Need In-Home Computer Help?</h3>
+
           <p class="section-intro">Call or text for availability, or request a visit below. Appointments may be available in the Clearwater area.</p>
-          <div class="urgency-box">Local Service • Clear Explanations • Patient In-Home Help</div>
+
+          <div class="urgency-box">🏠 Local Service • Clear Explanations • Patient In-Home Help</div>
 
           <form action="https://suncoast-b2c-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
             <div>
@@ -1009,7 +1074,7 @@
             
             <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
 
-            <button class="btn btn-primary" type="submit">Schedule a Visit</button>
+            <button class="btn btn-primary" type="submit">🗓️ Schedule a Visit</button>
           </form>
 
           <p class="privacy-note">We only use your information to respond to your request. Do not send passwords, payment details, or sensitive account information through this form.</p>
@@ -1017,7 +1082,8 @@
         </div>
 
         <div class="card contact-card">
-          <h4>Call or Text a Local Person</h4>
+          <h4>📞 Call or Text a Local Person</h4>
+
           <p class="mini">The primary action on this page is to call or text. That gives home users the fastest path to relief and lets you close warm leads quickly.</p>
 
           <div class="contact-stack">
@@ -1042,7 +1108,7 @@
   </footer>
 
   <div class="sticky-call">
-    <a href="tel:17276479000" onclick="trackCallClick('sticky_mobile');">Call or Text a Local Person</a>
+    <a href="tel:17276479000" onclick="trackCallClick('sticky_mobile');">📞 Call or Text a Local Person</a>
   </div>
 </body>
 </html>
