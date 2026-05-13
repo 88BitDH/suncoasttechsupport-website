@@ -3,612 +3,808 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--
-    Preserve existing tracking scripts (e.g. Google Ads / gtag) and CSS links from your original page.
-    Updated title to reflect a broad range of computer and tech services; Wi‑Fi is still offered but not over‑emphasised in the title.
-  -->
-  <title>SunCoast Tech Support – In‑Home Computer &amp; Tech Services in Clearwater &amp; Pinellas County</title>
+
+  <!-- Updated title to include broader services and regional keywords -->
+  <title>SunCoast Tech Support | In‑Home Computer &amp; Tech Services in Clearwater &amp; Pinellas County</title>
+  <meta name="description" content="Frustrated with your computer? SunCoast Tech Support provides in‑home computer, Wi‑Fi, printer, and tech help for seniors and home users in Clearwater, Largo, Dunedin, Palm Harbor, and nearby Pinellas County." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());
+    gtag('config', 'AW-17992501324');
+
+    var CALL_CONVERSION_LABEL = 'AW-17992501324/CALL_PLACEHOLDER';
+    var FORM_CONVERSION_LABEL = 'AW-17992501324/FORM_PLACEHOLDER';
+
+    function trackCallClick(source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': 'call_' + source,
+        'value': 1
+      });
+    }
+
+    function trackSecondaryContact(type, source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': type + '_' + source,
+        'value': 1
+      });
+    }
+
+    function trackFormStart() {
+      gtag('event', 'form_start', {
+        'event_category': 'lead_form',
+        'event_label': 'b2c_request_visit'
+      });
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f9fc;
+      --surface: #ffffff;
+      --text: #163047;
+      --muted: #476173;
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --accent: #eaf4ff;
+      --border: #d7e5f2;
+      --success: #0f7b4d;
+      --warning-bg: #fff7e6;
+      --warning-border: #f0d5a5;
+      --warning-text: #784b00;
+      --shadow: 0 10px 25px rgba(22, 48, 71, 0.08);
+      --radius: 16px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #0d2235;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 0;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: #fff;
+      font-weight: 800;
+      white-space: nowrap;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    header {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f9fc 100%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      margin: 0 0 2px;
+    }
+
+    .brand-text p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn,
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .2s ease;
+      min-height: 56px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-subtle {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-subtle:hover { background: #f8fbff; }
+
+    .hero {
+      padding: 34px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .trust-line {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 11px 16px;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-lead {
+      font-size: 22px;
+      color: var(--text);
+      margin: 0 0 12px;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 660px;
+    }
+
+    .urgency-box {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 12px 15px;
+      border-radius: 14px;
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      border: 1px solid var(--warning-border);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .btn-call-dominant {
+      font-size: 21px;
+      min-height: 64px;
+      padding: 18px 22px;
+      min-width: 320px;
+    }
+
+    .secondary-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .secondary-links a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 36px 0;
+    }
+
+    .section h3 {
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.15;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-photo {
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-panel {
+      padding: 24px;
+    }
+
+    .quote-strip {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+
+    .quote-strip ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .quote-strip li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .review-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 800;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      padding: 20px;
+    }
+
+    .service-card h4 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .see-more {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .sticky-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .sticky-call a {
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* Sitelinks nav styling */
+    .sitelinks ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sitelinks li a {
+      color: var(--primary);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  </style>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
+
 <body>
-
-<!--
-  SECTION 1 — HERO / TOP OF PAGE
-  This section introduces the business and its main services. The phone number is kept clickable for mobile users.
-  A separate Wi‑Fi service card (below) links to the dedicated lead page instead of over‑emphasising Wi‑Fi here.
--->
-<section id="hero" class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">Appointments Available • <a href="tel:+17276479000">Call or Text (727) 647‑9000</a></p>
-
-    <img
-      src="assets/suncoast-logo.png"
-      alt="SunCoast Tech Support logo"
-      class="site-logo"
-    />
-
-    <h1>SunCoast Tech Support</h1>
-
-    <p class="hero-kicker">
-      In‑Home Tech Services in Clearwater &amp; Largo
-    </p>
-
-    <h2>
-      Computer Setup, Wi‑Fi, Printer Setup &amp; Home Tech Service
-    </h2>
-
-    <p class="hero-copy">
-      Looking for in‑home tech service near Clearwater or Largo? SunCoast Tech Support comes to your home for computer setup, Wi‑Fi troubleshooting, printer setup, data transfer, and other common home technology issues. We’re patient and clear whether you’re a senior, a family member, or any home user needing services.
-    </p>
-
-    <p class="service-area-line">
-      Serving Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor,
-      Belleair, Clearwater Beach, and nearby Pinellas County homes.
-    </p>
-
-    <div class="hero-actions">
-      <a href="tel:+17276479000" class="btn btn-primary">
-        Call or Text (727) 647‑9000
-      </a>
-
-      <a href="#schedule" class="btn btn-secondary">
-        Schedule a Visit
-      </a>
-      
-      <a href="sms:+17276479000" class="btn btn-secondary">
-        Text Us
-      </a>
-    </div>
-
-    <p class="trust-line">
-      ⭐ 5.0 Google Rating | 20+ Years Experience | Insured | Veteran‑Owned
-    </p>
-  </div>
-</section>
-
-<!--
-  SECTION 2 — MAIN INTRO
-  Adjusted heading to address seniors. Rest of the copy remains concise for mobile users.
--->
-<section id="intro" class="intro">
-  <div class="container">
-    <h2>Local In‑Home Tech Service for Pinellas County Homes</h2>
-
-    <p>
-      Need a computer set up, Wi‑Fi fixed, printer connected, or files moved to a new device? We provide local in‑home service across Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Clearwater Beach, and nearby Pinellas County areas.
-    </p>
-
-    <p>
-      We explain things in plain English and work with the setup you already have at home. No need to unplug your computer or carry devices across town.
-    </p>
-
-    <div class="section-actions">
-      <a href="tel:+17276479000" class="btn btn-primary">
-        Call or Text a Local Person
-      </a>
-
-      <a href="#schedule" class="btn btn-secondary">
-        Schedule a Visit
-      </a>
-
-      <a href="#pricing" class="btn btn-secondary">
-        Start with $149
-      </a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>📅 Appointments Available • Call or Text (727) 647‑9000</span>
+      <a href="tel:17276479000" onclick="trackCallClick('topbar');">📞 Call or Text (727) 647‑9000</a>
     </div>
   </div>
-</section>
 
-<!--
-  SECTION 3 — MEET YOUR LOCAL EXPERT
-  No major changes except subtle mention that service includes seniors.
--->
-<section id="local-expert" class="local-expert">
-  <div class="container expert-grid">
-    <div class="expert-image">
-      <img
-        src="assets/moe-suncoast-tech-support.png"
-        alt="Moe from SunCoast Tech Support"
-      />
-    </div>
+  <header>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="src/assets/logo.png" alt="SunCoast Tech Support logo" />
+        <div class="brand-text">
+          <h1>SunCoast Tech Support</h1>
+          <p>In-home computer and tech help for Clearwater-area homes</p>
+        </div>
+      </div>
 
-    <div class="expert-content">
-      <h3>Meet Your Local Expert</h3>
-
-      <p>
-        Hi, I’m Moe. I provide local in‑home technology service for Clearwater‑area homes, including seniors, families, and home users.
-      </p>
-
-      <p>
-        Common service requests include computer setup, slow computers, Wi‑Fi connection issues, printer setup, and moving files or family photos to a new device.
-      </p>
-
-      <p>
-        If you searched for computer setup near me, printer setup in Largo, Wi‑Fi service in Clearwater, or in‑home tech service in Pinellas County, this page is built to answer that request.
-      </p>
-
-      <div class="review-snippets">
-        <h4>⭐ What customers are saying</h4>
-
-        <ul>
-          <li>“Fast, professional, and explained everything clearly.”</li>
-          <li>“Saved my family photos and made the whole process easy.”</li>
-          <li>“Finally fixed my Wi‑Fi throughout the house.”</li>
-        </ul>
-
-        <a
-          href="https://www.google.com/search?q=Suncoast+Tech+Support+reviews"
-          target="_blank"
-          rel="noopener"
-        >
-          Read Google Reviews
-        </a>
+      <div class="header-actions hide-mobile">
+        <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('header');">📞 Call or Text a Local Person</a>
+        <a class="btn btn-subtle" href="#contact" onclick="trackSecondaryContact('schedule', 'header');">🗓️ Schedule a Visit</a>
+        <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">💬 Text Us</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!--
-  SECTION 4 — COMMON IN‑HOME TECH SERVICES
-  Updated the Wi‑Fi card heading to link to the dedicated Wi‑Fi page and refreshed the description to highlight dead spots and slow speeds.
--->
-<section id="services" class="services">
-  <div class="container">
-    <h2>Common In‑Home Tech Services in Clearwater &amp; Nearby Areas</h2>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="trust-line">⭐ 5.0 Google Rating | 20+ Years Experience | Insured | Veteran-Owned</div>
 
-    <p>
-      Local setup and device service for computers, Wi‑Fi, printers, and home technology across Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Clearwater Beach, and nearby Pinellas County homes.
-    </p>
+          <!-- Updated hero headline to include broader tech help -->
+          <h2>Friendly In‑Home Tech Help in the Clearwater Area</h2>
 
-    <div class="service-grid">
-      <article class="service-card">
-        <h3>Computer Setup</h3>
-        <p>
-          New PC or laptop setup, basic settings, device setup, and getting your computer ready to use at home in Clearwater, Largo, Dunedin, Palm Harbor, and nearby Pinellas County.
-        </p>
-      </article>
+          <p class="hero-lead">In-home help for Clearwater-area homes, families, seniors, and home users.</p>
 
-      <article class="service-card">
-        <h3><a href="https://suncoasttechsupport.net/wifi">Wi‑Fi &amp; Internet Speed Solutions</a></h3>
-        <p>
-          Eliminate dead spots, fix slow speeds, set up routers, and optimize your home Wi‑Fi network for homes in Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor, and Belleair.
-        </p>
-      </article>
+          <!-- Added mention of Wi-Fi and other tech issues while keeping general tone -->
+          <p class="hero-copy">
+            We explain everything in plain English—no confusing tech talk. No need to unplug your computer or drag it across town. We come to you, find the problem, and help you feel comfortable every step of the way. Need to fix Wi‑Fi dead spots, set up a printer, or transfer family photos? We handle all your in‑home tech needs.
+          </p>
 
-      <article class="service-card">
-        <h3>Printer Setup</h3>
-        <p>
-          Wireless printer setup, Wi‑Fi printer connection, printer offline issues, and printers that won’t print for homes in Clearwater, Largo, Dunedin, Palm Harbor, and nearby Pinellas.
-        </p>
-      </article>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="trackCallClick('hero');">📞 Call or Text a Local Person</a>
+          </div>
 
-      <article class="service-card">
-        <h3>Data Transfer</h3>
-        <p>
-          Move files, family photos, and important documents from an old device to a new computer in Clearwater, Largo, Dunedin, Palm Harbor, and nearby areas.
-        </p>
-      </article>
+          <div class="secondary-links">
+            <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
+            <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">💬 Text Us</a>
+            <a href="#pricing">💵 Start with $149</a>
+          </div>
+        </div>
 
-      <article class="service-card">
-        <h3>Basic Device Review</h3>
-        <p>
-          Review slow computers, startup issues, error messages, and common device concerns during an in‑home visit.
-        </p>
-      </article>
+        <div class="hero-card">
+          <img src="src/assets/hero-photo.jpg" alt="Friendly local technician helping a customer at home" />
+        </div>
+      </div>
+    </section>
 
-      <article class="service-card">
-        <h3>In‑Home Tech Service</h3>
-        <p>
-          Local home technology service for computers, printers, Wi‑Fi, and common device setup needs across Pinellas County.
-        </p>
-      </article>
+    <!-- About / Meet Your Expert -->
+    <section class="section">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="card about-photo">
+            <img src="src/assets/owner-photo.png" alt="Moe from SunCoast Tech Support" />
+          </div>
+
+          <div class="card about-panel">
+            <h3>👋 Meet Your Local Expert</h3>
+
+            <p class="section-intro">Hi, I’m Moe. I provide patient, local in-home technology help for Clearwater-area homes, including seniors, families, and home users.</p>
+
+            <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi‑Fi drops out, or family photos need to move safely to a new device.</p>
+
+            <p>Common requests include slow computers, printer issues, Wi‑Fi concerns, and moving family photos or important files to a new device.</p>
+
+            <div class="quote-strip">
+              <strong>⭐ What customers are saying</strong>
+              <ul>
+                <li>“Fast, professional, and explained everything clearly.”</li>
+                <li>“Saved my family photos and made the whole process easy.”</li>
+                <li>“Finally fixed my Wi‑Fi throughout the house.”</li>
+              </ul>
+              <a class="review-link" href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read Google Reviews</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Common Problems Section -->
+    <section class="section">
+      <div class="wrap">
+        <h3>🛠️ Common Problems We Fix</h3>
+        <p class="section-intro">Focused on common in-home technology requests from Clearwater-area customers.</p>
+
+        <div class="service-grid">
+          <div class="card service-card">
+            <h4><a href="https://suncoasttechsupport.net/wifi">📶 Wi‑Fi Problems</a></h4>
+            <p>Weak signal, dropped connections, dead spots, and Wi‑Fi coverage concerns around the home.</p>
+          </div>
+
+          <div class="card service-card">
+            <h4>📁 Data Transfer</h4>
+            <p>Move files, family photos, and important documents from an old device to a new one safely.</p>
+          </div>
+
+          <div class="card service-card">
+            <h4>🛡️ Virus &amp; Malware Cleanup</h4>
+            <p>Help with pop-ups, suspicious behavior, and basic cleanup options for a safer, more stable computer.</p>
+          </div>
+
+          <div class="card service-card">
+            <h4>🐢 Slow Computers &amp; Errors</h4>
+            <p>Help with sluggish performance, startup issues, error messages, and general computer issues.</p>
+          </div>
+        </div>
+
+        <details class="see-more">
+          <summary>➕ See More</summary>
+          <div class="see-more-content">
+            <ul>
+              <li>🖨️ Printer help</li>
+              <li>📧 Email access help</li>
+              <li>💻 New computer guidance</li>
+              <li>🔐 Basic security review</li>
+              <li>🏠 General in-home technology help</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <h3>💵 Simple, Upfront Pricing</h3>
+
+        <p class="pricing-guide">Not sure what you need? Start with the $149 visit. Many common requests can be handled during the first visit.</p>
+
+        <p class="section-intro">Choose the option that best fits the problem, or call and we’ll help you decide.</p>
+
+        <div class="pricing-grid">
+          <div class="card pricing-card">
+            <h4>Starter Visit</h4>
+            <p class="price">$149</p>
+            <p class="pricing-sub">Best for one main issue</p>
+            <ul>
+              <li>Initial review</li>
+              <li>Help with one primary request</li>
+              <li>Basic system check</li>
+            </ul>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">📞 Call to Book Starter</a>
+          </div>
+
+          <div class="card pricing-card popular">
+            <span class="tag">Most Popular</span>
+            <h4>Home Care Visit</h4>
+            <p class="price">$199</p>
+            <p class="pricing-sub">Best for most homes</p>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Multiple requests during one visit</li>
+              <li>Performance review</li>
+              <li>Basic security review</li>
+              <li>Wi‑Fi and device help</li>
+            </ul>
+            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_homecare');">📞 Call to Book Home Care</a>
+          </div>
+
+          <div class="card pricing-card">
+            <h4>Total Care Visit</h4>
+            <p class="price">$279</p>
+            <p class="pricing-sub">Best for bigger cleanup or setup</p>
+            <ul>
+              <li>Everything in Home Care</li>
+              <li>Cleanup help if needed</li>
+              <li>System cleanup review</li>
+              <li>New device guidance or data transfer</li>
+              <li>Priority availability</li>
+            </ul>
+            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="wrap">
+        <h3>⭐ What Your Neighbors Are Saying</h3>
+        <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
+
+        <div class="testimonials">
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“They saved 30 years of family photos and showed me how to keep them safe.”</blockquote>
+            <cite>Margaret H. • Clearwater Beach</cite>
+          </div>
+
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“He explained everything in words I could understand and fixed it in one visit.”</blockquote>
+            <cite>Robert T. • Palm Harbor</cite>
+          </div>
+
+          <div class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <blockquote>“My Wi‑Fi works in every room now, even the lanai. Should have called sooner.”</blockquote>
+            <cite>Susan M. • Dunedin</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="wrap">
+        <h3>❓ Frequently Asked Questions</h3>
+        <p class="section-intro">Clear answers before you call or book.</p>
+
+        <div class="faq-list">
+          <div class="card faq-item">
+            <h4>🏠 Do I need to bring my computer anywhere?</h4>
+            <p>No. We come to your home and work with the setup you already have there.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>📍 What areas do you serve?</h4>
+            <p>Clearwater, Clearwater Beach, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>👵 Do you work with seniors?</h4>
+            <p>Yes. The service is designed to be patient, clear, respectful, and easy to understand.</p>
+          </div>
+
+          <div class="card faq-item">
+            <h4>💵 What if I am not sure which pricing option I need?</h4>
+            <p>Start with the $149 visit or call first. We’ll help you choose the best fit for the problem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="card form-card">
+          <h3>🗓️ Need In-Home Computer Help?</h3>
+
+          <p class="section-intro">Call or text for availability, or request a visit below. Appointments may be available in the Clearwater area.</p>
+
+          <div class="urgency-box">🏠 Local Service • Clear Explanations • Patient In-Home Help</div>
+
+          <form action="https://suncoast-b2c-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Full Name" required />
+            </div>
+
+            <div>
+              <label for="message">What do you need help with?</label>
+              <textarea id="message" name="message" placeholder="Briefly describe the problem" required></textarea>
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Best Number to Reach You" required />
+            </div>
+
+            <input type="hidden" name="_subject" value="New SunCoast Tech Customer Lead" />
+            <input type="hidden" name="lead_type" value="customer" />
+            <input type="hidden" name="lead_source" value="b2c_homepage" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
+
+            <button class="btn btn-primary" type="submit">🗓️ Schedule a Visit</button>
+          </form>
+
+          <p class="privacy-note">We only use your information to respond to your request. Do not send passwords, payment details, or sensitive account information through this form.</p>
+          <p class="form-note">Form kept intentionally simple for mobile users.</p>
+        </div>
+
+        <div class="card contact-card">
+          <h4>📞 Call or Text a Local Person</h4>
+
+          <p class="mini">Have a computer, Wi‑Fi, printer, or file transfer issue? Call or text today to ask about availability and get clear next steps from a local person.</p>
+
+          <div class="contact-stack">
+            <a class="contact-chip" href="tel:17276479000" onclick="trackCallClick('contact_card');">📞 Call (727) 647-9000</a>
+            <a class="contact-chip" href="sms:17276479000" onclick="trackSecondaryContact('text', 'contact_card');">💬 Text (727) 647-9000</a>
+            <a class="contact-chip" href="mailto:support@SuncoastTechSupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email support@SuncoastTechSupport.net</a>
+          </div>
+
+          <!-- Added hours of operation -->
+          <p class="mini"><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="card footer-card">
+        <p><strong>SunCoast Tech Support</strong> • Insured • Veteran-Owned</p>
+        <p>Serving Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor &amp; Belleair</p>
+        <p><a href="https://suncoasttechsupport.net/privacy.html">Privacy Policy</a></p>
+        <p>© SunCoast Tech Support</p>
+        <p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
+      </div>
     </div>
+  </footer>
+
+  <div class="sticky-call">
+    <a href="tel:17276479000" onclick="trackCallClick('sticky_mobile');">📞 Call or Text a Local Person</a>
   </div>
-</section>
 
-<!--
-  SECTION 5 — SIMPLE, UPFRONT PRICING
-  Unchanged. Included in full for completeness.
--->
-<section id="pricing" class="pricing">
-  <div class="container">
-    <h2>Simple, Upfront Pricing</h2>
+  <!-- Sitelinks navigation for Google Ads -->
+  <nav class="sitelinks">
+    <ul>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://suncoasttechsupport.net/wifi">Wi‑Fi Solutions</a></li>
+    </ul>
+  </nav>
 
-    <p>
-      Not sure which visit fits your request? Start with the $149 visit. Many common setup and connection requests can be reviewed during the first in‑home visit.
-    </p>
-
-    <div class="pricing-grid">
-      <article class="pricing-card">
-        <h3>Starter Visit</h3>
-        <p class="price">$149</p>
-        <p>Best for one main issue</p>
-
-        <ul>
-          <li>Initial review</li>
-          <li>One primary in‑home service request</li>
-          <li>Basic system check</li>
-        </ul>
-
-        <a href="tel:+17276479000" class="btn btn-primary">
-          Call to Book Starter
-        </a>
-      </article>
-
-      <article class="pricing-card featured">
-        <p class="badge">Most Popular</p>
-        <h3>Home Care Visit</h3>
-        <p class="price">$199</p>
-        <p>Best for most homes</p>
-
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Multiple requests during one visit</li>
-          <li>Performance review</li>
-          <li>Basic security review</li>
-          <li>Wi‑Fi and device setup</li>
-        </ul>
-
-        <a href="tel:+17276479000" class="btn btn-primary">
-          Call to Book Home Care
-        </a>
-      </article>
-
-      <article class="pricing-card">
-        <h3>Total Care Visit</h3>
-        <p class="price">$279</p>
-        <p>Best for bigger setup or review needs</p>
-
-        <ul>
-          <li>Everything in Home Care</li>
-          <li>Basic system review if needed</li>
-          <li>System cleanup review</li>
-          <li>New device setup or data transfer</li>
-          <li>Priority availability</li>
-        </ul>
-
-        <a href="tel:+17276479000" class="btn btn-primary">
-          Call to Book Total Care
-        </a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!--
-  SECTION 6 — REVIEWS / SOCIAL PROOF
-  Unchanged. Included in full for completeness.
--->
-<section id="reviews" class="reviews">
-  <div class="container">
-    <h2>⭐ What Your Neighbors Are Saying</h2>
-
-    <p>
-      Real reassurance for people who want someone patient, local, and easy to work with.
-    </p>
-
-    <div class="review-grid">
-      <blockquote class="review-card">
-        <p>★★★★★</p>
-        <p>
-          “They saved 30 years of family photos and showed me how to keep them safe.”
-        </p>
-        <footer>Margaret H. • Clearwater Beach</footer>
-      </blockquote>
-
-      <blockquote class="review-card">
-        <p>★★★★★</p>
-        <p>
-          “He explained everything in words I could understand and fixed it in one visit.”
-        </p>
-        <footer>Robert T. • Palm Harbor</footer>
-      </blockquote>
-
-      <blockquote class="review-card">
-        <p>★★★★★</p>
-        <p>
-          “My Wi‑Fi works in every room now, even the lanai. Should have called sooner.”
-        </p>
-        <footer>Susan M. • Dunedin</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!--
-  SECTION 7 — FAQ
-  Unchanged. Included in full for completeness.
--->
-<section id="faq" class="faq">
-  <div class="container">
-    <h2>Frequently Asked Questions</h2>
-
-    <p>Clear answers before you call or book.</p>
-
-    <div class="faq-list">
-      <article class="faq-item">
-        <h3>Do I need to bring my computer anywhere?</h3>
-        <p>
-          No. We come to your home and work with the setup you already have there.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>What areas do you serve?</h3>
-        <p>
-          We serve Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas County areas.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Do you provide in‑home printer setup near me?</h3>
-        <p>
-          Yes. We provide in‑home printer setup and Wi‑Fi printer connection service in Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas County areas.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Can you set up a new computer at my home?</h3>
-        <p>
-          Yes. We can set up a new PC or laptop, review basic settings, connect common devices, and move files from an old device when needed.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Can you review Wi‑Fi problems at home?</h3>
-        <p>
-          We review Wi‑Fi coverage, weak signal areas, router placement, dropped connections, and basic home network setup.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Do you work with seniors?</h3>
-        <p>
-          Yes. The service is designed to be patient, clear, respectful, and easy to understand.
-        </p>
-      </article>
-
-      <article class="faq-item">
-        <h3>What if I am not sure which pricing option I need?</h3>
-        <p>
-          Start with the $149 visit or call first. We can review the request and recommend the best fit.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!--
-  SECTION 8 — FINAL CTA / FORM
-  The form remains largely the same; the heading and note emphasize local service for seniors. Phone field remains required and clickable via tel: link.
--->
-<section id="schedule" class="schedule">
-  <div class="container">
-    <h2>Need In‑Home Tech Service?</h2>
-
-    <p>
-      Need computer setup, Wi‑Fi service, printer setup, or data transfer? Call or text today for local in‑home service in Clearwater, Largo, Dunedin, Palm Harbor, and nearby Pinellas County.
-    </p>
-
-    <p class="trust-line">
-      Local Service • Clear Explanations • Patient In‑Home Visits
-    </p>
-
-    <form id="lead-form" class="lead-form" method="POST" action="">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        autocomplete="name"
-        required
-      />
-
-      <label for="service">What service do you need?</label>
-      <textarea
-        id="service"
-        name="message"
-        rows="4"
-        placeholder="Computer setup, Wi‑Fi issue, printer setup, data transfer, or another in‑home service request"
-        required
-      ></textarea>
-
-      <label for="phone">Phone Number</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        autocomplete="tel"
-        required
-      />
-
-      <button type="submit" class="btn btn-primary">
-        Schedule a Visit
-      </button>
-
-      <p class="form-note">
-        We only use your information to respond to your request. Do not send passwords, payment details, or sensitive account information through this form.
-      </p>
-
-      <p class="form-note">
-        Form kept intentionally simple for mobile users.
-      </p>
-    </form>
-  </div>
-</section>
-
-<!--
-  SECTION 9 — CONTACT / FOOTER CTA
-  Added hours of operation beneath the contact description. Phone numbers are clickable throughout.
--->
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Call or Text a Local Person</h2>
-
-    <p>
-      Have a computer setup, Wi‑Fi, printer setup, or data transfer request? Call or text today to ask about availability and get clear next steps from a local person.
-    </p>
-
-    <p class="hours">
-      <strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.
-    </p>
-
-    <div class="contact-actions">
-      <a href="tel:+17276479000" class="btn btn-primary">
-        Call (727) 647‑9000
-      </a>
-
-      <a href="sms:+17276479000" class="btn btn-secondary">
-        Text (727) 647‑9000
-      </a>
-
-      <a href="mailto:Support@SuncoastTechSupport.net" class="btn btn-secondary">
-        Email Support@SuncoastTechSupport.net
-      </a>
-    </div>
-  </div>
-</section>
-
-<!--
-  SECTION 10 — FOOTER
-  Added hours of operation and kept service area. Phone number not repeated here, but clickable links remain above.
--->
-<footer class="site-footer">
-  <div class="container">
-    <p>SunCoast Tech Support • Insured • Veteran‑Owned</p>
-
-    <p>
-      Serving Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor,
-      Belleair, Clearwater Beach, and nearby Pinellas County homes.
-    </p>
-
-    <p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
-
-    <p>
-      <a href="/privacy.html">Privacy Policy</a>
-    </p>
-
-    <p>© SunCoast Tech Support</p>
-  </div>
-</footer>
-
-<!--
-  OPTIONAL — STRUCTURED DATA FAQ JSON‑LD
-  Existing FAQ schema is preserved below. Added LocalBusiness schema to help search engines and AI understand the business, including hours of operation and service area. Sitelinks navigation is provided separately in a nav element below.
--->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do I need to bring my computer anywhere?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. SunCoast Tech Support provides in‑home service and works with the setup you already have there."
-      }
+  <!-- Local Business structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SunCoast Tech Support",
+    "url": "https://suncoasttechsupport.net",
+    "telephone": "+1-727-647-9000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Clearwater",
+      "addressRegion": "FL",
+      "addressCountry": "US"
     },
-    {
-      "@type": "Question",
-      "name": "What areas do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We serve Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas County areas."
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Off-hours support only"
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide in‑home printer setup near me?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We provide in‑home printer setup and Wi‑Fi printer connection service in Clearwater, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas County areas."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you set up a new computer at my home?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We can set up a new PC or laptop, review basic settings, connect common devices, and move files from an old device when needed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you review Wi‑Fi problems at home?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We review Wi‑Fi coverage, weak signal areas, router placement, dropped connections, and basic home network setup."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you work with seniors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The service is designed to be patient, clear, respectful, and easy to understand."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I am not sure which pricing option I need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with the $149 visit or call first. We can review the request and recommend the best fit."
-      }
-    }
-  ]
-}
-</script>
-
-<!--
-  NEW — LOCAL BUSINESS JSON‑LD SCHEMA
-  This structured data helps AI and search engines understand the business details, hours of operation and service area. It complements the FAQ schema above.
--->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "SunCoast Tech Support",
-  "url": "https://suncoasttechsupport.net/",
-  "telephone": "+1-727-647-9000",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Pinellas County",
-    "addressRegion": "FL",
-    "addressCountry": "US"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "17:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59",
-      "description": "Off‑hours support only"
-    }
-  ],
-  "areaServed": ["Clearwater", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Clearwater Beach", "Pinellas County"],
-  "sameAs": ["https://suncoasttechsupport.net/wifi"]
-}
-</script>
-
-<!--
-  SITE LINKS NAVIGATION
-  A simple nav element to provide links to key sections. These can be used as sitelinks in Google Ads.
--->
-<nav class="sitelinks">
-  <ul>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="https://suncoasttechsupport.net/wifi">Wi‑Fi Solutions</a></li>
-  </ul>
-</nav>
+    ],
+    "areaServed": ["Clearwater", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Pinellas County"],
+    "sameAs": ["https://suncoasttechsupport.net/wifi"]
+  }
+  </script>
 
 </body>
 </html>
