@@ -436,6 +436,106 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+
+    /*
+      =============================================================================
+      Responsive Grid & Card Layouts
+
+      The following styles define default grid layouts for the pricing, testimonials,
+      FAQ, and contact sections. These layouts use flexible grids on larger
+      screens and gracefully collapse into a single column on smaller devices.
+      This ensures that each “card” (pricing tier, review, FAQ item, contact
+      panel) is clearly visible and easy to scroll on mobile. See the media
+      query below for the mobile adjustments.
+    */
+
+    /* Pricing cards arranged in a flexible grid. On wide screens this will
+       display three cards side by side; the auto-fit ensures the cards wrap
+       nicely if space is limited. */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* Testimonials as a three-column grid on desktop. Cards will wrap if the
+       screen is narrower than three columns. */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* FAQ items in two columns on larger screens for better use of space. */
+    .faq-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* Contact section uses a two-column layout: the form on the left and
+       contact information on the right. */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Mobile responsive adjustments. On screens 768px wide or less, the layout
+       collapses to single columns for easier reading and scrolling. The hide-
+       mobile class is used to hide certain header actions on mobile devices. */
+    @media (max-width: 768px) {
+      /* Stack hero content above the image */
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      /* About section stacks photo and text vertically */
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Services: display each service card on its own row */
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Pricing cards: stack vertically */
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Testimonials: stack one per row */
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      /* FAQ items: stack one per row */
+      .faq-list {
+        grid-template-columns: 1fr;
+      }
+
+      /* Contact section: stack form and contact info */
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Hide header call-to-action buttons on mobile to save space */
+      .header-actions.hide-mobile {
+        display: none;
+      }
+
+      /* Adjust sticky call positioning on mobile */
+      .sticky-call {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
   </style>
 
   <!-- Cloudflare Turnstile -->
