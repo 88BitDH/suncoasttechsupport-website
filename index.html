@@ -536,6 +536,121 @@
         right: 16px;
       }
     }
+    /*
+      =============================================================================
+      Navigation Menu Styles
+
+      The navigation menu appears below the header and provides quick links to
+      each major section of the page. On mobile devices the links wrap to
+      multiple lines as needed. Colors and hover effects mirror the primary
+      brand palette.
+    */
+    .nav-menu {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-menu .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .nav-menu a {
+      color: var(--primary);
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-menu a:hover {
+      background: var(--accent);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /*
+      =============================================================================
+      Contact Section Enhancements
+
+      These styles refine the layout and appearance of the form and contact card.
+      Inputs are full-width with generous padding, labels are bold and clear,
+      and contact chips are styled for a friendly, approachable look. The
+      form/card padding ensures breathing room similar to the business page.
+    */
+    .form-card,
+    .contact-card {
+      padding: 24px;
+    }
+    .form-card form > div {
+      margin-bottom: 16px;
+    }
+    .form-card label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+    }
+    .form-card input,
+    .form-card textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      background: #fff;
+      color: var(--text);
+    }
+    .form-card textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-card button.btn {
+      width: 100%;
+      font-size: 18px;
+    }
+    .contact-card h4 {
+      margin-top: 0;
+    }
+    .contact-card p.mini {
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .contact-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .contact-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-chip:hover {
+      background: #f0f8ff;
+      text-decoration: none;
+    }
+
   </style>
 
   <!-- Cloudflare Turnstile -->
@@ -567,6 +682,19 @@
       </div>
     </div>
   </header>
+
+  <!-- Navigation menu linking to sections on the page -->
+  <nav class="nav-menu">
+    <div class="wrap">
+      <ul>
+        <li><a href="#services">Common Problems</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <main>
     <!-- Hero Section -->
@@ -634,7 +762,7 @@
     </section>
 
     <!-- Services / Common Problems Section -->
-    <section class="section">
+    <section id="services" class="section">
       <div class="wrap">
         <h3>🛠️ Common Problems We Fix</h3>
         <p class="section-intro">Focused on common in-home technology requests from Clearwater-area customers.</p>
@@ -731,7 +859,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section">
+    <section id="testimonials" class="section">
       <div class="wrap">
         <h3>⭐ What Your Neighbors Are Saying</h3>
         <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
@@ -759,7 +887,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section">
+    <section id="faq" class="section">
       <div class="wrap">
         <h3>❓ Frequently Asked Questions</h3>
         <p class="section-intro">Clear answers before you call or book.</p>
