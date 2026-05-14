@@ -402,18 +402,15 @@
     }
 
     .sticky-call {
-      /* Position set to static so that the button scrolls with the page rather than
-         staying fixed in one corner. Margin centers it and provides breathing
-         room above the footer. */
-      position: static;
-      margin: 32px auto;
-      z-index: auto;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
       background: var(--primary);
       color: #fff;
       border-radius: 999px;
       padding: 14px 20px;
       box-shadow: var(--shadow);
-      display: inline-block;
     }
 
     .sticky-call a {
@@ -461,27 +458,6 @@
       gap: 16px;
       margin-top: 20px;
     }
-
-/*
-  Ensure pricing cards align their call-to-book buttons at the bottom. Each
-  pricing card becomes a flex container so that the list of features grows
-  to fill the available space and the call-to-book button sits flush at
-  the bottom of the card. This creates visual alignment across all cards.
-*/
-.pricing-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.pricing-card ul {
-  flex-grow: 1;
-  margin-bottom: 0;
-}
-
-.pricing-card a.btn {
-  margin-top: auto;
-}
 
     /* Testimonials as a three-column grid on desktop. Cards will wrap if the
        screen is narrower than three columns. */
@@ -554,10 +530,10 @@
         display: none;
       }
 
-      /* No special positioning needed for sticky-call on mobile since it now
-         scrolls with the page. */
+      /* Adjust sticky call positioning on mobile */
       .sticky-call {
-        margin: 24px auto;
+        bottom: 16px;
+        right: 16px;
       }
     }
     /*
@@ -675,6 +651,223 @@
       text-decoration: none;
     }
 
+  
+
+    /* Senior readability controls and consumer-friendly section navigation */
+    body.senior-readable {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    body.senior-readable .hero-copy,
+    body.senior-readable .section-intro,
+    body.senior-readable .pricing-sub,
+    body.senior-readable .testimonial blockquote,
+    body.senior-readable .faq-item p,
+    body.senior-readable .mini {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    body.senior-readable .btn,
+    body.senior-readable .nav-menu a,
+    body.senior-readable input,
+    body.senior-readable textarea {
+      font-size: 20px;
+    }
+
+    .accessibility-bar {
+      background: #fff7e6;
+      border-bottom: 1px solid var(--warning-border);
+    }
+
+    .accessibility-bar .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      color: var(--warning-text);
+      font-weight: 800;
+    }
+
+    .text-toggle {
+      border: 1px solid var(--warning-border);
+      background: #fff;
+      color: var(--warning-text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      min-height: 44px;
+    }
+
+    .text-toggle:hover {
+      background: var(--warning-bg);
+    }
+
+    .nav-menu {
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(22, 48, 71, 0.08);
+    }
+
+    .nav-menu .nav-label {
+      color: var(--muted);
+      font-weight: 900;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .hero-cta-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin-top: 20px;
+    }
+
+    .hero-cta-card .btn-call-dominant {
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 12px;
+    }
+
+    .hero-cta-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .hero-cta-footer a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--accent);
+      color: var(--text);
+      font-weight: 900;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .pricing-card .qualifier {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text);
+      font-weight: 800;
+      margin: 12px 0 14px;
+    }
+
+    .pricing-card .btn-primary {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--primary);
+      position: relative;
+      padding-top: 34px;
+    }
+
+    .badge-popular {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffb703;
+      color: #163047;
+      border: 2px solid #f2a400;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-card.popular .badge-popular {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .review-source {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 0 0 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .review-source a,
+    .review-link-row a {
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .google-review-label {
+      color: var(--success);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .review-link-row {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .footer-service-area {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .accessibility-bar .wrap {
+        justify-content: flex-start;
+      }
+
+      .nav-menu .wrap {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+
+      .nav-menu ul {
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: flex-start;
+        padding: 8px 0;
+      }
+
+      .nav-menu a {
+        white-space: nowrap;
+        background: var(--accent);
+        border: 1px solid var(--border);
+      }
+
+      .hero-cta-footer {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
   <!-- Cloudflare Turnstile -->
@@ -686,6 +879,14 @@
     <div class="wrap">
       <span>📅 Appointments Available • Call or Text (727) 647‑9000</span>
       <a href="tel:17276479000" onclick="trackCallClick('topbar');">📞 Call or Text (727) 647‑9000</a>
+    </div>
+  </div>
+
+  <div class="accessibility-bar" aria-label="Readability controls">
+    <div class="wrap">
+      <span>👓 Need larger text?</span>
+      <button type="button" class="text-toggle" onclick="setSeniorReadable(true)">Make Text Larger</button>
+      <button type="button" class="text-toggle" onclick="setSeniorReadable(false)">Normal Text</button>
     </div>
   </div>
 
@@ -711,11 +912,12 @@
   <nav class="nav-menu">
     <div class="wrap">
       <ul>
-        <li><a href="#services">Common Problems</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="nav-label">Jump to:</li>
+        <li><a href="#services">🛠️ Common Problems</a></li>
+        <li><a href="#pricing">💵 Pricing</a></li>
+        <li><a href="#testimonials">⭐ Reviews</a></li>
+        <li><a href="#faq">❓ FAQ</a></li>
+        <li><a href="#contact">📞 Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -737,14 +939,13 @@
             We explain everything in plain English—no confusing tech talk. No need to unplug your computer or drag it across town. We come to you, find the problem, and help you feel comfortable every step of the way. Need to fix Wi‑Fi dead spots, set up a printer, or transfer family photos? We handle all your in‑home tech needs.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-cta-card" aria-label="Contact options">
             <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="trackCallClick('hero');">📞 Call or Text a Local Person</a>
-          </div>
-
-          <div class="secondary-links">
-            <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
-            <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">💬 Text Us</a>
-            <a href="#pricing">💵 Start with $149</a>
+            <div class="hero-cta-footer">
+              <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
+              <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">💬 Text Us</a>
+              <a href="#pricing">💵 Start with $149</a>
+            </div>
           </div>
         </div>
 
@@ -842,12 +1043,13 @@
             <h4>Starter Visit</h4>
             <p class="price">$149</p>
             <p class="pricing-sub">Best for one main issue</p>
+            <p class="qualifier">Good fit if you have one clear problem and want a simple in-home visit.</p>
             <ul>
               <li>Initial review</li>
               <li>Help with one primary request</li>
               <li>Basic system check</li>
             </ul>
-            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">📞 Call to Book Starter</a>
+            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_starter');">📞 Call to Book Starter</a>
           </div>
 
           <div class="card pricing-card popular">
@@ -855,6 +1057,7 @@
             <h4>Home Care Visit</h4>
             <p class="price">$199</p>
             <p class="pricing-sub">Best for most homes</p>
+            <p class="qualifier">Good fit if you have more than one tech issue or want a broader home technology check.</p>
             <ul>
               <li>Everything in Starter</li>
               <li>Multiple requests during one visit</li>
@@ -869,6 +1072,7 @@
             <h4>Total Care Visit</h4>
             <p class="price">$279</p>
             <p class="pricing-sub">Best for bigger cleanup or setup</p>
+            <p class="qualifier">Good fit if you need a larger setup, cleanup, device review, or file transfer help.</p>
             <ul>
               <li>Everything in Home Care</li>
               <li>Cleanup help if needed</li>
@@ -876,7 +1080,7 @@
               <li>New device guidance or data transfer</li>
               <li>Priority availability</li>
             </ul>
-            <a class="btn btn-subtle" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
+            <a class="btn btn-primary" href="tel:17276479000" onclick="trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
           </div>
         </div>
       </div>
@@ -887,26 +1091,31 @@
       <div class="wrap">
         <h3>⭐ What Your Neighbors Are Saying</h3>
         <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
+        <p class="review-source">These are Google review snippets. <a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read more Google reviews</a>.</p>
 
         <div class="testimonials">
           <div class="card testimonial">
+            <div class="google-review-label">Google Review</div>
             <div class="stars">★★★★★</div>
             <blockquote>“They saved 30 years of family photos and showed me how to keep them safe.”</blockquote>
             <cite>Margaret H. • Clearwater Beach</cite>
           </div>
 
           <div class="card testimonial">
+            <div class="google-review-label">Google Review</div>
             <div class="stars">★★★★★</div>
             <blockquote>“He explained everything in words I could understand and fixed it in one visit.”</blockquote>
             <cite>Robert T. • Palm Harbor</cite>
           </div>
 
           <div class="card testimonial">
+            <div class="google-review-label">Google Review</div>
             <div class="stars">★★★★★</div>
             <blockquote>“My Wi‑Fi works in every room now, even the lanai. Should have called sooner.”</blockquote>
             <cite>Susan M. • Dunedin</cite>
           </div>
         </div>
+        <p class="review-link-row"><a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">⭐ Read more Google reviews</a></p>
       </div>
     </section>
 
@@ -1003,7 +1212,7 @@
     <div class="wrap">
       <div class="card footer-card">
         <p><strong>SunCoast Tech Support</strong> • Insured • Veteran-Owned</p>
-        <p>Serving Clearwater, Dunedin, Palm Harbor, Largo, Safety Harbor &amp; Belleair</p>
+        <p class="footer-service-area">Serving Pinellas County, Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Belleair Bluffs, Seminole, Pinellas Park, St. Petersburg, and nearby Tampa Bay homes.</p>
         <p><a href="https://suncoasttechsupport.net/privacy.html">Privacy Policy</a></p>
         <p>© SunCoast Tech Support</p>
         <p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
@@ -1056,6 +1265,21 @@
     "areaServed": ["Clearwater", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Pinellas County"],
     "sameAs": ["https://suncoasttechsupport.net/wifi"]
   }
+  </script>
+
+
+  <script>
+    function setSeniorReadable(enabled) {
+      document.body.classList.toggle('senior-readable', enabled);
+      try { localStorage.setItem('suncoastSeniorReadable', enabled ? '1' : '0'); } catch (e) {}
+    }
+    (function () {
+      try {
+        if (localStorage.getItem('suncoastSeniorReadable') === '1') {
+          document.body.classList.add('senior-readable');
+        }
+      } catch (e) {}
+    })();
   </script>
 
 </body>
