@@ -1282,6 +1282,58 @@
       display: block !important;
     }
 
+  
+    /* Common Problems: aligned alphabetical card layout */
+    #services .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    #services .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 22px;
+    }
+
+    #services .service-card h4 {
+      min-height: 2.6em;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    #services .service-card p {
+      margin-top: 0;
+    }
+
+    @media (max-width: 680px) {
+      #services .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #services .service-card h4 {
+        min-height: auto;
+      }
+    }
+
+  
+    /* Common Problems: six-card aligned grid with cybersecurity card */
+    #services .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    #services .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
   </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1412,36 +1464,48 @@
         <p class="section-intro">Focused on common in-home technology requests from Clearwater-area customers.</p>
 
         <div class="service-grid">
+          
+          
           <div class="card service-card">
-            <h4><a href="https://suncoasttechsupport.net/wifi">📶 Wi‑Fi Problems</a></h4>
-            <p>Weak signal, dropped connections, dead spots, and Wi‑Fi coverage concerns around the home.</p>
+            <h4>💻 Computer &amp; Laptop Services</h4>
+            <p>Help with slow computers, laptop setup, startup issues, error messages, basic device setup, and common home computer problems.</p>
+          </div>
+
+          <div class="card service-card">
+            <h4>🔐 Cybersecurity &amp; Security Review</h4>
+            <p>Basic home security review, suspicious pop-up checks, account safety guidance, password hygiene, and practical steps to help reduce common online risks.</p>
           </div>
 
           <div class="card service-card">
             <h4>📁 Data Transfer</h4>
-            <p>Move files, family photos, and important documents from an old device to a new one safely.</p>
+            <p>Move files, family photos, and important documents from an old device to a new computer or laptop safely.</p>
+          </div>
+
+          <div class="card service-card">
+            <h4>🖨️ Printer, Scanners &amp; Fax</h4>
+            <p>Help connecting printers, scanners, all-in-one devices, wireless printers, scan-to-computer setup, and basic fax-related device issues.</p>
           </div>
 
           <div class="card service-card">
             <h4>🛡️ Virus &amp; Malware Cleanup</h4>
-            <p>Help with pop-ups, suspicious behavior, and basic cleanup options for a safer, more stable computer.</p>
+            <p>Help with pop-ups, suspicious behavior, browser redirects, and basic cleanup options for a safer, more stable computer.</p>
           </div>
 
           <div class="card service-card">
-            <h4>🐢 Slow Computers &amp; Errors</h4>
-            <p>Help with sluggish performance, startup issues, error messages, and general computer issues.</p>
+            <h4><a href="https://suncoasttechsupport.net/wifi">📶 Wi-Fi Problems</a></h4>
+            <p>Weak signal, dropped connections, dead spots, and Wi-Fi coverage concerns around the home.</p>
           </div>
+
+
         </div>
 
         <details class="see-more">
           <summary>➕ See More</summary>
           <div class="see-more-content">
             <ul>
-              <li>🖨️ Printer help</li>
               <li>📧 Email access help</li>
-              <li>💻 New computer guidance</li>
-              <li>🔐 Basic security review</li>
               <li>🏠 General in-home technology help</li>
+              <li>📱 Phone, tablet, and basic device guidance</li>
             </ul>
           </div>
         </details>
@@ -1713,6 +1777,32 @@
 
       applyTextSize();
     });
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cybersecurity and Home Security Review",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SunCoast Tech Support",
+      "telephone": "+1-727-647-9000",
+      "url": "https://suncoasttechsupport.net"
+    },
+    "areaServed": [
+      "Pinellas County",
+      "Clearwater",
+      "Largo",
+      "Dunedin",
+      "Palm Harbor",
+      "Safety Harbor",
+      "Belleair",
+      "Clearwater Beach"
+    ],
+    "serviceType": "Cybersecurity review, malware cleanup, home computer security help, and online safety guidance"
+  }
   </script>
 
 </body>
