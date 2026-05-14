@@ -1,1 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Printer, Scanner &amp; Fax Help in Clearwater, FL | Suncoast Tech Support</title>
+  <meta name="description" content="Local printer, scanner, and fax help in Clearwater, FL for setup, wireless printer issues, printer offline errors, scanning problems, fax setup, and home office troubleshooting." />
+  <meta name="theme-color" content="#0d6efd" />
+  <link rel="canonical" href="https://suncoasttechsupport.net/printer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17992501324');
+
+    function trackCallClick(source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': 'call_' + source,
+        'value': 1
+      });
+    }
+
+    function trackFormStart() {
+      gtag('event', 'form_start', {
+        'event_category': 'lead_form',
+        'event_label': 'printer_scanner_fax_help'
+      });
+    }
+  </script>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <style>
+    :root {
+      --brand: #0d6efd;
+      --brand-dark: #0a58ca;
+      --bg: #f5f9fc;
+      --surface: #ffffff;
+      --bg-soft: #eaf4ff;
+      --text: #163047;
+      --muted: #476173;
+      --border: #d7e5f2;
+      --shadow: 0 10px 25px rgba(22, 48, 71, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding-bottom: 5rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      background: #ffffff;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 0.55rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .top-call-strip {
+      background: #0d2235;
+      color: #fff;
+      text-align: center;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.98rem;
+    }
+
+    .top-call-strip a {
+      color: #fff;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .hero {
+      padding: 1.6rem 0 2rem;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .brand-wrap img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-wrap strong {
+      font-size: 1rem;
+      line-height: 1.2;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+    }
+
+    .trust-line {
+      display: inline-block;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 16px;
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.05rem, 6vw, 3.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+
+    .subheadline {
+      font-size: clamp(1.08rem, 3vw, 1.35rem);
+      color: var(--muted);
+      margin: 0 0 1rem;
+      font-weight: 700;
+    }
+
+    .supporting-text {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 820px;
+      margin-bottom: 1rem;
+    }
+
+    .phone-big {
+      display: inline-block;
+      font-size: clamp(1.85rem, 7vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: var(--brand-dark);
+      text-decoration: none;
+      margin: 0.35rem 0 1rem;
+    }
+
+    .phone-big:hover {
+      text-decoration: underline;
+    }
+
+    .button-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .sticky-call a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 14px;
+      padding: 0.95rem 1.1rem;
+      min-height: 54px;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary,
+    .sticky-call a {
+      background: var(--brand);
+      border: 1px solid var(--brand);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-primary:hover,
+    .sticky-call a:hover {
+      background: var(--brand-dark);
+      border-color: var(--brand-dark);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-soft);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .reassurance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .reassurance-item {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .icon {
+      display: inline-block;
+      margin-right: 0.35rem;
+    }
+
+    .section-wrap {
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-wrap h2 {
+      margin: 0 0 0.7rem;
+      font-size: clamp(1.55rem, 5vw, 2.3rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .section-wrap p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .service-list,
+    .step-list {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1rem;
+      padding-left: 1.25rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .issue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .issue-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .issue-item a {
+      font-weight: 900;
+    }
+
+    .card-soft {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .blue-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--brand-dark);
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+    }
+
+    .step-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+    }
+
+    .step-number {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 0.6rem;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-grid label {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea {
+      width: 100%;
+      min-height: 52px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem 0.9rem;
+      background: #fff;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-grid textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .final-cta {
+      background: #0d2235;
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2,
+    .final-cta p {
+      color: #fff;
+    }
+
+    .sticky-call {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(245, 249, 252, 0.96);
+      border-top: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-call a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 780px) {
+      .hero-card {
+        padding: 1.1rem;
+        border-radius: 18px;
+      }
+
+      .brand-wrap {
+        justify-content: center;
+      }
+
+      .trust-line {
+        display: block;
+        border-radius: 16px;
+        line-height: 1.45;
+      }
+
+      .button-row {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+
+      .reassurance-grid,
+      .issue-grid,
+      .step-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-wrap {
+        padding: 1.5rem 0;
+      }
+    }
+
+    @media (min-width: 781px) {
+      .sticky-call {
+        display: none;
+      }
+
+      body {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="disclaimer">
+    We are an independent local service provider and are not affiliated with Best Buy, Geek Squad, HP, Canon, Epson, Brother, Xerox, Microsoft, Apple, or any printer or computer manufacturer.
+  </div>
+
+  <div class="top-call-strip">
+    Printer, scanner, or fax problems? Call or text for availability:
+    <a href="tel:+17276479000" onclick="trackCallClick('topbar')">(727) 647-9000</a>
+  </div>
+
+  <main class="container">
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <div class="brand-wrap">
+          <img src="/logo.png" alt="Suncoast Tech Support logo" loading="eager" decoding="async" />
+          <strong>Suncoast Tech Support</strong>
+        </div>
+
+        <div class="trust-line">⭐ Local Clearwater-Area Business | 20+ Years Experience | Veteran-Owned</div>
+
+        <h1>Local Printer, Scanner &amp; Fax Help in Clearwater</h1>
+        <p class="subheadline">Is your printer offline, scanner not working, or fax setup giving you trouble?</p>
+
+        <p class="supporting-text">
+          Suncoast Tech Support helps Clearwater-area homeowners with practical printer, scanner, and fax support, including wireless printer setup, printer offline errors, printing from desktops and laptops, scan-to-computer setup, and basic home office troubleshooting.
+        </p>
+
+        <a class="phone-big" href="tel:+17276479000" onclick="trackCallClick('hero_phone')" aria-label="Call Suncoast Tech Support now at 727-647-9000">(727) 647-9000</a>
+
+        <div class="button-row">
+          <a class="btn-primary" href="#contact">Request Printer Help</a>
+          <a class="btn-secondary" href="sms:+17276479000" onclick="trackCallClick('hero_text')">Text Us for Availability</a>
+        </div>
+
+        <div class="reassurance-grid">
+          <div class="reassurance-item"><span class="icon">🖨️</span>No need to wrestle with confusing printer menus</div>
+          <div class="reassurance-item"><span class="icon">🏠</span>Onsite help available when needed</div>
+          <div class="reassurance-item"><span class="icon">📋</span>Simple, clear recommendations</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="problem">
+      <h2>Common Printer, Scanner &amp; Fax Problems We Help With</h2>
+
+      <p>
+        Printer and scanner issues can be frustrating because the problem may be the device, the computer, the Wi-Fi connection, the software, or the settings. We help review the issue and explain practical next steps in plain language.
+      </p>
+
+      <p>
+        Whether your printer is offline, your scanner will not send files to the computer, or your fax setup is confusing, we can help troubleshoot common home office problems.
+      </p>
+
+      <p><strong>Common printer, scanner, and fax issues include:</strong></p>
+
+      <div class="issue-grid">
+        <div class="issue-item">🖨️ New printer setup</div>
+        <div class="issue-item">📡 Wireless printer connection problems</div>
+        <div class="issue-item">🚫 Printer offline or not responding</div>
+        <div class="issue-item">💻 Printing from a desktop or laptop</div>
+        <div class="issue-item">📄 Scanner setup and scan-to-computer help</div>
+        <div class="issue-item">📧 Scan-to-email or save-to-folder setup questions</div>
+        <div class="issue-item">☎️ Basic fax setup and fax line troubleshooting</div>
+        <div class="issue-item">⚠️ Printer error messages, stuck jobs, or driver problems</div>
+        <div class="issue-item">🧾 Help printing documents, labels, forms, or photos</div>
+        <div class="issue-item">🧰 Troubleshooting to identify what is causing the problem</div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="services">
+      <article class="blue-card">
+        <h2>What We Help With</h2>
+
+        <p>
+          Our printer, scanner, and fax support visit focuses on checking the device, computer, connection, and settings so you understand what is wrong before spending money on replacement equipment.
+        </p>
+
+        <ul class="service-list">
+          <li>🖨️ New printer setup and basic configuration</li>
+          <li>📡 Wireless printer connection review</li>
+          <li>🚫 Printer offline and not responding troubleshooting</li>
+          <li>💻 Desktop and laptop printing setup</li>
+          <li>📄 Scanner setup and scan-to-computer help</li>
+          <li>📧 Scan-to-email or save-to-folder setup review</li>
+          <li>☎️ Basic fax setup and fax troubleshooting</li>
+          <li>⚠️ Printer software, driver, and error message review</li>
+          <li>📋 Clear recommendations before replacing a printer, scanner, or fax device</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section-wrap" id="related-help">
+      <h2>Related Computer &amp; Wi-Fi Help</h2>
+
+      <p>
+        Printer and scanner problems are often connected to computer settings, Wi-Fi coverage, software, or security warnings. These related services may help if the issue is bigger than the printer itself.
+      </p>
+
+      <div class="issue-grid">
+        <div class="issue-item">
+          💻 <strong>Computer Support</strong><br />
+          Need help with a slow computer, startup problem, error message, or new desktop/laptop setup?
+          <br />
+          <a href="https://suncoasttechsupport.net/computer">View Computer Support</a>
+        </div>
+
+        <div class="issue-item">
+          📡 <strong>Home Wi-Fi Help</strong><br />
+          Weak Wi-Fi signal, dead zones, or slow internet in certain rooms can affect wireless printers.
+          <br />
+          <a href="https://suncoasttechsupport.net/wifi">View Wi-Fi Coverage Help</a>
+        </div>
+
+        <div class="issue-item">
+          🛡️ <strong>Suspicious Pop-Ups</strong><br />
+          Help reviewing fake printer warnings, browser pop-ups, or other suspicious messages on your computer.
+        </div>
+
+        <div class="issue-item">
+          📦 <strong>Software Setup</strong><br />
+          Help reviewing printer apps, scanning software, and basic computer setup needed for printing or scanning.
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="process">
+      <h2>How It Works</h2>
+
+      <div class="step-card-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div>Tell us what your printer, scanner, or fax is doing.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div>We review the device, computer, connection, and settings.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div>You receive clear next steps for setup, troubleshooting, or replacement decisions.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="local">
+      <h2>Local Printer, Scanner &amp; Fax Help in Clearwater and Pinellas County</h2>
+
+      <p>
+        Suncoast Tech Support serves Clearwater and nearby Pinellas County communities, including Largo, Dunedin, Palm Harbor, and surrounding areas. If your printer is offline, your scanner will not work, or your fax setup needs attention, request local availability today.
+      </p>
+    </section>
+
+    <section class="section-wrap" id="contact">
+      <div class="card-soft">
+        <h2>Want Help With a Printer, Scanner, or Fax Problem?</h2>
+
+        <p>
+          Request local help with printer, scanner, or fax support in the Clearwater area.
+        </p>
+
+        <form id="printer-request-form" class="form-grid" method="POST" action="https://suncoast-b2c-lead-form.iammoeskicova0808.workers.dev/" onfocusin="trackFormStart();">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+
+          <div>
+            <label for="preferred_contact_method">Preferred contact method</label>
+            <select id="preferred_contact_method" name="preferred_contact_method" required>
+              <option value="">Select one</option>
+              <option value="phone">Phone</option>
+              <option value="text">Text</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">What printer, scanner, or fax problem are you having?</label>
+            <textarea id="message" name="message" placeholder="Tell us if you need help with printer setup, printer offline errors, wireless printer problems, scanner setup, scan-to-computer issues, fax setup, or another home office issue." required></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New Printer Scanner Fax Lead - Suncoast Tech Support" />
+          <input type="hidden" name="lead_source" value="printer_scanner_fax_landing_page" />
+          <input type="hidden" name="lead_type" value="b2c_printer_scanner_fax" />
+          <input type="hidden" name="_redirect" value="https://suncoasttechsupport.net/thank-you.html" />
+
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
+
+          <button class="btn-primary" type="submit">Request Availability</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="cta-final">
+      <div class="final-cta">
+        <h2>Need Help With a Printer, Scanner, or Fax?</h2>
+        <p>Request local help with printer setup, wireless printer issues, printer offline errors, scanner setup, fax setup, or home office troubleshooting.</p>
+        <a class="btn-primary" href="#contact">Request Printer Help</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="disclaimer">
+    We are an independent local service provider and are not affiliated with Best Buy, Geek Squad, HP, Canon, Epson, Brother, Xerox, Microsoft, Apple, or any printer or computer manufacturer.
+  </div>
+
+  <div class="sticky-call" aria-label="Sticky call now bar">
+    <a href="tel:+17276479000" onclick="trackCallClick('sticky_mobile')">Call for Printer Help: (727) 647-9000</a>
+  </div>
+</body>
+</html>
 
