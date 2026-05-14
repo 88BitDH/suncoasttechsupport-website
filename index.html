@@ -1133,6 +1133,155 @@
       }
     }
 
+  
+    /* Senior readability controls: exactly two buttons */
+    .readability-section {
+      background: #eef6ff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .readability-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .readability-label {
+      margin: 0;
+      font-weight: 900;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .readability-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .readability-actions .btn {
+      min-height: 48px;
+      padding: 12px 16px;
+      font-size: 17px;
+    }
+
+    /* Incremental text sizing. Each click of A+ increases one step. */
+    html[data-text-size="1"] body { font-size: 18px; }
+    html[data-text-size="2"] body { font-size: 19px; }
+    html[data-text-size="3"] body { font-size: 20px; }
+    html[data-text-size="4"] body { font-size: 21px; }
+    html[data-text-size="5"] body { font-size: 22px; }
+
+    html[data-text-size="1"] p,
+    html[data-text-size="1"] li,
+    html[data-text-size="1"] a,
+    html[data-text-size="1"] button,
+    html[data-text-size="1"] input,
+    html[data-text-size="1"] textarea,
+    html[data-text-size="1"] label { font-size: 1.06em; }
+
+    html[data-text-size="2"] p,
+    html[data-text-size="2"] li,
+    html[data-text-size="2"] a,
+    html[data-text-size="2"] button,
+    html[data-text-size="2"] input,
+    html[data-text-size="2"] textarea,
+    html[data-text-size="2"] label { font-size: 1.12em; }
+
+    html[data-text-size="3"] p,
+    html[data-text-size="3"] li,
+    html[data-text-size="3"] a,
+    html[data-text-size="3"] button,
+    html[data-text-size="3"] input,
+    html[data-text-size="3"] textarea,
+    html[data-text-size="3"] label { font-size: 1.18em; }
+
+    html[data-text-size="4"] p,
+    html[data-text-size="4"] li,
+    html[data-text-size="4"] a,
+    html[data-text-size="4"] button,
+    html[data-text-size="4"] input,
+    html[data-text-size="4"] textarea,
+    html[data-text-size="4"] label { font-size: 1.24em; }
+
+    html[data-text-size="5"] p,
+    html[data-text-size="5"] li,
+    html[data-text-size="5"] a,
+    html[data-text-size="5"] button,
+    html[data-text-size="5"] input,
+    html[data-text-size="5"] textarea,
+    html[data-text-size="5"] label { font-size: 1.3em; }
+
+    /* Founder photo: keep the full photo visible inside the Meet Your Local Expert card */
+    .expert-profile-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+      overflow: visible;
+    }
+
+    .expert-photo-wrap {
+      align-self: center;
+    }
+
+    .expert-profile-card img,
+    .founder-photo,
+    .about-photo img {
+      object-fit: contain !important;
+      object-position: center top !important;
+      width: 100%;
+      height: auto !important;
+      max-height: 360px;
+      background: #fff;
+      border-radius: 16px;
+      display: block;
+    }
+
+    @media (max-width: 680px) {
+      .readability-card {
+        align-items: stretch;
+      }
+
+      .readability-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .readability-actions .btn {
+        width: 100%;
+      }
+
+      .expert-profile-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
+    /* Final readability override: only two visible buttons */
+    .accessibility-bar { display: none !important; }
+    .readability-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .readability-actions .btn { min-height: 48px; padding: 12px 16px; font-size: 17px; }
+
+  
+    /* Final founder photo fit override: full image visible, head not cropped */
+    .expert-profile-card img,
+    .expert-photo-wrap img,
+    .founder-photo,
+    .about-photo img {
+      object-fit: contain !important;
+      object-position: center top !important;
+      width: 100% !important;
+      height: auto !important;
+      max-height: 360px !important;
+      display: block !important;
+    }
+
   </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1146,16 +1295,17 @@
       <a href="tel:17276479000" onclick="trackCallClick('topbar');">📞 Call or Text (727) 647‑9000</a>
     </div>
   </div>
-
-  <div class="accessibility-bar" aria-label="Readability controls">
+<section class="readability-section">
     <div class="wrap">
-      <span>👓 Need larger text?</span>
-      <button type="button" id="font-smaller" class="text-toggle" onclick="decreaseFontSize()">A− Smaller</button>
-      <button type="button" id="font-larger" class="text-toggle" onclick="increaseFontSize()">A+ Make Text Larger</button>
-      <button type="button" id="font-reset" class="text-toggle" onclick="resetFontSize()">Reset Text</button>
-      <span id="font-step-label" class="font-step-status" aria-live="polite">Text Size: Standard</span>
+      <div class="readability-card" aria-label="Readability controls">
+        <p class="readability-label">👓 Need larger text?</p>
+        <div class="readability-actions">
+          <button type="button" id="increaseText" class="btn btn-subtle">A+ Make Text Larger</button>
+          <button type="button" id="resetText" class="btn btn-subtle">Reset to Normal</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <header>
     <div class="wrap header-inner">
@@ -1535,92 +1685,34 @@
     "sameAs": ["https://suncoasttechsupport.net/wifi"]
   }
   </script>
-
-
   <script>
-    (function () {
-      var maxFontStep = 5;
-      var currentFontStep = 0;
-      var fontClasses = ['reader-font-1', 'reader-font-2', 'reader-font-3', 'reader-font-4', 'reader-font-5', 'font-step-1', 'font-step-2', 'font-step-3'];
-      var labels = [
-        'Text Size: Standard',
-        'Text Size: Larger +1',
-        'Text Size: Larger +2',
-        'Text Size: Larger +3',
-        'Text Size: Larger +4',
-        'Text Size: Largest +5'
-      ];
+    document.addEventListener('DOMContentLoaded', function () {
+      var increaseButton = document.getElementById('increaseText');
+      var resetButton = document.getElementById('resetText');
+      var maxLevel = 5;
+      var currentLevel = parseInt(localStorage.getItem('suncoastTextLevel') || '0', 10);
 
-      function applyFontStep(step) {
-        currentFontStep = Math.max(0, Math.min(maxFontStep, parseInt(step, 10) || 0));
+      function applyTextSize() {
+        document.documentElement.setAttribute('data-text-size', String(currentLevel));
+        localStorage.setItem('suncoastTextLevel', String(currentLevel));
+      }
 
-        fontClasses.forEach(function (className) {
-          document.body.classList.remove(className);
+      if (increaseButton) {
+        increaseButton.addEventListener('click', function () {
+          currentLevel = Math.min(currentLevel + 1, maxLevel);
+          applyTextSize();
         });
-
-        if (currentFontStep > 0) {
-          document.body.classList.add('reader-font-' + currentFontStep);
-        }
-
-        var label = document.getElementById('font-step-label');
-        if (label) {
-          label.textContent = labels[currentFontStep];
-        }
-
-        try {
-          localStorage.setItem('suncoastReaderFontStep', String(currentFontStep));
-        } catch (e) {}
       }
 
-      window.increaseFontSize = function () {
-        applyFontStep(currentFontStep + 1);
-      };
-
-      window.decreaseFontSize = function () {
-        applyFontStep(currentFontStep - 1);
-      };
-
-      window.resetFontSize = function () {
-        applyFontStep(0);
-      };
-
-      function initReadabilityControls() {
-        var savedStep = 0;
-        try {
-          savedStep = parseInt(localStorage.getItem('suncoastReaderFontStep') || '0', 10) || 0;
-        } catch (e) {}
-        applyFontStep(savedStep);
-
-        var larger = document.getElementById('font-larger');
-        var smaller = document.getElementById('font-smaller');
-        var reset = document.getElementById('font-reset');
-
-        if (larger) {
-          larger.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.increaseFontSize();
-          });
-        }
-        if (smaller) {
-          smaller.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.decreaseFontSize();
-          });
-        }
-        if (reset) {
-          reset.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.resetFontSize();
-          });
-        }
+      if (resetButton) {
+        resetButton.addEventListener('click', function () {
+          currentLevel = 0;
+          applyTextSize();
+        });
       }
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initReadabilityControls);
-      } else {
-        initReadabilityControls();
-      }
-    })();
+      applyTextSize();
+    });
   </script>
 
 </body>
