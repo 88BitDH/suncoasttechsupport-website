@@ -488,6 +488,54 @@
     /* Mobile responsive adjustments. On screens 768px wide or less, the layout
        collapses to single columns for easier reading and scrolling. The hide-
        mobile class is used to hide certain header actions on mobile devices. */
+
+
+    /* Stronger spacing for senior readability and card comfort */
+    .faq-item {
+      padding: 24px 26px;
+    }
+
+    .footer-card {
+      padding: 30px 32px;
+    }
+
+    .expert-profile-card {
+      padding: 26px;
+    }
+
+    .expert-profile-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .expert-photo-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .expert-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .font-step-status {
+      background: #fff;
+      border: 1px solid var(--warning-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 900;
+    }
+
     @media (max-width: 768px) {
       /* Stack hero content above the image */
       .hero-grid {
@@ -654,26 +702,67 @@
   
 
     /* Senior readability controls and consumer-friendly section navigation */
-    body.senior-readable {
-      font-size: 20px;
-      line-height: 1.8;
+    body.font-step-1 {
+      font-size: 19px;
+      line-height: 1.75;
     }
 
-    body.senior-readable .hero-copy,
-    body.senior-readable .section-intro,
-    body.senior-readable .pricing-sub,
-    body.senior-readable .testimonial blockquote,
-    body.senior-readable .faq-item p,
-    body.senior-readable .mini {
-      font-size: 20px;
-      line-height: 1.8;
+    body.font-step-2 {
+      font-size: 21px;
+      line-height: 1.85;
     }
 
-    body.senior-readable .btn,
-    body.senior-readable .nav-menu a,
-    body.senior-readable input,
-    body.senior-readable textarea {
-      font-size: 20px;
+    body.font-step-3 {
+      font-size: 23px;
+      line-height: 1.95;
+    }
+
+    body.font-step-1 .hero-copy,
+    body.font-step-1 .section-intro,
+    body.font-step-1 .pricing-sub,
+    body.font-step-1 .testimonial blockquote,
+    body.font-step-1 .faq-item p,
+    body.font-step-1 .mini,
+    body.font-step-1 li,
+    body.font-step-1 label,
+    body.font-step-1 input,
+    body.font-step-1 textarea,
+    body.font-step-1 .btn,
+    body.font-step-1 .nav-menu a {
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    body.font-step-2 .hero-copy,
+    body.font-step-2 .section-intro,
+    body.font-step-2 .pricing-sub,
+    body.font-step-2 .testimonial blockquote,
+    body.font-step-2 .faq-item p,
+    body.font-step-2 .mini,
+    body.font-step-2 li,
+    body.font-step-2 label,
+    body.font-step-2 input,
+    body.font-step-2 textarea,
+    body.font-step-2 .btn,
+    body.font-step-2 .nav-menu a {
+      font-size: 21px;
+      line-height: 1.85;
+    }
+
+    body.font-step-3 .hero-copy,
+    body.font-step-3 .section-intro,
+    body.font-step-3 .pricing-sub,
+    body.font-step-3 .testimonial blockquote,
+    body.font-step-3 .faq-item p,
+    body.font-step-3 .mini,
+    body.font-step-3 li,
+    body.font-step-3 label,
+    body.font-step-3 input,
+    body.font-step-3 textarea,
+    body.font-step-3 .btn,
+    body.font-step-3 .nav-menu a {
+      font-size: 23px;
+      line-height: 1.95;
     }
 
     .accessibility-bar {
@@ -840,7 +929,65 @@
       color: var(--text);
     }
 
+
+
+    /* Stronger spacing for senior readability and card comfort */
+    .faq-item {
+      padding: 24px 26px;
+    }
+
+    .footer-card {
+      padding: 30px 32px;
+    }
+
+    .expert-profile-card {
+      padding: 26px;
+    }
+
+    .expert-profile-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .expert-photo-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .expert-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .font-step-status {
+      background: #fff;
+      border: 1px solid var(--warning-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 900;
+    }
+
     @media (max-width: 768px) {
+
+
+      .expert-profile-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .expert-photo-wrap img {
+        max-height: 320px;
+      }
+
       .accessibility-bar .wrap {
         justify-content: flex-start;
       }
@@ -868,6 +1015,124 @@
       }
     }
 
+
+    /* FINAL OVERRIDES: working incremental senior readability controls */
+    body.reader-font-1,
+    body.reader-font-1 p,
+    body.reader-font-1 li,
+    body.reader-font-1 a,
+    body.reader-font-1 label,
+    body.reader-font-1 input,
+    body.reader-font-1 textarea,
+    body.reader-font-1 button,
+    body.reader-font-1 .btn,
+    body.reader-font-1 .mini,
+    body.reader-font-1 .section-intro,
+    body.reader-font-1 .pricing-sub { font-size: 20px !important; }
+
+    body.reader-font-2,
+    body.reader-font-2 p,
+    body.reader-font-2 li,
+    body.reader-font-2 a,
+    body.reader-font-2 label,
+    body.reader-font-2 input,
+    body.reader-font-2 textarea,
+    body.reader-font-2 button,
+    body.reader-font-2 .btn,
+    body.reader-font-2 .mini,
+    body.reader-font-2 .section-intro,
+    body.reader-font-2 .pricing-sub { font-size: 22px !important; }
+
+    body.reader-font-3,
+    body.reader-font-3 p,
+    body.reader-font-3 li,
+    body.reader-font-3 a,
+    body.reader-font-3 label,
+    body.reader-font-3 input,
+    body.reader-font-3 textarea,
+    body.reader-font-3 button,
+    body.reader-font-3 .btn,
+    body.reader-font-3 .mini,
+    body.reader-font-3 .section-intro,
+    body.reader-font-3 .pricing-sub { font-size: 24px !important; }
+
+    body.reader-font-4,
+    body.reader-font-4 p,
+    body.reader-font-4 li,
+    body.reader-font-4 a,
+    body.reader-font-4 label,
+    body.reader-font-4 input,
+    body.reader-font-4 textarea,
+    body.reader-font-4 button,
+    body.reader-font-4 .btn,
+    body.reader-font-4 .mini,
+    body.reader-font-4 .section-intro,
+    body.reader-font-4 .pricing-sub { font-size: 26px !important; }
+
+    body.reader-font-5,
+    body.reader-font-5 p,
+    body.reader-font-5 li,
+    body.reader-font-5 a,
+    body.reader-font-5 label,
+    body.reader-font-5 input,
+    body.reader-font-5 textarea,
+    body.reader-font-5 button,
+    body.reader-font-5 .btn,
+    body.reader-font-5 .mini,
+    body.reader-font-5 .section-intro,
+    body.reader-font-5 .pricing-sub { font-size: 28px !important; }
+
+    body.reader-font-1 h2 { font-size: clamp(40px, 5.5vw, 58px) !important; }
+    body.reader-font-2 h2 { font-size: clamp(44px, 6vw, 62px) !important; }
+    body.reader-font-3 h2 { font-size: clamp(48px, 6.5vw, 66px) !important; }
+    body.reader-font-4 h2 { font-size: clamp(52px, 7vw, 70px) !important; }
+    body.reader-font-5 h2 { font-size: clamp(56px, 7.5vw, 74px) !important; }
+
+    body.reader-font-1 h3 { font-size: clamp(32px, 3.4vw, 42px) !important; }
+    body.reader-font-2 h3 { font-size: clamp(35px, 3.7vw, 45px) !important; }
+    body.reader-font-3 h3 { font-size: clamp(38px, 4vw, 48px) !important; }
+    body.reader-font-4 h3 { font-size: clamp(41px, 4.3vw, 51px) !important; }
+    body.reader-font-5 h3 { font-size: clamp(44px, 4.6vw, 54px) !important; }
+
+    /* Keep the founder photo physically inside the Meet Your Local Expert card */
+    .expert-profile-card {
+      overflow: hidden;
+    }
+
+    .expert-profile-card .expert-profile-layout {
+      display: grid !important;
+      grid-template-columns: minmax(220px, 300px) 1fr !important;
+      gap: 28px !important;
+      align-items: start !important;
+    }
+
+    .expert-profile-card .expert-photo-wrap {
+      margin: 0 !important;
+      width: 100% !important;
+      border-radius: 18px !important;
+      overflow: hidden !important;
+      background: #fff !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: var(--shadow) !important;
+    }
+
+    .expert-profile-card .expert-photo-wrap img {
+      width: 100% !important;
+      min-height: 300px !important;
+      max-height: 360px !important;
+      object-fit: cover !important;
+    }
+
+    @media (max-width: 768px) {
+      .expert-profile-card .expert-profile-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .expert-profile-card .expert-photo-wrap img {
+        min-height: 240px !important;
+        max-height: 320px !important;
+      }
+    }
+
   </style>
 
   <!-- Cloudflare Turnstile -->
@@ -885,8 +1150,10 @@
   <div class="accessibility-bar" aria-label="Readability controls">
     <div class="wrap">
       <span>👓 Need larger text?</span>
-      <button type="button" class="text-toggle" onclick="setSeniorReadable(true)">Make Text Larger</button>
-      <button type="button" class="text-toggle" onclick="setSeniorReadable(false)">Normal Text</button>
+      <button type="button" id="font-smaller" class="text-toggle" onclick="decreaseFontSize()">A− Smaller</button>
+      <button type="button" id="font-larger" class="text-toggle" onclick="increaseFontSize()">A+ Make Text Larger</button>
+      <button type="button" id="font-reset" class="text-toggle" onclick="resetFontSize()">Reset Text</button>
+      <span id="font-step-label" class="font-step-status" aria-live="polite">Text Size: Standard</span>
     </div>
   </div>
 
@@ -958,28 +1225,30 @@
     <!-- About / Meet Your Expert -->
     <section class="section">
       <div class="wrap">
-        <div class="about-grid">
-          <div class="card about-photo">
-            <img src="src/assets/owner-photo.png" alt="Moe from SunCoast Tech Support" />
-          </div>
+        <div class="card about-panel expert-profile-card">
+          <div class="expert-profile-layout">
+            <div class="expert-photo-wrap">
+              <img src="src/assets/owner-photo.png" alt="Moe from SunCoast Tech Support" />
+            </div>
 
-          <div class="card about-panel">
-            <h3>👋 Meet Your Local Expert</h3>
+            <div class="expert-copy">
+              <h3>👋 Meet Your Local Expert</h3>
 
-            <p class="section-intro">Hi, I’m Moe. I provide patient, local in-home technology help for Clearwater-area homes, including seniors, families, and home users.</p>
+              <p class="section-intro">Hi, I’m Moe. I provide patient, local in-home technology help for Clearwater-area homes, including seniors, families, and home users.</p>
 
-            <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi‑Fi drops out, or family photos need to move safely to a new device.</p>
+              <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi‑Fi drops out, or family photos need to move safely to a new device.</p>
 
-            <p>Common requests include slow computers, printer issues, Wi‑Fi concerns, and moving family photos or important files to a new device.</p>
+              <p>Common requests include slow computers, printer issues, Wi‑Fi concerns, and moving family photos or important files to a new device.</p>
 
-            <div class="quote-strip">
-              <strong>⭐ What customers are saying</strong>
-              <ul>
-                <li>“Fast, professional, and explained everything clearly.”</li>
-                <li>“Saved my family photos and made the whole process easy.”</li>
-                <li>“Finally fixed my Wi‑Fi throughout the house.”</li>
-              </ul>
-              <a class="review-link" href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read Google Reviews</a>
+              <div class="quote-strip">
+                <strong>⭐ What customers are saying</strong>
+                <ul>
+                  <li>“Fast, professional, and explained everything clearly.”</li>
+                  <li>“Saved my family photos and made the whole process easy.”</li>
+                  <li>“Finally fixed my Wi‑Fi throughout the house.”</li>
+                </ul>
+                <a class="review-link" href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read Google Reviews</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1262,23 +1531,95 @@
         "description": "Off-hours support only"
       }
     ],
-    "areaServed": ["Clearwater", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Pinellas County"],
+    "areaServed": ["Pinellas County", "Clearwater", "Clearwater Beach", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Belleair Bluffs", "Seminole", "Pinellas Park", "St. Petersburg", "Tampa Bay"],
     "sameAs": ["https://suncoasttechsupport.net/wifi"]
   }
   </script>
 
 
   <script>
-    function setSeniorReadable(enabled) {
-      document.body.classList.toggle('senior-readable', enabled);
-      try { localStorage.setItem('suncoastSeniorReadable', enabled ? '1' : '0'); } catch (e) {}
-    }
     (function () {
-      try {
-        if (localStorage.getItem('suncoastSeniorReadable') === '1') {
-          document.body.classList.add('senior-readable');
+      var maxFontStep = 5;
+      var currentFontStep = 0;
+      var fontClasses = ['reader-font-1', 'reader-font-2', 'reader-font-3', 'reader-font-4', 'reader-font-5', 'font-step-1', 'font-step-2', 'font-step-3'];
+      var labels = [
+        'Text Size: Standard',
+        'Text Size: Larger +1',
+        'Text Size: Larger +2',
+        'Text Size: Larger +3',
+        'Text Size: Larger +4',
+        'Text Size: Largest +5'
+      ];
+
+      function applyFontStep(step) {
+        currentFontStep = Math.max(0, Math.min(maxFontStep, parseInt(step, 10) || 0));
+
+        fontClasses.forEach(function (className) {
+          document.body.classList.remove(className);
+        });
+
+        if (currentFontStep > 0) {
+          document.body.classList.add('reader-font-' + currentFontStep);
         }
-      } catch (e) {}
+
+        var label = document.getElementById('font-step-label');
+        if (label) {
+          label.textContent = labels[currentFontStep];
+        }
+
+        try {
+          localStorage.setItem('suncoastReaderFontStep', String(currentFontStep));
+        } catch (e) {}
+      }
+
+      window.increaseFontSize = function () {
+        applyFontStep(currentFontStep + 1);
+      };
+
+      window.decreaseFontSize = function () {
+        applyFontStep(currentFontStep - 1);
+      };
+
+      window.resetFontSize = function () {
+        applyFontStep(0);
+      };
+
+      function initReadabilityControls() {
+        var savedStep = 0;
+        try {
+          savedStep = parseInt(localStorage.getItem('suncoastReaderFontStep') || '0', 10) || 0;
+        } catch (e) {}
+        applyFontStep(savedStep);
+
+        var larger = document.getElementById('font-larger');
+        var smaller = document.getElementById('font-smaller');
+        var reset = document.getElementById('font-reset');
+
+        if (larger) {
+          larger.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.increaseFontSize();
+          });
+        }
+        if (smaller) {
+          smaller.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.decreaseFontSize();
+          });
+        }
+        if (reset) {
+          reset.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.resetFontSize();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initReadabilityControls);
+      } else {
+        initReadabilityControls();
+      }
     })();
   </script>
 
