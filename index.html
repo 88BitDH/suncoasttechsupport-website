@@ -402,15 +402,18 @@
     }
 
     .sticky-call {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
+      /* Position set to static so that the button scrolls with the page rather than
+         staying fixed in one corner. Margin centers it and provides breathing
+         room above the footer. */
+      position: static;
+      margin: 32px auto;
+      z-index: auto;
       background: var(--primary);
       color: #fff;
       border-radius: 999px;
       padding: 14px 20px;
       box-shadow: var(--shadow);
+      display: inline-block;
     }
 
     .sticky-call a {
@@ -458,6 +461,27 @@
       gap: 16px;
       margin-top: 20px;
     }
+
+/*
+  Ensure pricing cards align their call-to-book buttons at the bottom. Each
+  pricing card becomes a flex container so that the list of features grows
+  to fill the available space and the call-to-book button sits flush at
+  the bottom of the card. This creates visual alignment across all cards.
+*/
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pricing-card ul {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.pricing-card a.btn {
+  margin-top: auto;
+}
 
     /* Testimonials as a three-column grid on desktop. Cards will wrap if the
        screen is narrower than three columns. */
@@ -530,10 +554,10 @@
         display: none;
       }
 
-      /* Adjust sticky call positioning on mobile */
+      /* No special positioning needed for sticky-call on mobile since it now
+         scrolls with the page. */
       .sticky-call {
-        bottom: 16px;
-        right: 16px;
+        margin: 24px auto;
       }
     }
     /*
