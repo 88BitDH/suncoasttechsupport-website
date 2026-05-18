@@ -20,11 +20,20 @@
     var FORM_CONVERSION_LABEL = 'AW-17992501324/FORM_PLACEHOLDER';
 
     function trackCallClick(source) {
-      gtag('event', 'click', {
-        'event_category': 'contact',
-        'event_label': 'call_' + source,
-        'value': 1
-      });
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': CALL_CONVERSION_LABEL,
+          'value': 1.0,
+          'currency': 'USD'
+        });
+
+        gtag('event', 'click', {
+          'event_category': 'contact',
+          'event_label': 'call_' + source,
+          'value': 1
+        });
+      }
+    });
     }
 
     function trackSecondaryContact(type, source) {
