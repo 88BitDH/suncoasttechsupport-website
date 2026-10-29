@@ -472,10 +472,40 @@
         padding-bottom: 0;
       }
     }
-  </style>
+  
+/* Shared consumer-site header and footer */
+.sc-shared-header,.sc-shared-footer{font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}
+.sc-shared-header *,.sc-shared-footer *{box-sizing:border-box}
+.sc-shared-header{background:#fff;border-bottom:1px solid #d7e5f2;color:#163047}
+.sc-shared-inner{max-width:1120px;width:calc(100% - 32px);margin:0 auto}
+.sc-shared-top{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:12px 0}
+.sc-shared-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#163047!important;font-size:19px;font-weight:800;line-height:1.25}
+.sc-shared-brand img{width:54px;height:54px;object-fit:contain;flex:none}
+.sc-shared-contact{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sc-shared-contact a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:10px;border:1px solid #d7e5f2;text-decoration:none;font-weight:700;color:#163047!important}
+.sc-shared-contact a:first-child{background:#0d6efd;border-color:#0d6efd;color:#fff!important}
+.sc-shared-nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 12px}
+.sc-shared-nav a{color:#163047!important;text-decoration:none;font-size:15px;font-weight:700;padding:9px 12px;border-radius:10px;background:#eaf4ff;white-space:nowrap}
+.sc-shared-header a:focus-visible,.sc-shared-footer a:focus-visible{outline:3px solid #dd8600;outline-offset:3px}
+.sc-shared-footer{background:#153c58;color:#fff;padding:26px 0 max(30px,env(safe-area-inset-bottom));margin-top:24px}
+.sc-shared-footer a{color:#fff!important;text-decoration:underline}
+.sc-shared-footer p{margin:0 0 10px;color:#fff;line-height:1.65}
+.sc-shared-footer nav{display:flex;flex-wrap:wrap;gap:12px 22px;margin:14px 0}
+@media(max-width:700px){.sc-shared-top{align-items:flex-start;flex-direction:column;gap:12px}.sc-shared-brand{font-size:18px}.sc-shared-contact{display:grid;grid-template-columns:1fr 1fr;width:100%}.sc-shared-contact a{min-width:0;text-align:center}.sc-shared-nav{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}.sc-shared-nav a{flex:none}.sc-shared-footer{padding-bottom:100px}}
+
+</style>
 </head>
 
 <body>
+<header class="sc-shared-header">
+<div class="sc-shared-inner">
+<div class="sc-shared-top">
+<a class="sc-shared-brand" href="https://suncoasttechsupport.net/"><img src="/logo.png" alt="Suncoast Tech Support logo" width="54" height="54"><span>Suncoast Tech Support</span></a>
+<div class="sc-shared-contact"><a href="tel:17276479000">Call (727) 647-9000</a><a href="sms:17276479000">Text Us</a></div>
+</div>
+<nav class="sc-shared-nav" aria-label="Consumer website navigation">
+<a href="https://suncoasttechsupport.net/">Home</a><a href="https://suncoasttechsupport.net/#services">Services</a><a href="https://suncoasttechsupport.net/#pricing">Pricing</a><a href="https://suncoasttechsupport.net/about/">About</a><a href="https://suncoasttechsupport.net/reviews/">Reviews</a><a href="https://suncoasttechsupport.net/faq/">FAQ</a><a href="https://suncoasttechsupport.net/schedule/">Schedule</a>
+</nav></div></header>
   <div class="disclaimer">
     We provide practical home technology security review and troubleshooting. We do not provide legal advice, financial fraud recovery, law enforcement services, or guaranteed threat removal.
   </div>
@@ -698,6 +728,13 @@
   <div class="sticky-call" aria-label="Sticky call now bar">
     <a href="tel:+17276479000" onclick="trackCallClick('sticky_mobile')">Call for Security Review: (727) 647-9000</a>
   </div>
+<footer class="sc-shared-footer"><div class="sc-shared-inner">
+<p><strong>Suncoast Tech Support</strong> · Insured · Veteran-Owned</p>
+<p><strong>Suncoast Tech Support is a Florida OSD Certified Veteran-Owned Business.</strong></p>
+<p>Serving Pinellas County, Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Belleair Bluffs, Seminole, Pinellas Park, St. Petersburg, and nearby Tampa Bay homes.</p>
+<nav aria-label="Footer navigation"><a href="https://suncoasttechsupport.net/">Home</a><a href="https://suncoasttechsupport.net/about/">About Us</a><a href="https://suncoasttechsupport.net/reviews/">Reviews</a><a href="https://suncoasttechsupport.net/faq/">FAQ</a><a href="https://suncoasttechsupport.net/schedule/">Schedule a Visit</a><a href="https://suncoasttechsupport.net/privacy.html">Privacy Policy</a></nav>
+<p>Call or text: <a href="tel:17276479000">(727) 647-9000</a></p><p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off-hours support only.</p>
+</div></footer>
 </body>
 </html>
 
