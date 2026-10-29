@@ -1426,6 +1426,40 @@
     }
 
   @media(max-width:760px){.header-actions.hide-mobile{display:none}.nav-menu ul{display:flex;overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;gap:12px}.nav-menu li{flex:0 0 auto}.contact-grid,.expert-profile-layout,.review-grid{grid-template-columns:1fr}.card{min-width:0}body{overflow-x:hidden}.sticky-call{padding-bottom:env(safe-area-inset-bottom)}}
+
+/* Expert page: desktop and mobile layout refinement */
+.expert-profile-layout{display:grid;grid-template-columns:minmax(220px,34%) minmax(0,1fr);gap:clamp(18px,3vw,32px);align-items:start}
+.expert-profile-card{width:100%;max-width:100%;overflow:hidden}
+.expert-copy{min-width:0;overflow-wrap:break-word}
+.expert-photo-wrap{min-width:0}
+.expert-photo-wrap img{display:block;width:100%;height:auto;max-height:440px;object-fit:contain;object-position:center top}
+.nav-menu .wrap{max-width:var(--max)}
+@media(min-width:761px){.expert-profile-card{padding:clamp(20px,3vw,32px)}}
+@media(max-width:760px){
+  .header-inner{flex-wrap:wrap;gap:12px}
+  .brand{min-width:0;max-width:100%}
+  .brand-text{min-width:0}
+  .brand-text h1{font-size:clamp(17px,5vw,20px)}
+  .brand-text p{font-size:14px}
+  .nav-menu .wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .nav-menu ul{width:max-content;min-width:100%;flex-wrap:nowrap;gap:10px}
+  .nav-menu li{flex-shrink:0}
+  .expert-profile-layout{grid-template-columns:minmax(0,1fr);gap:18px}
+  .expert-profile-card{padding:18px}
+  .expert-photo-wrap{max-width:340px;width:100%;margin:0 auto}
+  .expert-photo-wrap img{max-height:360px}
+  .expert-copy{width:100%}
+  .expert-copy h3{font-size:clamp(26px,7vw,34px);line-height:1.2}
+  .expert-copy p,.expert-copy li{overflow-wrap:anywhere}
+  .section{padding:20px 0}
+  .wrap{width:calc(100% - 28px)}
+}
+@media(max-width:380px){
+  .expert-profile-card{padding:14px}
+  .brand img{width:48px;height:48px}
+  .nav-menu a{font-size:14px}
+}
+
 </style>
 
   <!-- Cloudflare Turnstile -->
