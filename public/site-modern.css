@@ -45,3 +45,10 @@ body .sc-a11y-toggle{font-size:14px}
  body .sc-business-footer .sc-footer-grid{grid-template-columns:minmax(0,1fr)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body :is(.btn,.btn-primary,.btn-secondary){transition:none!important}}
+
+
+/* Compact right-side contact shortcut, paired with Accessibility */
+.sc-side-contact{position:fixed;right:12px;top:calc(44% + 62px);z-index:4999;font:700 14px/1.3 Arial,Helvetica,sans-serif}
+.sc-side-contact a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:10px 12px;border:2px solid #fff;border-radius:999px;background:#1268ae;color:#fff!important;text-decoration:none;box-shadow:0 3px 16px rgba(0,0,0,.2);white-space:nowrap}
+.sc-side-contact a:focus-visible{outline:3px solid #ef9b36;outline-offset:3px}
+@media(max-width:600px){.sc-side-contact{top:auto;bottom:164px;right:8px}.sc-side-contact a{padding:9px 11px;min-height:46px}}
