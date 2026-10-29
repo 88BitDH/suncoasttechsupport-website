@@ -582,7 +582,11 @@ main p,main li{font-family:inherit;line-height:1.65}
 .sc-unified-head .sc-service-dropdown a{display:block!important;width:100%!important;padding:11px 12px!important;font:600 14px/1.45 Arial,Helvetica,sans-serif!important;color:#163047!important;white-space:normal!important;text-decoration:none!important;border-radius:8px!important}
 .sc-unified-head .sc-service-dropdown a:hover,.sc-unified-head .sc-service-dropdown a:focus-visible{background:#eaf4ff!important}
 @media(max-width:760px){
-.sc-unified-head .sc-head-nav-inner{flex-wrap:wrap!important;overflow:visible!important;gap:4px!important}
+.sc-unified-head .sc-head-nav-inner{flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;align-items:center!important;gap:4px!important}
+.sc-unified-head .sc-head-nav-inner>a,.sc-unified-head .sc-service-menu summary{height:34px!important;min-height:34px!important;display:inline-flex!important;align-items:center!important;box-sizing:border-box!important}
+.sc-unified-head .sc-service-menu{display:inline-flex!important;align-items:center!important;min-height:34px!important;margin:0!important;padding:0!important}
+.sc-unified-head .sc-service-menu summary{margin:0!important}
+.sc-unified-head .sc-head-nav:has(.sc-service-menu[open]) .sc-head-nav-inner{flex-wrap:wrap!important;overflow:visible!important}
 .sc-unified-head .sc-service-menu[open]{flex:0 0 100%!important;order:3!important}
 .sc-unified-head .sc-service-menu[open] .sc-service-dropdown{position:static!important;width:100%!important;max-width:100%!important;max-height:38vh!important;margin-top:4px!important;box-shadow:0 5px 14px rgba(12,48,78,.12)!important}
 }
