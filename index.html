@@ -1429,6 +1429,9 @@
 /* Sticky headers across consumer pages */
 header{position:sticky;top:0;z-index:1100}
 .nav-menu{position:sticky;top:0;z-index:1099}
+/* Keep branded header and navigation together */
+.sc-sticky-pair{position:sticky;top:0;z-index:1200;background:#fff}
+.sc-sticky-pair>header,.sc-sticky-pair>.nav-menu{position:static!important;top:auto!important}
 </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1444,7 +1447,8 @@ header{position:sticky;top:0;z-index:1100}
   </div>
 
 
-  <header>
+  <div class="sc-sticky-pair">
+<header>
     <div class="wrap header-inner">
       <div class="brand">
         <img src="src/assets/logo.png" alt="SunCoast Tech Support logo" />
@@ -1476,6 +1480,7 @@ header{position:sticky;top:0;z-index:1100}
       </ul>
     </div>
   </nav>
+</div>
 
   <main>
     <!-- Hero Section -->
