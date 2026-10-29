@@ -1429,12 +1429,16 @@
 /* Sticky headers across consumer pages */
 header{position:sticky;top:0;z-index:1100}
 .nav-menu{position:sticky;top:0;z-index:1099}
+/* Keep branded header and navigation together */
+.sc-sticky-pair{position:sticky;top:0;z-index:1200;background:#fff}
+.sc-sticky-pair>header,.sc-sticky-pair>.nav-menu{position:static!important;top:auto!important}
 </style>
 
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+<div class="sc-sticky-pair">
 <header>
     <div class="wrap header-inner">
       <div class="brand">
@@ -1455,6 +1459,7 @@ header{position:sticky;top:0;z-index:1100}
 
   <!-- Navigation menu linking to sections on the page -->
   <nav class="nav-menu"><div class="wrap"><ul><li class="nav-label">Explore:</li><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/schedule/">Schedule</a></li></ul></div></nav>
+</div>
 
   <main><div class="wrap" style="padding-top:20px"><p><a href="/">← Back to home</a></p></div>
 <section id="faq" class="section">
