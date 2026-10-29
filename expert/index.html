@@ -1480,6 +1480,11 @@
   .expert-profile-card .expert-copy h3{font-size:clamp(25px,7vw,34px)}
 }
 
+
+/* Fix nested grid: outer card must not constrain the inner photo-and-text grid */
+.expert-profile-card{display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important}
+.expert-profile-card > .expert-profile-layout{width:100% !important;min-width:0 !important;grid-template-columns:minmax(0,300px) minmax(0,1fr) !important}
+@media(max-width:760px){.expert-profile-card > .expert-profile-layout{grid-template-columns:minmax(0,1fr) !important}}
 </style>
 
   <!-- Cloudflare Turnstile -->
