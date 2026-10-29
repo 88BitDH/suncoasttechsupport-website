@@ -72,6 +72,12 @@ main h3{font-family:inherit;font-size:clamp(24px,3vw,32px);line-height:1.25}
 main h4{font-family:inherit;font-size:clamp(20px,2.3vw,24px);line-height:1.3}
 main p,main li{font-family:inherit;line-height:1.65}
 @media(max-width:600px){body{font-size:17px}main h1{font-size:32px}main h2{font-size:28px}main h3{font-size:24px}main h4{font-size:20px}}
+
+/* Founder photo in About page only */
+.sc-founder-layout{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);align-items:start;gap:24px}
+.sc-founder-photo{display:block;width:100%;height:auto;max-width:260px;object-fit:contain;object-position:center top;border-radius:14px;border:1px solid var(--line,#d6e4ee);background:#fff}
+.sc-founder-biography{min-width:0}
+@media(max-width:650px){.sc-founder-layout{grid-template-columns:minmax(0,1fr);gap:16px}.sc-founder-photo{max-width:280px;margin:0 auto}}
 </style>
 <link rel="stylesheet" href="/site-modern.css?v=20261029-headerfix">
 <style id="sc-unified-header-critical">
@@ -138,8 +144,12 @@ main p,main li{font-family:inherit;line-height:1.65}
 <p>Suncoast Tech Support provides practical technology assistance to homeowners, seniors and small businesses in Pinellas County and nearby Tampa Bay communities.</p>
 <p>Suncoast Tech Support is a Florida OSD Certified Veteran-Owned Business, operated by 88 Bit Diamond Hands LLC.</p></section>
 <section><h2>Meet the founder</h2>
+<div class="sc-founder-layout">
+<img class="sc-founder-photo" src="https://business.suncoasttechsupport.net/images/moe-headshot.jpg" alt="Ishmael Moe Muhammad, founder of Suncoast Tech Support" loading="lazy" decoding="async">
+<div class="sc-founder-biography">
 <p>Ishmael “Moe” Muhammad is a U.S. Army veteran with more than 20 years of technology infrastructure and operations experience. His background includes work across financial services, healthcare, manufacturing and small-business IT.</p>
-<p>He brings that experience to local customers who need clear explanations, dependable follow-through and support that fits their actual needs.</p></section>
+<p>He brings that experience to local customers who need clear explanations, dependable follow-through and support that fits their actual needs.</p>
+</div></div></section>
 <section><h2>Why Suncoast exists</h2>
 <p>Technology support should be understandable and accessible. Our approach is to listen, explain the options in plain language and focus on a practical resolution—whether that means fixing a home computer, improving Wi-Fi, helping with data transfer or supporting a small office.</p></section>
 <section><h2>Who we help</h2>
