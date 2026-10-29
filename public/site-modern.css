@@ -1,0 +1,47 @@
+/* Suncoast consumer design system — presentation only; no content or tracking changes */
+:root{--sc-navy:#123b57;--sc-blue:#1268ae;--sc-ink:#18344b;--sc-line:#dae5ed;--sc-soft:#f5f8fb;--sc-shadow:0 8px 25px rgba(14,46,72,.07)}
+html{scroll-padding-top:145px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--sc-ink);background:var(--sc-soft);-webkit-font-smoothing:antialiased}
+body :is(h1,h2,h3,h4){letter-spacing:-.015em;text-wrap:balance}
+body :is(p,li){overflow-wrap:break-word}
+body :is(a,button,input,select,textarea){-webkit-tap-highlight-color:transparent}
+body a:focus-visible,body button:focus-visible,body input:focus-visible,body select:focus-visible,body textarea:focus-visible{outline:3px solid #ef9b36;outline-offset:3px}
+body :is(.card,.hero-card,.service-card,.pricing-card,.faq-item,.review-card,.testimonial-card,.about-panel,.hero-main,.final-cta){border-radius:16px;border-color:var(--sc-line);box-shadow:var(--sc-shadow)}
+body :is(.section,.section-wrap){scroll-margin-top:155px}
+body :is(.wrap,.container,.sc-shared-inner){max-width:1120px}
+body :is(.service-grid,.pricing-grid,.review-grid,.testimonial-grid,.reassurance-grid){gap:20px}
+body :is(.btn,.btn-primary,.btn-secondary,.phone-big,.sc-shared-contact a){border-radius:11px;transition:background-color .15s ease,border-color .15s ease,box-shadow .15s ease;box-shadow:none}
+body :is(.btn,.btn-primary,.btn-secondary){min-height:48px}
+body :is(.btn:hover,.btn-primary:hover,.btn-secondary:hover){transform:none}
+body :is(input:not([type=hidden]):not([type=checkbox]):not([type=radio]),select,textarea){max-width:100%;border-radius:10px;min-height:44px}
+body textarea{min-height:110px}
+body :is(.sc-shared-header,.expert-sticky-shell,.sc-sticky-pair){box-shadow:0 3px 14px rgba(12,48,78,.09)}
+body .sc-shared-nav a{border-radius:8px;background:transparent}
+body .sc-shared-nav a:hover{background:#eaf2f8}
+body .sc-business-footer{background:var(--sc-navy)}
+body .sc-business-footer .sc-footer-grid{gap:clamp(22px,4vw,44px)}
+body .sc-business-footer nav a{line-height:1.5}
+body .sc-a11y-toggle{font-size:14px}
+@media(min-width:761px){
+ body .hero-grid{gap:clamp(24px,4vw,48px)}
+ body .expert-profile-card{max-width:100%;width:100%;display:block!important}
+ body .expert-profile-card>.expert-profile-layout{grid-template-columns:minmax(0,300px) minmax(0,1fr)!important;width:100%!important}
+ body .expert-profile-card .expert-copy{min-width:0!important;width:auto!important;word-break:normal!important;overflow-wrap:normal!important}
+}
+@media(max-width:760px){
+ html{scroll-padding-top:110px}
+ body .wrap,body .container{width:calc(100% - 28px);max-width:100%}
+ body :is(.hero-grid,.service-grid,.pricing-grid,.review-grid,.testimonial-grid,.contact-grid,.reassurance-grid,.expert-profile-layout){grid-template-columns:minmax(0,1fr)!important}
+ body :is(.card,.service-card,.pricing-card,.hero-card,.about-panel){min-width:0;max-width:100%}
+ body :is(.hero,.section,.section-wrap){padding-top:22px;padding-bottom:22px}
+ body .hero-actions,body .button-row{gap:10px}
+ body .btn-call-dominant{min-width:0;max-width:100%}
+ body :is(.btn,.btn-primary,.btn-secondary){max-width:100%}
+ body .expert-profile-card{display:block!important;width:100%!important}
+ body .expert-profile-card>.expert-profile-layout{grid-template-columns:minmax(0,1fr)!important}
+ body .expert-profile-card .expert-copy{min-width:0!important;width:100%!important;word-break:normal!important;overflow-wrap:normal!important}
+ body .expert-photo-wrap img{max-height:360px;object-fit:contain}
+ body .sc-shared-header .sc-shared-nav{scrollbar-width:thin}
+ body .sc-business-footer .sc-footer-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body :is(.btn,.btn-primary,.btn-secondary){transition:none!important}}
