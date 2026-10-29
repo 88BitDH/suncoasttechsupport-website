@@ -1488,6 +1488,16 @@ main p,main li{font-family:inherit;line-height:1.65}
 .hero-photo-column>.trust-line{display:block;width:100%;max-width:100%;margin:0;border-radius:16px;white-space:normal;line-height:1.5;font-size:14px;padding:12px 16px}
 .hero-photo-column .hero-card{min-width:0}
 .hero-photo-column .hero-card img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover}
+
+/* Compact homepage pricing introduction linked to dedicated pricing page */
+.sc-home-price-teaser{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:clamp(22px,4vw,34px);background:#fff;border:1px solid #d7e5f2;border-radius:17px;box-shadow:0 8px 25px rgba(14,46,72,.05)}
+.sc-home-price-teaser>div{min-width:0;max-width:680px}
+.sc-home-price-teaser h3{font-size:clamp(24px,3vw,30px)!important;line-height:1.2!important;margin:0 0 9px!important}
+.sc-home-price-teaser p{font-size:17px!important;line-height:1.6!important;color:#476173;margin:0!important}
+.sc-home-price-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;padding:13px 18px;min-height:50px;border-radius:10px;background:#1268f0;color:#fff!important;text-decoration:none!important;font-weight:800;font-size:15px;text-align:center}
+.sc-home-price-link:hover{background:#0959db}
+.sc-home-price-link:focus-visible{outline:3px solid #ef9b36;outline-offset:3px}
+@media(max-width:760px){.sc-home-price-teaser{flex-direction:column;align-items:stretch;gap:18px}.sc-home-price-link{width:100%;flex:none}}
 </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1556,7 +1566,7 @@ main p,main li{font-family:inherit;line-height:1.65}
 <a href="/cleanup">Virus &amp; Malware Cleanup</a>
 <a href="/wifi">Wi-Fi Problems</a>
 <a href="/#services">All Services</a>
-</div></details><a href="/#pricing">Pricing</a><a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a><a href="/schedule/">Schedule</a><details class="sc-service-menu sc-social-menu"><summary>Social</summary><div class="sc-service-dropdown">
+</div></details><a href="/pricing/">Pricing</a><a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a><a href="/schedule/">Schedule</a><details class="sc-service-menu sc-social-menu"><summary>Social</summary><div class="sc-service-dropdown">
 <a href="https://business.suncoasttechsupport.net/facebook/" target="_blank" rel="noopener noreferrer">Facebook</a>
 <a href="https://business.suncoasttechsupport.net/linkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 <a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269243,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu" target="_blank" rel="noopener noreferrer">Google Business Profile</a>
@@ -1647,58 +1657,14 @@ main p,main li{font-family:inherit;line-height:1.65}
     </section>
 
     <!-- Pricing Section -->
-    <section class="section" id="pricing">
+    <section class="section" id="pricing" aria-labelledby="sc-home-pricing-heading">
       <div class="wrap">
-        <h3>💵 Simple, Upfront Pricing</h3>
-
-        <p class="pricing-guide">Not sure what you need? Start with the $149 visit. Many common requests can be handled during the first visit.</p>
-
-        <p class="section-intro">Choose the option that best fits the problem, or call and we’ll help you decide.</p>
-
-        <div class="pricing-grid">
-          <div class="card pricing-card reveal">
-            <h4>Starter Visit</h4>
-            <p class="price">$149</p>
-            <p class="pricing-sub">Best for one main issue</p>
-            <p class="qualifier">Good fit if you have one clear problem and want a simple in-home visit.</p>
-            <ul>
-              <li>Initial review</li>
-              <li>Help with one primary request</li>
-              <li>Basic system check</li>
-            </ul>
-            <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('pricing_starter');">📞 Call to Book Starter</a>
+        <div class="sc-home-price-teaser">
+          <div>
+            <h3 id="sc-home-pricing-heading">Affordable In-Home Tech Support</h3>
+            <p>Clear, upfront pricing with visits starting at <strong>$149</strong>. Compare Starter, Home Care, and Total Care visits, plus payment options.</p>
           </div>
-
-          <div class="card pricing-card popular reveal">
-            <span class="tag">Most Popular</span>
-            <h4>Home Care Visit</h4>
-            <p class="price">$199</p>
-            <p class="pricing-sub">Best for most homes</p>
-            <p class="qualifier">Good fit if you have more than one tech issue or want a broader home technology check.</p>
-            <ul>
-              <li>Everything in Starter</li>
-              <li>Multiple requests during one visit</li>
-              <li>Performance review</li>
-              <li>Basic security review</li>
-              <li>Wi‑Fi and device help</li>
-            </ul>
-            <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('pricing_homecare');">📞 Call to Book Home Care</a>
-          </div>
-
-          <div class="card pricing-card reveal">
-            <h4>Total Care Visit</h4>
-            <p class="price">$279</p>
-            <p class="pricing-sub">Best for bigger cleanup or setup</p>
-            <p class="qualifier">Good fit if you need a larger setup, cleanup, device review, or file transfer help.</p>
-            <ul>
-              <li>Everything in Home Care</li>
-              <li>Cleanup help if needed</li>
-              <li>System cleanup review</li>
-              <li>New device guidance or data transfer</li>
-              <li>Priority availability</li>
-            </ul>
-            <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
-          </div>
+          <a class="sc-home-price-link" href="/pricing/">View Pricing &amp; Payment Options <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
