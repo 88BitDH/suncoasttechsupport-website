@@ -1432,6 +1432,19 @@ header{position:sticky;top:0;z-index:1100}
 /* Keep branded header and navigation together */
 .sc-sticky-pair{position:sticky;top:0;z-index:1200;background:#fff}
 .sc-sticky-pair>header,.sc-sticky-pair>.nav-menu{position:static!important;top:auto!important}
+
+/* Consumer footer aligned with business footer */
+.sc-business-footer{background:#153c58;color:#fff;padding:32px 0 36px;font:16px/1.6 Arial,Helvetica,sans-serif}
+.sc-business-footer *{box-sizing:border-box}
+.sc-business-footer .sc-shell-inner{max-width:1120px;width:calc(100% - 32px);margin:auto}
+.sc-business-footer .sc-footer-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(160px,1fr) minmax(170px,1fr);gap:22px}
+.sc-business-footer p{color:#fff;margin:8px 0}
+.sc-business-footer a{color:#fff;text-decoration:underline}
+.sc-business-footer nav{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.sc-business-footer strong{font-weight:800}
+.sc-business-footer .sc-copyright{border-top:1px solid rgba(255,255,255,.2);padding-top:15px;margin-top:24px}
+.sc-business-footer a:focus-visible{outline:3px solid #ffab40;outline-offset:3px}
+@media(max-width:720px){.sc-business-footer .sc-footer-grid{grid-template-columns:1fr;gap:20px}.sc-business-footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}}
 </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1640,18 +1653,11 @@ header{position:sticky;top:0;z-index:1100}
     
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="card footer-card">
-        <p><strong>SunCoast Tech Support</strong> • Insured • Veteran-Owned</p>
-        <p><strong>Suncoast Tech Support is a Florida OSD Certified Veteran-Owned Business.</strong></p>
-        <p class="footer-service-area">Serving Pinellas County, Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Belleair Bluffs, Seminole, Pinellas Park, St. Petersburg, and nearby Tampa Bay homes.</p>
-        <p><a href="https://suncoasttechsupport.net/privacy.html">Privacy Policy</a></p>
-        <p>© SunCoast Tech Support</p>
-        <p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="sc-business-footer"><div class="sc-shell-inner"><div class="sc-footer-grid">
+<div><strong>Suncoast Tech Support</strong><p>Veteran-owned · Florida OSD certified · Pinellas County SBE · Insured</p><p>Call <a href="tel:17276479000">(727) 647-9000</a> · <a href="sms:17276479000">Text Suncoast</a></p><p>Serving Pinellas County, Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Belleair Bluffs, Seminole, Pinellas Park, St. Petersburg, and nearby Tampa Bay homes.</p><p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off-hours support only.</p></div>
+<nav aria-label="Legal pages"><strong>Legal</strong><a href="https://business.suncoasttechsupport.net/terms/">Terms of Service</a><a href="https://business.suncoasttechsupport.net/privacy/">Privacy Policy</a><a href="https://business.suncoasttechsupport.net/client-authorization/">Client Authorization and Consent</a></nav>
+<nav aria-label="Social media"><strong>Follow Suncoast</strong><a href="https://business.suncoasttechsupport.net/facebook/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://business.suncoasttechsupport.net/linkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269243,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu" target="_blank" rel="noopener noreferrer">Google Business Profile</a></nav>
+</div><p class="sc-copyright">© Suncoast Tech Support · 88 Bit Diamond Hands LLC</p></div></footer>
 
   <div class="sticky-call">
     <a href="tel:17276479000" onclick="return trackCallClick('sticky_mobile');">📞 Call or Text a Local Person</a>
