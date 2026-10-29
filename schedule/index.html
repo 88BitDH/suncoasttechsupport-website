@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Updated title to include broader services and regional keywords -->
+  <title>Schedule a Visit | Suncoast Tech Support</title>
+  <meta name="description" content="Frustrated with your computer? SunCoast Tech Support provides in‑home computer, Wi‑Fi, printer, and tech help for seniors and home users in Clearwater, Largo, Dunedin, Palm Harbor, and nearby Pinellas County." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17992501324"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());
+    gtag('config', 'AW-17992501324');
+
+    var CALL_CONVERSION_LABEL = 'AW-17992501324/rt-XCLrMoa8cEMyQv4ND';
+    var FORM_CONVERSION_LABEL = 'AW-17992501324/FORM_PLACEHOLDER';
+
+    function gtag_report_conversion(url, source) {
+      var callbackFired = false;
+
+      var callback = function () {
+        if (callbackFired) return;
+        callbackFired = true;
+
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': CALL_CONVERSION_LABEL,
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+        });
+
+        gtag('event', 'click', {
+          'event_category': 'contact',
+          'event_label': 'call_' + source,
+          'value': 1
+        });
+
+        setTimeout(callback, 1000);
+        return false;
+      }
+
+      callback();
+      return false;
+    }
+
+    function trackCallClick(source) {
+      return gtag_report_conversion('tel:17276479000', source);
+    }
+
+    function trackSecondaryContact(type, source) {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': type + '_' + source,
+        'value': 1
+      });
+    }
+
+    function trackFormStart() {
+      gtag('event', 'form_start', {
+        'event_category': 'lead_form',
+        'event_label': 'b2c_request_visit'
+      });
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f9fc;
+      --surface: #ffffff;
+      --text: #163047;
+      --muted: #476173;
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --accent: #eaf4ff;
+      --border: #d7e5f2;
+      --success: #0f7b4d;
+      --warning-bg: #fff7e6;
+      --warning-border: #f0d5a5;
+      --warning-text: #784b00;
+      --shadow: 0 10px 25px rgba(22, 48, 71, 0.08);
+      --radius: 16px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #0d2235;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 0;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: #fff;
+      font-weight: 800;
+      white-space: nowrap;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    header {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f9fc 100%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      margin: 0 0 2px;
+    }
+
+    .brand-text p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn,
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .2s ease;
+      min-height: 56px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-subtle {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-subtle:hover { background: #f8fbff; }
+
+    .hero {
+      padding: 34px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .trust-line {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 11px 16px;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-lead {
+      font-size: 22px;
+      color: var(--text);
+      margin: 0 0 12px;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 660px;
+    }
+
+    .urgency-box {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 12px 15px;
+      border-radius: 14px;
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      border: 1px solid var(--warning-border);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .btn-call-dominant {
+      font-size: 21px;
+      min-height: 64px;
+      padding: 18px 22px;
+      min-width: 320px;
+    }
+
+    .secondary-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .secondary-links a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: cover;
+    }
+
+    .section {
+      padding: 36px 0;
+    }
+
+    .section h3 {
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.15;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-photo {
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-panel {
+      padding: 24px;
+    }
+
+    .quote-strip {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+
+    .quote-strip ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .quote-strip li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .review-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 800;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      padding: 20px;
+    }
+
+    .service-card h4 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .see-more {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .sticky-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .sticky-call a {
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* Sitelinks nav styling */
+    .sitelinks ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sitelinks li a {
+      color: var(--primary);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /*
+      =============================================================================
+      Responsive Grid & Card Layouts
+
+      The following styles define default grid layouts for the pricing, testimonials,
+      FAQ, and contact sections. These layouts use flexible grids on larger
+      screens and gracefully collapse into a single column on smaller devices.
+      This ensures that each “card” (pricing tier, review, FAQ item, contact
+      panel) is clearly visible and easy to scroll on mobile. See the media
+      query below for the mobile adjustments.
+    */
+
+    /* Pricing cards arranged in a flexible grid. On wide screens this will
+       display three cards side by side; the auto-fit ensures the cards wrap
+       nicely if space is limited. */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* Testimonials as a three-column grid on desktop. Cards will wrap if the
+       screen is narrower than three columns. */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* FAQ items in two columns on larger screens for better use of space. */
+    .faq-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    /* Contact section uses a two-column layout: the form on the left and
+       contact information on the right. */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Mobile responsive adjustments. On screens 768px wide or less, the layout
+       collapses to single columns for easier reading and scrolling. The hide-
+       mobile class is used to hide certain header actions on mobile devices. */
+
+
+    /* Stronger spacing for senior readability and card comfort */
+    .faq-item {
+      padding: 24px 26px;
+    }
+
+    .footer-card {
+      padding: 30px 32px;
+    }
+
+    .expert-profile-card {
+      padding: 26px;
+    }
+
+    .expert-profile-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .expert-photo-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .expert-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .font-step-status {
+      background: #fff;
+      border: 1px solid var(--warning-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 900;
+    }
+
+    @media (max-width: 768px) {
+      /* Stack hero content above the image */
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      /* About section stacks photo and text vertically */
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Services: display each service card on its own row */
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Pricing cards: stack vertically */
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Testimonials: stack one per row */
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+
+      /* FAQ items: stack one per row */
+      .faq-list {
+        grid-template-columns: 1fr;
+      }
+
+      /* Contact section: stack form and contact info */
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Hide header call-to-action buttons on mobile to save space */
+      .header-actions.hide-mobile {
+        display: none;
+      }
+
+      /* Adjust sticky call positioning on mobile */
+      .sticky-call {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+    /*
+      =============================================================================
+      Navigation Menu Styles
+
+      The navigation menu appears below the header and provides quick links to
+      each major section of the page. On mobile devices the links wrap to
+      multiple lines as needed. Colors and hover effects mirror the primary
+      brand palette.
+    */
+    .nav-menu {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-menu .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .nav-menu a {
+      color: var(--primary);
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-menu a:hover {
+      background: var(--accent);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /*
+      =============================================================================
+      Contact Section Enhancements
+
+      These styles refine the layout and appearance of the form and contact card.
+      Inputs are full-width with generous padding, labels are bold and clear,
+      and contact chips are styled for a friendly, approachable look. The
+      form/card padding ensures breathing room similar to the business page.
+    */
+    .form-card,
+    .contact-card {
+      padding: 24px;
+    }
+    .form-card form > div {
+      margin-bottom: 16px;
+    }
+    .form-card label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+    }
+    .form-card input,
+    .form-card textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      background: #fff;
+      color: var(--text);
+    }
+    .form-card textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-card button.btn {
+      width: 100%;
+      font-size: 18px;
+    }
+    .contact-card h4 {
+      margin-top: 0;
+    }
+    .contact-card p.mini {
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .contact-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .contact-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-chip:hover {
+      background: #f0f8ff;
+      text-decoration: none;
+    }
+
+  
+
+    /* Senior readability controls and consumer-friendly section navigation */
+    body.font-step-1 {
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    body.font-step-2 {
+      font-size: 21px;
+      line-height: 1.85;
+    }
+
+    body.font-step-3 {
+      font-size: 23px;
+      line-height: 1.95;
+    }
+
+    body.font-step-1 .hero-copy,
+    body.font-step-1 .section-intro,
+    body.font-step-1 .pricing-sub,
+    body.font-step-1 .testimonial blockquote,
+    body.font-step-1 .faq-item p,
+    body.font-step-1 .mini,
+    body.font-step-1 li,
+    body.font-step-1 label,
+    body.font-step-1 input,
+    body.font-step-1 textarea,
+    body.font-step-1 .btn,
+    body.font-step-1 .nav-menu a {
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    body.font-step-2 .hero-copy,
+    body.font-step-2 .section-intro,
+    body.font-step-2 .pricing-sub,
+    body.font-step-2 .testimonial blockquote,
+    body.font-step-2 .faq-item p,
+    body.font-step-2 .mini,
+    body.font-step-2 li,
+    body.font-step-2 label,
+    body.font-step-2 input,
+    body.font-step-2 textarea,
+    body.font-step-2 .btn,
+    body.font-step-2 .nav-menu a {
+      font-size: 21px;
+      line-height: 1.85;
+    }
+
+    body.font-step-3 .hero-copy,
+    body.font-step-3 .section-intro,
+    body.font-step-3 .pricing-sub,
+    body.font-step-3 .testimonial blockquote,
+    body.font-step-3 .faq-item p,
+    body.font-step-3 .mini,
+    body.font-step-3 li,
+    body.font-step-3 label,
+    body.font-step-3 input,
+    body.font-step-3 textarea,
+    body.font-step-3 .btn,
+    body.font-step-3 .nav-menu a {
+      font-size: 23px;
+      line-height: 1.95;
+    }
+
+    .accessibility-bar {
+      background: #fff7e6;
+      border-bottom: 1px solid var(--warning-border);
+    }
+
+    .accessibility-bar .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      color: var(--warning-text);
+      font-weight: 800;
+    }
+
+    .text-toggle {
+      border: 1px solid var(--warning-border);
+      background: #fff;
+      color: var(--warning-text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      min-height: 44px;
+    }
+
+    .text-toggle:hover {
+      background: var(--warning-bg);
+    }
+
+    .nav-menu {
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(22, 48, 71, 0.08);
+    }
+
+    .nav-menu .nav-label {
+      color: var(--muted);
+      font-weight: 900;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .hero-cta-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin-top: 20px;
+    }
+
+    .hero-cta-card .btn-call-dominant {
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 12px;
+    }
+
+    .hero-cta-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .hero-cta-footer a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--accent);
+      color: var(--text);
+      font-weight: 900;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .pricing-card .qualifier {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text);
+      font-weight: 800;
+      margin: 12px 0 14px;
+    }
+
+    .pricing-card .btn-primary {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--primary);
+      position: relative;
+      padding-top: 34px;
+    }
+
+    .badge-popular {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffb703;
+      color: #163047;
+      border: 2px solid #f2a400;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-card.popular .badge-popular {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .review-source {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 0 0 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .review-source a,
+    .review-link-row a {
+      font-weight: 900;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .google-review-label {
+      color: var(--success);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .review-link-row {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .footer-service-area {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+
+
+    /* Stronger spacing for senior readability and card comfort */
+    .faq-item {
+      padding: 24px 26px;
+    }
+
+    .footer-card {
+      padding: 30px 32px;
+    }
+
+    .expert-profile-card {
+      padding: 26px;
+    }
+
+    .expert-profile-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .expert-photo-wrap {
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .expert-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .font-step-status {
+      background: #fff;
+      border: 1px solid var(--warning-border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 900;
+    }
+
+    @media (max-width: 768px) {
+
+
+      .expert-profile-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .expert-photo-wrap img {
+        max-height: 320px;
+      }
+
+      .accessibility-bar .wrap {
+        justify-content: flex-start;
+      }
+
+      .nav-menu .wrap {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+
+      .nav-menu ul {
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: flex-start;
+        padding: 8px 0;
+      }
+
+      .nav-menu a {
+        white-space: nowrap;
+        background: var(--accent);
+        border: 1px solid var(--border);
+      }
+
+      .hero-cta-footer {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* FINAL OVERRIDES: working incremental senior readability controls */
+    body.reader-font-1,
+    body.reader-font-1 p,
+    body.reader-font-1 li,
+    body.reader-font-1 a,
+    body.reader-font-1 label,
+    body.reader-font-1 input,
+    body.reader-font-1 textarea,
+    body.reader-font-1 button,
+    body.reader-font-1 .btn,
+    body.reader-font-1 .mini,
+    body.reader-font-1 .section-intro,
+    body.reader-font-1 .pricing-sub { font-size: 20px !important; }
+
+    body.reader-font-2,
+    body.reader-font-2 p,
+    body.reader-font-2 li,
+    body.reader-font-2 a,
+    body.reader-font-2 label,
+    body.reader-font-2 input,
+    body.reader-font-2 textarea,
+    body.reader-font-2 button,
+    body.reader-font-2 .btn,
+    body.reader-font-2 .mini,
+    body.reader-font-2 .section-intro,
+    body.reader-font-2 .pricing-sub { font-size: 22px !important; }
+
+    body.reader-font-3,
+    body.reader-font-3 p,
+    body.reader-font-3 li,
+    body.reader-font-3 a,
+    body.reader-font-3 label,
+    body.reader-font-3 input,
+    body.reader-font-3 textarea,
+    body.reader-font-3 button,
+    body.reader-font-3 .btn,
+    body.reader-font-3 .mini,
+    body.reader-font-3 .section-intro,
+    body.reader-font-3 .pricing-sub { font-size: 24px !important; }
+
+    body.reader-font-4,
+    body.reader-font-4 p,
+    body.reader-font-4 li,
+    body.reader-font-4 a,
+    body.reader-font-4 label,
+    body.reader-font-4 input,
+    body.reader-font-4 textarea,
+    body.reader-font-4 button,
+    body.reader-font-4 .btn,
+    body.reader-font-4 .mini,
+    body.reader-font-4 .section-intro,
+    body.reader-font-4 .pricing-sub { font-size: 26px !important; }
+
+    body.reader-font-5,
+    body.reader-font-5 p,
+    body.reader-font-5 li,
+    body.reader-font-5 a,
+    body.reader-font-5 label,
+    body.reader-font-5 input,
+    body.reader-font-5 textarea,
+    body.reader-font-5 button,
+    body.reader-font-5 .btn,
+    body.reader-font-5 .mini,
+    body.reader-font-5 .section-intro,
+    body.reader-font-5 .pricing-sub { font-size: 28px !important; }
+
+    body.reader-font-1 h2 { font-size: clamp(40px, 5.5vw, 58px) !important; }
+    body.reader-font-2 h2 { font-size: clamp(44px, 6vw, 62px) !important; }
+    body.reader-font-3 h2 { font-size: clamp(48px, 6.5vw, 66px) !important; }
+    body.reader-font-4 h2 { font-size: clamp(52px, 7vw, 70px) !important; }
+    body.reader-font-5 h2 { font-size: clamp(56px, 7.5vw, 74px) !important; }
+
+    body.reader-font-1 h3 { font-size: clamp(32px, 3.4vw, 42px) !important; }
+    body.reader-font-2 h3 { font-size: clamp(35px, 3.7vw, 45px) !important; }
+    body.reader-font-3 h3 { font-size: clamp(38px, 4vw, 48px) !important; }
+    body.reader-font-4 h3 { font-size: clamp(41px, 4.3vw, 51px) !important; }
+    body.reader-font-5 h3 { font-size: clamp(44px, 4.6vw, 54px) !important; }
+
+    /* Keep the founder photo physically inside the Meet Your Local Expert card */
+    .expert-profile-card {
+      overflow: hidden;
+    }
+
+    .expert-profile-card .expert-profile-layout {
+      display: grid !important;
+      grid-template-columns: minmax(220px, 300px) 1fr !important;
+      gap: 28px !important;
+      align-items: start !important;
+    }
+
+    .expert-profile-card .expert-photo-wrap {
+      margin: 0 !important;
+      width: 100% !important;
+      border-radius: 18px !important;
+      overflow: hidden !important;
+      background: #fff !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: var(--shadow) !important;
+    }
+
+    .expert-profile-card .expert-photo-wrap img {
+      width: 100% !important;
+      min-height: 300px !important;
+      max-height: 360px !important;
+      object-fit: cover !important;
+    }
+
+    @media (max-width: 768px) {
+      .expert-profile-card .expert-profile-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .expert-profile-card .expert-photo-wrap img {
+        min-height: 240px !important;
+        max-height: 320px !important;
+      }
+    }
+
+  
+    /* Senior readability controls: exactly two buttons */
+    .readability-section {
+      background: #eef6ff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .readability-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .readability-label {
+      margin: 0;
+      font-weight: 900;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .readability-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .readability-actions .btn {
+      min-height: 48px;
+      padding: 12px 16px;
+      font-size: 17px;
+    }
+
+    /* Incremental text sizing. Each click of A+ increases one step. */
+    html[data-text-size="1"] body { font-size: 18px; }
+    html[data-text-size="2"] body { font-size: 19px; }
+    html[data-text-size="3"] body { font-size: 20px; }
+    html[data-text-size="4"] body { font-size: 21px; }
+    html[data-text-size="5"] body { font-size: 22px; }
+
+    html[data-text-size="1"] p,
+    html[data-text-size="1"] li,
+    html[data-text-size="1"] a,
+    html[data-text-size="1"] button,
+    html[data-text-size="1"] input,
+    html[data-text-size="1"] textarea,
+    html[data-text-size="1"] label { font-size: 1.06em; }
+
+    html[data-text-size="2"] p,
+    html[data-text-size="2"] li,
+    html[data-text-size="2"] a,
+    html[data-text-size="2"] button,
+    html[data-text-size="2"] input,
+    html[data-text-size="2"] textarea,
+    html[data-text-size="2"] label { font-size: 1.12em; }
+
+    html[data-text-size="3"] p,
+    html[data-text-size="3"] li,
+    html[data-text-size="3"] a,
+    html[data-text-size="3"] button,
+    html[data-text-size="3"] input,
+    html[data-text-size="3"] textarea,
+    html[data-text-size="3"] label { font-size: 1.18em; }
+
+    html[data-text-size="4"] p,
+    html[data-text-size="4"] li,
+    html[data-text-size="4"] a,
+    html[data-text-size="4"] button,
+    html[data-text-size="4"] input,
+    html[data-text-size="4"] textarea,
+    html[data-text-size="4"] label { font-size: 1.24em; }
+
+    html[data-text-size="5"] p,
+    html[data-text-size="5"] li,
+    html[data-text-size="5"] a,
+    html[data-text-size="5"] button,
+    html[data-text-size="5"] input,
+    html[data-text-size="5"] textarea,
+    html[data-text-size="5"] label { font-size: 1.3em; }
+
+    /* Founder photo: keep the full photo visible inside the Meet Your Local Expert card */
+    .expert-profile-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+      overflow: visible;
+    }
+
+    .expert-photo-wrap {
+      align-self: center;
+    }
+
+    .expert-profile-card img,
+    .founder-photo,
+    .about-photo img {
+      object-fit: contain !important;
+      object-position: center top !important;
+      width: 100%;
+      height: auto !important;
+      max-height: 360px;
+      background: #fff;
+      border-radius: 16px;
+      display: block;
+    }
+
+    @media (max-width: 680px) {
+      .readability-card {
+        align-items: stretch;
+      }
+
+      .readability-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .readability-actions .btn {
+        width: 100%;
+      }
+
+      .expert-profile-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
+    /* Final readability override: only two visible buttons */
+    .accessibility-bar { display: none !important; }
+    .readability-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .readability-actions .btn { min-height: 48px; padding: 12px 16px; font-size: 17px; }
+
+  
+    /* Final founder photo fit override: full image visible, head not cropped */
+    .expert-profile-card img,
+    .expert-photo-wrap img,
+    .founder-photo,
+    .about-photo img {
+      object-fit: contain !important;
+      object-position: center top !important;
+      width: 100% !important;
+      height: auto !important;
+      max-height: 360px !important;
+      display: block !important;
+    }
+
+  
+    /* Common Problems: aligned alphabetical card layout */
+    #services .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    #services .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 22px;
+    }
+
+    #services .service-card h4 {
+      min-height: 2.6em;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    #services .service-card p {
+      margin-top: 0;
+    }
+
+    @media (max-width: 680px) {
+      #services .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #services .service-card h4 {
+        min-height: auto;
+      }
+    }
+
+  
+    /* Common Problems: six-card aligned grid with cybersecurity card */
+    #services .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    #services .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+  
+    /* UX change 1: subtle scroll reveal animations for cards only */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* UX change 2: mobile sticky Call/Text aid for the scroll experience */
+    .mobile-sticky-contact {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 88px;
+      }
+
+      .mobile-sticky-contact {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(245, 249, 252, 0.97);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -8px 20px rgba(22, 48, 71, 0.08);
+      }
+
+      .mobile-sticky-contact a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        border-radius: 14px;
+        background: var(--primary);
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+
+  </style>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<header>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="src/assets/logo.png" alt="SunCoast Tech Support logo" />
+        <div class="brand-text">
+          <h1>SunCoast Tech Support</h1>
+          <p>In-home computer and tech help for Clearwater-area homes</p>
+        </div>
+      </div>
+
+      <div class="header-actions hide-mobile">
+        <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('header');">📞 Call or Text a Local Person</a>
+        <a class="btn btn-subtle" href="/schedule/" onclick="trackSecondaryContact('schedule', 'header');">🗓️ Schedule a Visit</a>
+        <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">💬 Text Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation menu linking to sections on the page -->
+  <nav class="nav-menu"><div class="wrap"><ul><li class="nav-label">Explore:</li><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/schedule/">Schedule</a></li></ul></div></nav>
+
+  <main><div class="wrap" style="padding-top:20px"><p><a href="/">← Back to home</a></p></div>
+<section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="card form-card reveal">
+          <h3>🗓️ Need In-Home Computer Help?</h3>
+
+          <p class="section-intro">Call or text for availability, or request a visit below. Appointments may be available in the Clearwater area.</p>
+
+          <div class="urgency-box">🏠 Local Service • Clear Explanations • Patient In-Home Help</div>
+
+          <form action="https://suncoast-b2c-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Full Name" required />
+            </div>
+
+            <div>
+              <label for="message">What do you need help with?</label>
+              <textarea id="message" name="message" placeholder="Briefly describe the problem" required></textarea>
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Best Number to Reach You" required />
+            </div>
+
+            <input type="hidden" name="_subject" value="New SunCoast Tech Customer Lead" />
+            <input type="hidden" name="lead_type" value="customer" />
+            <input type="hidden" name="lead_source" value="b2c_homepage" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
+
+            <button class="btn btn-primary" type="submit">🗓️ Schedule a Visit</button>
+          </form>
+
+          <p class="privacy-note">We only use your information to respond to your request. Do not send passwords, payment details, or sensitive account information through this form.</p>
+          <p class="form-note">Form kept intentionally simple for mobile users.</p>
+        </div>
+
+        <div class="card contact-card reveal">
+          <h4>📞 Call or Text a Local Person</h4>
+
+          <p class="mini">Have a computer, Wi‑Fi, printer, or file transfer issue? Call or text today to ask about availability and get clear next steps from a local person.</p>
+
+          <div class="contact-stack">
+            <a class="contact-chip" href="tel:17276479000" onclick="return trackCallClick('contact_card');">📞 Call (727) 647-9000</a>
+            <a class="contact-chip" href="sms:17276479000" onclick="trackSecondaryContact('text', 'contact_card');">💬 Text (727) 647-9000</a>
+            <a class="contact-chip" href="mailto:support@SuncoastTechSupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email support@SuncoastTechSupport.net</a>
+          </div>
+
+          <!-- Added hours of operation -->
+          <p class="mini"><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
+        </div>
+      </div>
+    </section></main>
+<footer>
+    <div class="wrap">
+      <div class="card footer-card">
+        <p><strong>SunCoast Tech Support</strong> • Insured • Veteran-Owned</p>
+        <p><strong>Suncoast Tech Support is a Florida OSD Certified Veteran-Owned Business.</strong></p>
+        <p class="footer-service-area">Serving Pinellas County, Clearwater, Clearwater Beach, Largo, Dunedin, Palm Harbor, Safety Harbor, Belleair, Belleair Bluffs, Seminole, Pinellas Park, St. Petersburg, and nearby Tampa Bay homes.</p>
+        <p><a href="https://suncoasttechsupport.net/privacy.html">Privacy Policy</a></p>
+        <p>© SunCoast Tech Support</p>
+        <p><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-call">
+    <a href="tel:17276479000" onclick="return trackCallClick('sticky_mobile');">📞 Call or Text a Local Person</a>
+  </div>
+
+  <!-- Sitelinks navigation for Google Ads -->
+  <nav class="sitelinks">
+    <ul>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/schedule/">Contact</a></li>
+      <li><a href="https://suncoasttechsupport.net/wifi">Wi‑Fi Solutions</a></li>
+    </ul>
+  </nav>
+
+  <!-- Local Business structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SunCoast Tech Support",
+    "url": "https://suncoasttechsupport.net",
+    "telephone": "+1-727-647-9000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Clearwater",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Off-hours support only"
+      }
+    ],
+    "areaServed": ["Pinellas County", "Clearwater", "Clearwater Beach", "Largo", "Dunedin", "Palm Harbor", "Safety Harbor", "Belleair", "Belleair Bluffs", "Seminole", "Pinellas Park", "St. Petersburg", "Tampa Bay"],
+    "sameAs": ["https://suncoasttechsupport.net/wifi"]
+  }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var increaseButton = document.getElementById('increaseText');
+      var resetButton = document.getElementById('resetText');
+      var maxLevel = 5;
+      var currentLevel = parseInt(localStorage.getItem('suncoastTextLevel') || '0', 10);
+
+      function applyTextSize() {
+        document.documentElement.setAttribute('data-text-size', String(currentLevel));
+        localStorage.setItem('suncoastTextLevel', String(currentLevel));
+      }
+
+      if (increaseButton) {
+        increaseButton.addEventListener('click', function () {
+          currentLevel = Math.min(currentLevel + 1, maxLevel);
+          applyTextSize();
+        });
+      }
+
+      if (resetButton) {
+        resetButton.addEventListener('click', function () {
+          currentLevel = 0;
+          applyTextSize();
+        });
+      }
+
+      applyTextSize();
+    });
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cybersecurity and Home Security Review",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SunCoast Tech Support",
+      "telephone": "+1-727-647-9000",
+      "url": "https://suncoasttechsupport.net"
+    },
+    "areaServed": [
+      "Pinellas County",
+      "Clearwater",
+      "Largo",
+      "Dunedin",
+      "Palm Harbor",
+      "Safety Harbor",
+      "Belleair",
+      "Clearwater Beach"
+    ],
+    "serviceType": "Cybersecurity review, malware cleanup, home computer security help, and online safety guidance"
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Computer and Laptop Services",
+    "url": "https://suncoasttechsupport.net/computer",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SunCoast Tech Support",
+      "telephone": "+1-727-647-9000",
+      "url": "https://suncoasttechsupport.net"
+    },
+    "areaServed": [
+      "Pinellas County",
+      "Clearwater",
+      "Largo",
+      "Dunedin",
+      "Palm Harbor",
+      "Safety Harbor",
+      "Belleair",
+      "Clearwater Beach"
+    ],
+    "serviceType": "Computer setup, laptop setup, slow computer help, error troubleshooting, and in-home computer services"
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "SunCoast Tech Support Service Pages",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Computer and Laptop Services",
+        "url": "https://suncoasttechsupport.net/computer"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cybersecurity and Security Review",
+        "url": "https://suncoasttechsupport.net/security"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Data Transfer",
+        "url": "https://suncoasttechsupport.net/data"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Printer, Scanners and Fax",
+        "url": "https://suncoasttechsupport.net/printer"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Virus and Malware Cleanup",
+        "url": "https://suncoasttechsupport.net/cleanup"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Wi-Fi Problems",
+        "url": "https://suncoasttechsupport.net/wifi"
+      }
+    ]
+  }
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var revealItems = document.querySelectorAll('.reveal');
+
+      if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(function (item) {
+          item.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    });
+  </script>
+
+
+  <div class="mobile-sticky-contact" aria-label="Mobile contact shortcuts">
+    <a href="tel:17276479000" onclick="return trackCallClick('mobile_sticky_call');">📞 Call</a>
+    <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'mobile_sticky_text');">💬 Text</a>
+  </div>
+
+</body>
+</html>
