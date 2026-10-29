@@ -1425,7 +1425,8 @@
       }
     }
 
-  </style>
+  @media(max-width:760px){.header-actions.hide-mobile{display:none}.nav-menu ul{display:flex;overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;scrollbar-width:thin;gap:12px}.nav-menu li{flex:0 0 auto}.readability-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.readability-actions button{min-height:44px}.hero-grid,.contact-grid{grid-template-columns:1fr}.service-grid,.pricing-grid{grid-template-columns:1fr}.service-card,.pricing-card{min-width:0}body{overflow-x:hidden} .sticky-call{padding-bottom:env(safe-area-inset-bottom)}}
+</style>
 
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -1438,17 +1439,7 @@
       <a href="tel:17276479000" onclick="return trackCallClick('topbar');">📞 Call or Text (727) 647‑9000</a>
     </div>
   </div>
-<section class="readability-section">
-    <div class="wrap">
-      <div class="readability-card" aria-label="Readability controls">
-        <p class="readability-label">👓 Need larger text?</p>
-        <div class="readability-actions">
-          <button type="button" id="increaseText" class="btn btn-subtle">A+ Make Text Larger</button>
-          <button type="button" id="resetText" class="btn btn-subtle">Reset to Normal</button>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <header>
     <div class="wrap header-inner">
@@ -1462,11 +1453,12 @@
 
       <div class="header-actions hide-mobile">
         <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('header');">📞 Call or Text a Local Person</a>
-        <a class="btn btn-subtle" href="#contact" onclick="trackSecondaryContact('schedule', 'header');">🗓️ Schedule a Visit</a>
+        <a class="btn btn-subtle" href="/schedule/" onclick="trackSecondaryContact('schedule', 'header');">🗓️ Schedule a Visit</a>
         <a class="btn btn-subtle" href="sms:17276479000" onclick="trackSecondaryContact('text', 'header');">💬 Text Us</a>
       </div>
     </div>
-  </header>
+  <div class="wrap" style="padding:0 0 12px"><div class="readability-card" aria-label="Text size options" style="margin:0;box-shadow:none"><div class="readability-actions"><span class="readability-label" style="margin:0">Text size</span><button type="button" id="increaseText" class="btn btn-subtle">A+ Make Text Larger</button><button type="button" id="resetText" class="btn btn-subtle">Reset to Normal</button></div></div></div>
+</header>
 
   <!-- Navigation menu linking to sections on the page -->
   <nav class="nav-menu">
@@ -1475,9 +1467,9 @@
         <li class="nav-label">Jump to:</li>
         <li><a href="#services">🛠️ Common Problems</a></li>
         <li><a href="#pricing">💵 Pricing</a></li>
-        <li><a href="#testimonials">⭐ Reviews</a></li>
-        <li><a href="#faq">❓ FAQ</a></li>
-        <li><a href="#contact">📞 Contact</a></li>
+        <li><a href="/expert/">👋 Meet Expert</a></li><li><a href="/reviews/">⭐ Reviews</a></li>
+        <li><a href="/faq/">❓ FAQ</a></li>
+        <li><a href="/schedule/">🗓️ Schedule</a></li>
       </ul>
     </div>
   </nav>
@@ -1502,7 +1494,7 @@
           <div class="hero-cta-card" aria-label="Contact options">
             <a class="btn btn-primary btn-call-dominant" href="tel:17276479000" onclick="return trackCallClick('hero');">📞 Call or Text a Local Person</a>
             <div class="hero-cta-footer">
-              <a href="#contact" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
+              <a href="/schedule/" onclick="trackSecondaryContact('schedule', 'hero');">🗓️ Schedule a Visit</a>
               <a href="sms:17276479000" onclick="trackSecondaryContact('text', 'hero');">💬 Text Us</a>
               <a href="#pricing">💵 Start with $149</a>
             </div>
@@ -1516,38 +1508,7 @@
     </section>
 
     <!-- About / Meet Your Expert -->
-    <section class="section">
-      <div class="wrap">
-        <div class="card about-panel expert-profile-card">
-          <div class="expert-profile-layout">
-            <div class="expert-photo-wrap">
-              <img src="src/assets/owner-photo.png" alt="Moe from SunCoast Tech Support" />
-            </div>
-
-            <div class="expert-copy">
-              <h3>👋 Meet Your Local Expert</h3>
-              <p><a href="/about/">Learn more about Suncoast Tech Support →</a></p>
-
-              <p class="section-intro">Hi, I’m Moe. I provide patient, local in-home technology help for Clearwater-area homes, including seniors, families, and home users.</p>
-
-              <p>I know how stressful it feels when a computer is slow, a printer stops working, Wi‑Fi drops out, or family photos need to move safely to a new device.</p>
-
-              <p>Common requests include slow computers, printer issues, Wi‑Fi concerns, and moving family photos or important files to a new device.</p>
-
-              <div class="quote-strip">
-                <strong>⭐ What customers are saying</strong>
-                <ul>
-                  <li>“Fast, professional, and explained everything clearly.”</li>
-                  <li>“Saved my family photos and made the whole process easy.”</li>
-                  <li>“Finally fixed my Wi‑Fi throughout the house.”</li>
-                </ul>
-                <a class="review-link" href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read Google Reviews</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Services / Common Problems Section -->
     <section id="services" class="section">
@@ -1662,125 +1623,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section">
-      <div class="wrap">
-        <h3>⭐ What Your Neighbors Are Saying</h3>
-        <p class="section-intro">Real reassurance for people who want someone patient, local, and easy to work with.</p>
-        <p class="review-source">These are Google review snippets. <a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read more Google reviews</a>.</p>
-
-        <div class="testimonials">
-          <div class="card testimonial reveal">
-            <div class="google-review-label">Google Review</div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“They saved 30 years of family photos and showed me how to keep them safe.”</blockquote>
-            <cite>Margaret H. • Clearwater Beach</cite>
-          </div>
-
-          <div class="card testimonial reveal">
-            <div class="google-review-label">Google Review</div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“He explained everything in words I could understand and fixed it in one visit.”</blockquote>
-            <cite>Robert T. • Palm Harbor</cite>
-          </div>
-
-          <div class="card testimonial reveal">
-            <div class="google-review-label">Google Review</div>
-            <div class="stars">★★★★★</div>
-            <blockquote>“My Wi‑Fi works in every room now, even the lanai. Should have called sooner.”</blockquote>
-            <cite>Susan M. • Dunedin</cite>
-          </div>
-        </div>
-        <p class="review-link-row"><a href="https://www.google.com/maps/place/Suncoast+Tech+Support/@27.9600634,-83.0269085,10z/data=!4m8!3m7!1s0xfda3740f6700f1b:0xbe48f9ed81314891!8m2!3d27.9598495!4d-82.6972656!9m1!1b1!16s%2Fg%2F11yvdld9vh?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">⭐ Read more Google reviews</a></p>
-      </div>
-    </section>
+    
 
     <!-- FAQ Section -->
-    <section id="faq" class="section">
-      <div class="wrap">
-        <h3>❓ Frequently Asked Questions</h3>
-        <p class="section-intro">Clear answers before you call or book.</p>
-
-        <div class="faq-list">
-          <div class="card faq-item reveal">
-            <h4>🏠 Do I need to bring my computer anywhere?</h4>
-            <p>No. We come to your home and work with the setup you already have there.</p>
-          </div>
-
-          <div class="card faq-item reveal">
-            <h4>📍 What areas do you serve?</h4>
-            <p>Clearwater, Clearwater Beach, Dunedin, Largo, Palm Harbor, Safety Harbor, Belleair, and nearby Pinellas areas.</p>
-          </div>
-
-          <div class="card faq-item reveal">
-            <h4>👵 Do you work with seniors?</h4>
-            <p>Yes. The service is designed to be patient, clear, respectful, and easy to understand.</p>
-          </div>
-
-          <div class="card faq-item reveal">
-            <h4>💵 What if I am not sure which pricing option I need?</h4>
-            <p>Start with the $149 visit or call first. We’ll help you choose the best fit for the problem.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="wrap contact-grid">
-        <div class="card form-card reveal">
-          <h3>🗓️ Need In-Home Computer Help?</h3>
-
-          <p class="section-intro">Call or text for availability, or request a visit below. Appointments may be available in the Clearwater area.</p>
-
-          <div class="urgency-box">🏠 Local Service • Clear Explanations • Patient In-Home Help</div>
-
-          <form action="https://suncoast-b2c-lead-form.iammoeskicova0808.workers.dev/" method="POST" onfocusin="trackFormStart();">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Full Name" required />
-            </div>
-
-            <div>
-              <label for="message">What do you need help with?</label>
-              <textarea id="message" name="message" placeholder="Briefly describe the problem" required></textarea>
-            </div>
-
-            <div>
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" placeholder="Best Number to Reach You" required />
-            </div>
-
-            <input type="hidden" name="_subject" value="New SunCoast Tech Customer Lead" />
-            <input type="hidden" name="lead_type" value="customer" />
-            <input type="hidden" name="lead_source" value="b2c_homepage" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAACzrFz4NsVodL59R"></div>
-
-            <button class="btn btn-primary" type="submit">🗓️ Schedule a Visit</button>
-          </form>
-
-          <p class="privacy-note">We only use your information to respond to your request. Do not send passwords, payment details, or sensitive account information through this form.</p>
-          <p class="form-note">Form kept intentionally simple for mobile users.</p>
-        </div>
-
-        <div class="card contact-card reveal">
-          <h4>📞 Call or Text a Local Person</h4>
-
-          <p class="mini">Have a computer, Wi‑Fi, printer, or file transfer issue? Call or text today to ask about availability and get clear next steps from a local person.</p>
-
-          <div class="contact-stack">
-            <a class="contact-chip" href="tel:17276479000" onclick="return trackCallClick('contact_card');">📞 Call (727) 647-9000</a>
-            <a class="contact-chip" href="sms:17276479000" onclick="trackSecondaryContact('text', 'contact_card');">💬 Text (727) 647-9000</a>
-            <a class="contact-chip" href="mailto:support@SuncoastTechSupport.net" onclick="trackSecondaryContact('email', 'contact_card');">✉️ Email support@SuncoastTechSupport.net</a>
-          </div>
-
-          <!-- Added hours of operation -->
-          <p class="mini"><strong>Hours:</strong> Monday – Friday 8 AM–5 PM; Saturday &amp; Sunday off‑hours support only.</p>
-        </div>
-      </div>
-    </section>
+    
   </main>
 
   <footer>
@@ -1804,7 +1653,7 @@
   <nav class="sitelinks">
     <ul>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="/schedule/">Contact</a></li>
       <li><a href="https://suncoasttechsupport.net/wifi">Wi‑Fi Solutions</a></li>
     </ul>
   </nav>
