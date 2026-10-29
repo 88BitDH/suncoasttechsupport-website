@@ -573,11 +573,36 @@ main p,main li{font-family:inherit;line-height:1.65}
 .sc-unified-head .sc-head-ctas a{white-space:normal!important;font-size:13px!important;padding:8px 5px!important;min-height:44px!important}
 .sc-unified-head .sc-head-nav-inner{width:calc(100% - 24px)!important}
 }
+/* Services dropdown: matches the existing business-style navigation */
+.sc-unified-head .sc-head-nav-inner{overflow:visible!important;flex-wrap:wrap!important}
+.sc-unified-head .sc-service-menu{position:relative!important;flex:none!important;font:700 14px/1.3 Arial,Helvetica,sans-serif!important;color:#163047!important}
+.sc-unified-head .sc-service-menu summary{display:inline-flex!important;align-items:center!important;gap:8px!important;list-style:none!important;padding:8px 10px!important;border-radius:8px!important;cursor:pointer!important;font:700 14px/1.3 Arial,Helvetica,sans-serif!important;color:#163047!important;min-height:34px!important}
+.sc-unified-head .sc-service-menu summary::-webkit-details-marker{display:none!important}
+.sc-unified-head .sc-service-menu summary::after{content:"";display:inline-block;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+.sc-unified-head .sc-service-menu[open] summary,.sc-unified-head .sc-service-menu summary:hover{background:#eaf4ff!important}
+.sc-unified-head .sc-service-menu summary:focus-visible{outline:3px solid #ef9b36!important;outline-offset:3px!important}
+.sc-unified-head .sc-service-dropdown{position:absolute!important;top:calc(100% + 5px)!important;left:0!important;display:flex!important;flex-direction:column!important;gap:2px!important;width:310px!important;max-width:calc(100vw - 24px)!important;max-height:60vh!important;overflow-y:auto!important;padding:8px!important;background:#fff!important;border:1px solid #d7e5f2!important;border-radius:12px!important;box-shadow:0 12px 30px rgba(12,48,78,.2)!important;z-index:1400!important}
+.sc-unified-head .sc-service-menu:not([open]) .sc-service-dropdown{display:none!important}
+.sc-unified-head .sc-service-dropdown a{display:block!important;width:100%!important;padding:11px 12px!important;font:600 14px/1.45 Arial,Helvetica,sans-serif!important;color:#163047!important;white-space:normal!important;text-decoration:none!important;border-radius:8px!important}
+.sc-unified-head .sc-service-dropdown a:hover,.sc-unified-head .sc-service-dropdown a:focus-visible{background:#eaf4ff!important}
+@media(max-width:760px){
+.sc-unified-head .sc-head-nav-inner{flex-wrap:wrap!important;overflow:visible!important;gap:4px!important}
+.sc-unified-head .sc-service-menu[open]{flex:0 0 100%!important;order:3!important}
+.sc-unified-head .sc-service-menu[open] .sc-service-dropdown{position:static!important;width:100%!important;max-width:100%!important;max-height:38vh!important;margin-top:4px!important;box-shadow:0 5px 14px rgba(12,48,78,.12)!important}
+}
 </style>
 </head>
 
 <body>
-<div class="sc-unified-head"><div class="sc-head-row"><a class="sc-head-brand" href="/"><img src="/logo.png" alt="Suncoast Tech Support logo" width="58" height="58"><span>Suncoast Tech Support<span class="sc-head-subtitle" style="display:block">In-home computer and tech help for Clearwater-area homes</span></span></a><div class="sc-head-ctas"><a href="tel:17276479000" onclick="if(typeof trackCallClick==='function')return trackCallClick('header');">Call (727) 647-9000</a><a href="/schedule/">Schedule a Visit</a><a href="sms:17276479000">Text Us</a></div></div><nav class="sc-head-nav" aria-label="Consumer site navigation"><div class="sc-head-nav-inner"><a href="/">Home</a><a href="/#services">Services</a><a href="/#pricing">Pricing</a><a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a><a href="/schedule/">Schedule</a></div></nav></div>
+<div class="sc-unified-head"><div class="sc-head-row"><a class="sc-head-brand" href="/"><img src="/logo.png" alt="Suncoast Tech Support logo" width="58" height="58"><span>Suncoast Tech Support<span class="sc-head-subtitle" style="display:block">In-home computer and tech help for Clearwater-area homes</span></span></a><div class="sc-head-ctas"><a href="tel:17276479000" onclick="if(typeof trackCallClick==='function')return trackCallClick('header');">Call (727) 647-9000</a><a href="/schedule/">Schedule a Visit</a><a href="sms:17276479000">Text Us</a></div></div><nav class="sc-head-nav" aria-label="Consumer site navigation"><div class="sc-head-nav-inner"><a href="/">Home</a><details class="sc-service-menu"><summary>Services</summary><div class="sc-service-dropdown">
+<a href="/computer">Computer &amp; Laptop Services</a>
+<a href="/security">Cybersecurity &amp; Security Review</a>
+<a href="/data">Data Transfer</a>
+<a href="/printer">Printer, Scanners &amp; Fax</a>
+<a href="/cleanup">Virus &amp; Malware Cleanup</a>
+<a href="/wifi">Wi-Fi Problems</a>
+<a href="/#services">All Services</a>
+</div></details><a href="/#pricing">Pricing</a><a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a><a href="/schedule/">Schedule</a></div></nav></div>
   <div class="disclaimer">
     We provide practical virus and malware cleanup help for home technology. Cleanup results depend on device condition, infection type, account access, backups, and system damage. We do not provide guaranteed threat removal, legal advice, financial fraud recovery, or law enforcement services.
   </div>
