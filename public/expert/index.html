@@ -1460,6 +1460,26 @@
   .nav-menu a{font-size:14px}
 }
 
+
+/* Expert page repair: override earlier conflicting grid sizing */
+.expert-profile-card .expert-profile-layout{
+  display:grid !important;
+  grid-template-columns:minmax(0,300px) minmax(0,1fr) !important;
+  width:100% !important;
+  gap:clamp(18px,3vw,28px) !important;
+  align-items:start !important;
+}
+.expert-profile-card .expert-copy{width:auto !important;min-width:0 !important;max-width:100% !important;overflow-wrap:normal !important;word-break:normal !important}
+.expert-profile-card .expert-copy h3{overflow-wrap:normal !important;word-break:normal !important;white-space:normal !important}
+.expert-profile-card .expert-photo-wrap{width:100% !important;min-width:0 !important;max-width:300px !important}
+.expert-profile-card .expert-photo-wrap img{width:100% !important;height:auto !important;max-height:420px !important;object-fit:contain !important}
+@media(max-width:760px){
+  .expert-profile-card .expert-profile-layout{grid-template-columns:minmax(0,1fr) !important;gap:18px !important}
+  .expert-profile-card .expert-photo-wrap{max-width:320px !important;margin:0 auto !important}
+  .expert-profile-card .expert-copy{width:100% !important}
+  .expert-profile-card .expert-copy h3{font-size:clamp(25px,7vw,34px)}
+}
+
 </style>
 
   <!-- Cloudflare Turnstile -->
@@ -1469,7 +1489,7 @@
 <header>
     <div class="wrap header-inner">
       <div class="brand">
-        <img src="/src/assets/logo.png" alt="SunCoast Tech Support logo" />
+        <img src="/logo.png" alt="SunCoast Tech Support logo" />
         <div class="brand-text">
           <h1>SunCoast Tech Support</h1>
           <p>In-home computer and tech help for Clearwater-area homes</p>
@@ -1493,7 +1513,7 @@
         <div class="card about-panel expert-profile-card">
           <div class="expert-profile-layout">
             <div class="expert-photo-wrap">
-              <img src="/src/assets/owner-photo.png" alt="Moe from SunCoast Tech Support" />
+              <img src="https://business.suncoasttechsupport.net/images/moe-headshot.jpg" alt="Moe from SunCoast Tech Support" />
             </div>
 
             <div class="expert-copy">
