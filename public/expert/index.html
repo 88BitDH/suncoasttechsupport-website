@@ -1485,12 +1485,17 @@
 .expert-profile-card{display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important}
 .expert-profile-card > .expert-profile-layout{width:100% !important;min-width:0 !important;grid-template-columns:minmax(0,300px) minmax(0,1fr) !important}
 @media(max-width:760px){.expert-profile-card > .expert-profile-layout{grid-template-columns:minmax(0,1fr) !important}}
+
+/* Expert page: keep the brand header and navigation together while scrolling */
+.expert-sticky-shell{position:sticky;top:0;z-index:1100;background:#fff;box-shadow:0 3px 12px rgba(22,48,71,.08)}
+.expert-sticky-shell > header,.expert-sticky-shell > .nav-menu{position:static;top:auto;z-index:auto}
 </style>
 
   <!-- Cloudflare Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+<div class="expert-sticky-shell">
 <header>
     <div class="wrap header-inner">
       <div class="brand">
@@ -1511,6 +1516,7 @@
 
   <!-- Navigation menu linking to sections on the page -->
   <nav class="nav-menu"><div class="wrap"><ul><li class="nav-label">Explore:</li><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/schedule/">Schedule</a></li></ul></div></nav>
+</div>
 
   <main><div class="wrap" style="padding-top:20px"><p><a href="/">← Back to home</a></p></div>
 <section class="section">
