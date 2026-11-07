@@ -24,7 +24,7 @@ Seller: **88 Bit Diamond Hands LLC, a Delaware limited liability company doing b
 **CONSUMER'S RIGHT OF CANCELLATION**  
 **You may cancel this contract without any penalty or obligation within 3 business days from the above date, and receive a full refund of all payments made to the seller.**
 
-**You may also cancel this contract if upon a doctor's order you cannot physically receive the services, or you may cancel the contract if the services cease to be offered as stated in the contract. If you cancel the contract for either of these reasons, the seller, Suncoast Tech Support, may keep only a portion of the contract price equal to a pro rata portion of the total price representing the proportion of services you used or completed, plus the cost to the seller of any related goods which you have consumed or retained.**
+**You may also cancel this contract if upon a doctor's order you cannot physically receive the services, or you may cancel the contract if the services cease to be offered as stated in the contract. If you cancel the contract for either of these reasons, the seller, 88 Bit Diamond Hands LLC doing business as Suncoast Tech Support, may keep only a portion of the contract price equal to a pro rata portion of the total price representing the proportion of services you used or completed, plus the cost to the seller of any related goods which you have consumed or retained.**
 
 **Assignee warning — when included on a contract form or note (10-point bold, capital letters):**  
 **THIS CONTRACT OR NOTE IS THE FUTURE CONSUMER SERVICES AND PUTS ALL ASSIGNEES ON NOTICE OF THE CONSUMER'S RIGHT TO CANCEL UNDER CHAPTER 2-18, F.A.C.**
