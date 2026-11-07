@@ -3,7 +3,7 @@
 Revision: November 7, 2026  
 Seller: **88 Bit Diamond Hands LLC, a Delaware limited liability company doing business in Florida as Suncoast Tech Support**
 
-> **Critical blocker before issuing notices:** Insert and approve the actual seller mailing/service address in the signed contract or front of the transaction receipt. No mailing address is invented in this draft. Verify any person-specific home-solicitation disclosure obligations. The live Stripe receipt and consent checkbox do **not** automatically establish that the specific Florida disclosures below were provided in the prescribed location and typography.
+> **Before issuing notices:** The seller's designated business mailing address is **1924 Argile Drive, Dunedin, FL 34698**. Include this address in the completed signed contract or front of the transaction receipt and confirm that written cancellation notices can reliably be received here. Verify any person-specific home-solicitation disclosure obligations. The live Stripe receipt and consent checkbox do **not** automatically establish that the specific Florida disclosures below were provided in the prescribed location and typography.
 
 ## Template A — Contracts for future, continuing residential consumer services
 **Use when Florida Administrative Code Rule 2-18.002 applies**, potentially including recurring monthly technology support. Evaluate applicability and contract/receipt format with Florida counsel.
@@ -14,7 +14,7 @@ Seller: **88 Bit Diamond Hands LLC, a Delaware limited liability company doing b
 - Service / plan: **[PLAN AND TERMS]**
 - Price, recurring amount, billing cycle and trial, if any: **[AS DISCLOSED IN CHECKOUT]**
 - Seller: **Suncoast Tech Support, operated by 88 Bit Diamond Hands LLC (Delaware LLC / Florida DBA)**
-- Seller business mailing/service address: **[INSERT VERIFIED APPROVED MAILING ADDRESS, CITY, FL ZIP]**
+- Seller business mailing/service address: **1924 Argile Drive, Dunedin, FL 34698**
 - Seller telephone: **(727) 647-9000**
 - Seller email: **sales@suncoasttechsupport.com**
 - Customer signature / consent record: **[DATE AND METHOD]**
@@ -41,7 +41,7 @@ Seller: **88 Bit Diamond Hands LLC, a Delaware limited liability company doing b
 - Transaction date (day actually signed): **[DATE]**
 - Buyer and address: **[NAME, ADDRESS]**
 - Seller / sponsor: **Suncoast Tech Support, operated by 88 Bit Diamond Hands LLC (Delaware LLC / Florida DBA)**
-- Seller / sponsor mailing address: **[INSERT APPROVED BUSINESS MAILING ADDRESS]**
+- Seller / sponsor mailing address: **1924 Argile Drive, Dunedin, FL 34698**
 - Seller / sponsor phone: **(727) 647-9000**
 - Name, address, and telephone of the employee making the sale: **[COMPLETE IF STATUTE APPLIES]**
 - Services and total price: **[COMPLETE]**
@@ -82,7 +82,7 @@ The buyer's written cancellation is effective when delivered through the methods
 10. Audit no-rollover policy separately: **unused monthly onsite visit/minutes expire each billing period**, but this never cancels statutory refund rights or remedies when a promised service is not provided.
 
 ### Operational gaps before live use
-- **Customer-facing address is missing.** Approve a legally valid business mailing address for notices; do not presume a private residence should be published.
+- **Mailing address supplied:** 1924 Argile Drive, Dunedin, FL 34698. Verify the address is valid for receiving statutory cancellation notices, and recognize that it will be customer-facing when published on contracts, receipts, or legal pages.
 - **Stripe receipt/checkout automation needs confirmation.** A consent checkbox and link to terms alone do not satisfy Rule 2-18.002's signature-adjacent/front-page receipt notice. Arrange a compliant order/receipt and retain proof of delivery at execution.
 - **Counsel should check applicability** to each of three monthly subscriptions, specifically Aura-only, and clarify home-solicitation rules for unrequested upsells during onsite visits.
 - **Check dates, fonts and mandatory wording** in final PDF/invoice/receipt output and confirm applicable Florida home solicitation sales permit rules before accepting those transactions.
