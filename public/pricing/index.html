@@ -218,15 +218,6 @@ main p,main li{font-family:inherit;line-height:1.65}
 .sc-pricing-card .btn{display:flex!important;align-items:center!important;justify-content:center!important;margin-top:auto!important;border-radius:10px!important;min-height:52px!important;padding:12px!important;font-weight:800!important;font-size:15px!important;text-align:center!important;background:#1268f0!important;color:#fff!important;text-decoration:none!important}
 .sc-pricing-card .btn:focus-visible,.sc-pricing-main a:focus-visible{outline:3px solid #ef9b36;outline-offset:3px}
 .sc-pricing-card .btn:hover{background:#0959db!important}
-.sc-payment-section{margin-top:40px!important;background:#fff;border:1px solid #d7e5f2!important;border-radius:18px;padding:clamp(22px,4vw,36px);box-shadow:0 8px 25px rgba(14,46,72,.05)!important}
-.sc-payment-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:22px}
-.sc-payment-heading h2{margin:4px 0 0}
-.sc-payment-heading>p{max-width:420px;margin:0;color:#476173;font-size:15px}
-.sc-payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.sc-payment-option{background:#f5f9fc;border:1px solid #d7e5f2;border-radius:12px;padding:19px}
-.sc-payment-option h3{font-size:19px!important;margin:0 0 7px!important;line-height:1.3!important}
-.sc-payment-option p{font-size:15px!important;color:#476173;margin:0!important;line-height:1.6!important}
-.sc-payment-disclaimer{font-size:14px!important;color:#476173;margin:20px 0 0!important}
 /* Monthly plan selector — scoped to the residential pricing page. */
 .sc-monthly-section{background:#fff;border:1px solid #d7e5f2!important;border-radius:18px;padding:clamp(22px,4vw,36px)!important;box-shadow:0 8px 25px rgba(14,46,72,.05)!important}
 .sc-monthly-lead{font-size:16px!important;color:#476173;max-width:770px;margin:0 0 22px!important}
@@ -247,9 +238,15 @@ main p,main li{font-family:inherit;line-height:1.65}
 .sc-monthly-benefits ul{padding-left:22px;margin:0}
 .sc-monthly-benefits li{font-size:16px!important;line-height:1.55!important;margin-bottom:9px}
 .sc-monthly-benefits [hidden]{display:none!important}
+.sc-monthly-billing{margin-top:22px;padding-top:18px;border-top:1px solid #d7e5f2}
+.sc-monthly-billing h3{font-size:19px!important;margin:0 0 7px!important;color:#163047}
+.sc-monthly-billing p{font-size:15px!important;line-height:1.65!important;color:#476173;margin:0!important}
+.sc-monthly-billing strong{color:#173047}
+.sc-monthly-billing a{font-weight:700;color:#1268ae}
+
 @media(max-width:720px){.sc-monthly-layout{grid-template-columns:1fr;gap:13px}.sc-monthly-section{padding:22px!important}}
-@media(max-width:900px){.sc-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sc-pricing-card:last-child{grid-column:1/-1;max-width:none}.sc-pricing-card .qualifier{min-height:0}.sc-payment-heading{display:block}.sc-payment-heading>p{margin-top:9px}}
-@media(max-width:650px){.sc-pricing-main{width:calc(100% - 28px);padding:22px 0 45px}.sc-pricing-grid,.sc-payment-grid{grid-template-columns:minmax(0,1fr)}.sc-pricing-card:last-child{grid-column:auto}.sc-pricing-card{padding:23px 20px 20px}.sc-pricing-card.sc-popular{padding:22px 19px 19px}.sc-pricing-card .pricing-sub{min-height:0}.sc-pricing-card .qualifier{min-height:0}.sc-pricing-main h1{font-size:34px}.sc-pricing-card .btn{width:100%}.sc-payment-section{margin-top:26px!important}.sc-pricing-section h2{margin-bottom:22px}}
+@media(max-width:900px){.sc-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sc-pricing-card:last-child{grid-column:1/-1;max-width:none}.sc-pricing-card .qualifier{min-height:0}}
+@media(max-width:650px){.sc-pricing-main{width:calc(100% - 28px);padding:22px 0 45px}.sc-pricing-grid{grid-template-columns:minmax(0,1fr)}.sc-pricing-card:last-child{grid-column:auto}.sc-pricing-card{padding:23px 20px 20px}.sc-pricing-card.sc-popular{padding:22px 19px 19px}.sc-pricing-card .pricing-sub{min-height:0}.sc-pricing-card .qualifier{min-height:0}.sc-pricing-main h1{font-size:34px}.sc-pricing-card .btn{width:100%}.sc-pricing-section h2{margin-bottom:22px}}
 @media(prefers-reduced-motion:reduce){.sc-pricing-card .btn{transition:none}}
 </style></head>
 <body>
@@ -272,50 +269,6 @@ main p,main li{font-family:inherit;line-height:1.65}
 <h1>Simple, Upfront Pricing</h1>
 <p>Choose the option that best fits the problem, or call and we’ll help you decide.</p>
 <p class="sc-pricing-note">Not sure what you need? Start with the $149 visit. Many common requests can be handled during the first visit.</p>
-</section>
-<!-- Monthly plan enrollment: Stripe-hosted checkout handles all payment information. -->
-<section class="sc-monthly-section" id="sc-monthly-checkout" aria-labelledby="sc-monthly-heading">
-  <p class="sc-eyebrow">Monthly protection &amp; care</p>
-  <h2 id="sc-monthly-heading">Choose a Monthly Support Plan</h2>
-  <p class="sc-monthly-lead">Keep your technology protected and supported with predictable monthly billing. Select the plan that fits your needs and finish enrolling securely with Stripe.</p>
-  <div class="sc-monthly-layout">
-    <div class="sc-monthly-choice">
-      <label for="sc-monthly-plan">Select your monthly plan</label>
-      <select id="sc-monthly-plan" aria-describedby="sc-monthly-help">
-        <option value="managed">Managed Tech Care — $159/month</option>
-        <option value="aura">Aura Identity &amp; Scam Protection — $13.99/month</option>
-      </select>
-      <p id="sc-monthly-help">One plan per checkout. Aura protection is already included with Managed Tech Care — no separate Aura subscription needed.</p>
-      <div class="sc-monthly-summary" aria-live="polite" aria-atomic="true">
-        <p class="sc-monthly-price" id="sc-monthly-price">$159 <span>/month</span></p>
-        <p class="sc-monthly-due" id="sc-monthly-due">Due at checkout: $159. Renews monthly until canceled.</p>
-      </div>
-      <a class="sc-monthly-cta" id="sc-monthly-cta" href="https://suncoasttechsupport.com/monthly-support">Continue to Secure Checkout</a>
-      <p class="sc-monthly-security">Your payment is handled securely by Stripe. Nothing is charged on this website.</p>
-    </div>
-    <div class="sc-monthly-benefits">
-      <div id="sc-monthly-managed-details">
-        <h3>Managed Tech Care includes</h3>
-        <ul>
-          <li>One Microsoft 365 Business Standard license, email and account administration</li>
-          <li>Aura identity and scam protection — already included in this plan</li>
-          <li>One scheduled onsite visit of up to 60 minutes each month</li>
-          <li>Routine help with email, accounts and devices</li>
-        </ul>
-        <p>Month-to-month, with no free trial. Onsite service is subject to the plan's 10-mile service radius and scheduling availability. Please contact us before enrollment if you are outside the service area. Additional labor, equipment, major projects and incident recovery are quoted separately.</p>
-      </div>
-      <div id="sc-monthly-aura-details" hidden>
-        <h3>Aura-only protection includes</h3>
-        <ul>
-          <li>Identity, privacy and scam protection features</li>
-          <li>Data broker removal and spam call protection features</li>
-          <li>30-day free trial, then $13.99 per month unless canceled</li>
-          <li>Suncoast assistance with Aura enrollment</li>
-        </ul>
-        <p>This Aura-only subscription does not include Microsoft 365 management, technical support visits or onsite service. Existing Aura customers should contact us before enrolling again.</p>
-      </div>
-    </div>
-  </div>
 </section>
 <section class="sc-pricing-section" aria-labelledby="sc-visit-options">
 <h2 id="sc-visit-options">In-Home Service Visits</h2>
@@ -361,15 +314,53 @@ main p,main li{font-family:inherit;line-height:1.65}
             <a class="btn btn-primary" href="tel:17276479000" onclick="return trackCallClick('pricing_totalcare');">📞 Call to Book Total Care</a>
           </div></div>
 </section>
-<section class="sc-payment-section" id="payments" aria-labelledby="sc-payments-heading">
-<div class="sc-payment-heading"><div><p class="sc-eyebrow">Billing information</p><h2 id="sc-payments-heading">Payments &amp; Billing</h2></div><p>Payment arrangements are confirmed with your invoice or service agreement.</p></div>
-<div class="sc-payment-grid">
-<article class="sc-payment-option"><h3>Credit or Debit Card</h3><p>Ask about secure electronic card payment through an invoice or payment link.</p></article>
-<article class="sc-payment-option"><h3>Bank Transfer / ACH</h3><p>Bank-transfer payments may be arranged where available.</p></article>
-<article class="sc-payment-option"><h3>Pay by Check</h3><p>Check payments can be coordinated with your invoice instructions.</p></article>
-<article class="sc-payment-option"><h3>Monthly or Annual Plans</h3><p>Recurring support plans, where offered, can be billed monthly or annually under separate terms. The visit prices above are one-time service prices.</p></article>
-</div>
-<p class="sc-payment-disclaimer">Monthly plan enrollment takes place through secure Stripe checkout above. The in-home visit prices shown are one-time services; call or text Suncoast Tech Support to arrange those visits and their payment.</p>
+<!-- Monthly plan enrollment: Stripe-hosted checkout handles all payment information. -->
+<section class="sc-monthly-section" id="sc-monthly-checkout" aria-labelledby="sc-monthly-heading">
+  <p class="sc-eyebrow">Monthly protection &amp; care</p>
+  <h2 id="sc-monthly-heading">Choose a Monthly Support Plan</h2>
+  <p class="sc-monthly-lead">Keep your technology protected and supported with predictable monthly billing. Select the plan that fits your needs and finish enrolling securely with Stripe.</p>
+  <div class="sc-monthly-layout">
+    <div class="sc-monthly-choice">
+      <label for="sc-monthly-plan">Select your monthly plan</label>
+      <select id="sc-monthly-plan" aria-describedby="sc-monthly-help">
+        <option value="managed">Managed Tech Care — $159/month</option>
+        <option value="aura">Aura Identity &amp; Scam Protection — $13.99/month</option>
+      </select>
+      <p id="sc-monthly-help">One plan per checkout. Aura protection is already included with Managed Tech Care — no separate Aura subscription needed.</p>
+      <div class="sc-monthly-summary" aria-live="polite" aria-atomic="true">
+        <p class="sc-monthly-price" id="sc-monthly-price">$159 <span>/month</span></p>
+        <p class="sc-monthly-due" id="sc-monthly-due">Due at checkout: $159. Renews monthly until canceled.</p>
+      </div>
+      <a class="sc-monthly-cta" id="sc-monthly-cta" href="https://suncoasttechsupport.com/monthly-support">Continue to Secure Checkout</a>
+      <p class="sc-monthly-security">Your payment is handled securely by Stripe. Nothing is charged on this website.</p>
+    </div>
+    <div class="sc-monthly-benefits">
+      <div id="sc-monthly-managed-details">
+        <h3>Managed Tech Care includes</h3>
+        <ul>
+          <li>One Microsoft 365 Business Standard license, email and account administration</li>
+          <li>Aura identity and scam protection — already included in this plan</li>
+          <li>One scheduled onsite visit of up to 60 minutes each month</li>
+          <li>Routine help with email, accounts and devices</li>
+        </ul>
+        <p>Month-to-month, with no free trial. Onsite service is subject to the plan's 10-mile service radius and scheduling availability. Please contact us before enrollment if you are outside the service area. Additional labor, equipment, major projects and incident recovery are quoted separately.</p>
+      </div>
+      <div id="sc-monthly-aura-details" hidden>
+        <h3>Aura-only protection includes</h3>
+        <ul>
+          <li>Identity, privacy and scam protection features</li>
+          <li>Data broker removal and spam call protection features</li>
+          <li>30-day free trial, then $13.99 per month unless canceled</li>
+          <li>Suncoast assistance with Aura enrollment</li>
+        </ul>
+        <p>This Aura-only subscription does not include Microsoft 365 management, technical support visits or onsite service. Existing Aura customers should contact us before enrolling again.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sc-monthly-billing" id="payments" aria-labelledby="sc-payments-heading">
+    <h3 id="sc-payments-heading">Payment &amp; Billing</h3>
+    <p><strong>Secure online checkout:</strong> Pay using available methods displayed by Stripe. Monthly plans renew automatically until canceled. <strong>Check or ACH arrangements:</strong> <a href="tel:17276479000">Call us</a> to discuss options. The in-home visits above are one-time services; <a href="sms:17276479000">text</a> or call to schedule and arrange payment.</p>
+  </div>
 </section>
 </main>
 <footer class="sc-business-footer"><div class="sc-shell-inner"><div class="sc-footer-grid">
