@@ -325,7 +325,7 @@ main p,main li{font-family:inherit;line-height:1.65}
       <label for="sc-monthly-plan">Select your monthly plan</label>
       <select id="sc-monthly-plan" aria-describedby="sc-monthly-help">
         <option value="managed">Managed Tech Care with Aura — $159/month</option>
-        <option value="techcare">Monthly Tech Care — Without Aura (request pricing)</option>
+        <option value="techcare">Monthly Tech Care — Without Aura — $149/month</option>
         <option value="aura">Aura Identity &amp; Scam Protection — $13.99/month</option>
       </select>
       <p id="sc-monthly-help">Choose one plan. The $159 Managed Tech Care plan already includes Aura; the no-Aura plan is priced separately, and Aura-only is its own subscription.</p>
@@ -355,7 +355,7 @@ main p,main li{font-family:inherit;line-height:1.65}
           <li>Routine help with email, accounts and devices</li>
           <li>No Aura identity or scam protection subscription</li>
         </ul>
-        <p>Monthly pricing is being finalized. Contact Suncoast to confirm your rate, the 10-mile onsite service area and terms before enrollment. Additional labor, equipment, major projects and incident recovery are quoted separately.</p>
+        <p>Month-to-month at $149 with no free trial. Onsite service is subject to the plan's 10-mile service radius and scheduling availability. Please contact us before enrollment if you are outside the service area. Additional labor, equipment, major projects and incident recovery are quoted separately.</p>
       </div>
       <div id="sc-monthly-aura-details" hidden>
         <h3>Aura-only protection includes</h3>
@@ -420,13 +420,13 @@ main p,main li{font-family:inherit;line-height:1.65}
   // Only verified, active Stripe checkout destinations; never collect card details here.
   var plans={
     managed:{price:'$159 <span>/month</span>',due:'Due at checkout: $159. Renews monthly until canceled.',url:'https://suncoasttechsupport.com/monthly-support',button:'Continue to Secure Checkout'},
-    techcare:{price:'Pricing <span>on request</span>',due:'Monthly rate to be confirmed before enrollment. No charge is collected now.',url:'mailto:sales@suncoasttechsupport.com?subject=Monthly%20Tech%20Care%20without%20Aura',button:'Request Plan Pricing'},
+    techcare:{price:'$149 <span>/month</span>',due:'Due at checkout: $149. Renews monthly until canceled. Aura is not included.',url:'https://suncoasttechsupport.com/tech-care',button:'Continue to Secure Checkout'},
     aura:{price:'$13.99 <span>/month</span>',due:'30-day free trial: $0 due today. Then $13.99/month until canceled.',url:'https://pay.suncoasttechsupport.com/b/6oU00i8hN9olfOcatc8og0f',button:'Continue to Secure Checkout'}
   };
   function render(){
     var selected=Object.prototype.hasOwnProperty.call(plans,select.value)?select.value:'managed';
     price.innerHTML=plans[selected].price;
-    price.classList.toggle('is-pending',selected==='techcare');
+    price.classList.remove('is-pending');
     due.textContent=plans[selected].due;
     checkout.href=plans[selected].url;
     checkout.textContent=plans[selected].button;
